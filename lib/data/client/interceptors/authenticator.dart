@@ -10,10 +10,12 @@ class Authenticator extends Interceptor {
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    final String? token =
-        _authenticationNotifier.preference.maybeData()?.token;
+    final isSignedIn = _authenticationNotifier.isSignedIn();
+    final isNotSignedIn = _authenticationNotifier.isNotSignedIn();
+    final token = _authenticationNotifier.token;
 
-    if (token != null) options.headers["Authorization"] = "Bearer $token";
+    if (isSignedIn) options.headers["Authorization"] = "Bearer $token";
+    if (isNotSignedIn) _authenticationNotifier.logout();
 
     super.onRequest(options, handler);
   }
