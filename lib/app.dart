@@ -17,16 +17,16 @@ class App extends ConsumerStatefulWidget {
 }
 
 class _AppState extends ConsumerState<App> {
-  final _router = AppRouter();
 
   @override
   Widget build(BuildContext context) {
     final settings = ref.watch(settingsProvider);
+    final router = ref.watch(goRouterProvider);
 
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
-      routerConfig: _router,
+      routerConfig: router,
       scaffoldMessengerKey: Utils.messengerKey,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
