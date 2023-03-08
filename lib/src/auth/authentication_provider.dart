@@ -25,6 +25,16 @@ class AuthenticationNotifier extends PersistentStateNotifier<dynamic> {
     state = authentication;
   }
 
+  bool isSignedIn() {
+    return state.token != null;
+  }
+
+  bool isNotSignedIn() {
+    return state.token == null;
+  }
+
+  String? token () => state.token;
+
   void logout() {
     state = state.copyWith(
       token: null,
