@@ -33,7 +33,7 @@ class AuthenticationNotifier extends PersistentStateNotifier<dynamic> {
     return state.token == null;
   }
 
-  String? token () => state.token;
+  get token => state.token;
 
   void logout() {
     state = state.copyWith(
