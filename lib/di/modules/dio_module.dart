@@ -1,6 +1,7 @@
 import 'package:app/constants/api_document.dart';
 import 'package:app/data/client/interceptors/authenticator.dart';
 import 'package:app/src/auth/authentication_provider.dart';
+import 'package:app/utils/snackbar.dart';
 import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -24,6 +25,9 @@ final dioProvider = Provider<Dio>(
     ..interceptors
         .add(InterceptorsWrapper(onError: (DioError e, handler) async {
       if (e.response?.statusCode == 401) {
+        final message =
+        e.response!.data['message'];
+        Utils.showErrorSnackBar(message);
         authenticationNotifier.logout();
       }
       handler.next(e);
