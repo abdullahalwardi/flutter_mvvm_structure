@@ -3,6 +3,7 @@ import 'package:app/router/app_router.dart';
 import 'package:app/src/settings/settings_provider.dart';
 import 'package:app/theme/platform_default.dart';
 import 'package:app/theme/theme.dart';
+import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,12 +26,10 @@ class _AppState extends ConsumerState<App> {
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
-      routerDelegate: _router.routerDelegate,
-      routeInformationProvider: _router.routeInformationProvider,
       routerConfig: _router,
+      scaffoldMessengerKey: Utils.messengerKey,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      routeInformationParser: _router.routeInformationParser,
       themeMode: settings.themeMode,
       theme: getThemeData(ThemeMode.light),
       darkTheme: getThemeData(ThemeMode.dark),

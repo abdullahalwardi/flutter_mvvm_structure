@@ -33,15 +33,32 @@ dependencies:
   # Models
   freezed_annotation: ^2.2.0
   json_annotation: ^4.7.0
+  retrofit: '>=4.0.0 <5.0.0'
 
   # Routing
   go_router: ^6.0.6
   responsive_framework: ^0.2.0
+  dio: ^5.0.1
+
+  # UI
+  flutter_svg: ^2.0.2
+  
+  # Animations
+  animated_text_kit: ^4.2.2
+  gap: ^2.0.1
+
+  # Utils
+  form_validator: ^2.1.1
+  since_date: ^0.0.2
+  infinite_scroll_pagination: ^3.2.0
+  image_picker: ^0.8.6+3
+  awesome_dio_interceptor: ^1.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   go_router_builder: any
+  retrofit_generator: '>=5.0.0 <6.0.0'
   build_runner: any
   build_verify: any
   riverpod_generator: ^1.0.6
@@ -49,7 +66,24 @@ dev_dependencies:
   freezed: ^2.3.2
   json_serializable: ^6.5.4
   change_app_package_name: ^1.1.0
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/constants/
+  filename: assets.dart
+
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    flutter_svg: true
 
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/svg/
+    - assets/images/
+    - assets/fonts/
+    - assets/icons/

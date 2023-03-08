@@ -3,5 +3,20 @@
     "switchTheme": "Switch theme",
     "changeLanguage": "Change language",
     "darkMode": "Dark Mode",
-    "lightMode": "Light Mode"
+    "lightMode": "Light Mode",
+    "login": "Login",
+    "welcomeAgain": "Welcome again",
+    "username": "Username",
+    "typeYourUsenameHere": "Type your username here",
+    "validationEmail": "Please enter a valid email",
+    "validationMaxLength": "Please complete the required length",
+    "validationRequired": "This field is required",
+    "validationUrl": "Please enter a valid URL",
+    "validationPhoneNumber": "Please enter a valid phone number",
+    "invalidFieldValue": "Invalid field value",
+    "typeYourPasswordHere": "Type your password here",
+    "password": "Password",
+    "fieldRequired": "This field is required",
+    "welcomeAgain": "Welcome again",
+    "loginSuccess": "Logged in successfully"
 }

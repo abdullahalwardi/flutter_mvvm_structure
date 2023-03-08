@@ -1,9 +1,9 @@
 import 'package:app/common_lib.dart';
+import 'package:app/data/models/settings/settings.dart';
 import 'package:app/data/shared_preference/serializable_preference.dart';
 import 'package:app/persistent_store.dart';
 import 'package:app/theme/platform_default.dart';
 import 'package:app/provider_shared_preferences.dart';
-import 'package:app/data/models/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

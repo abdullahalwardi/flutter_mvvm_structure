@@ -3,5 +3,19 @@
     "switchTheme": "تغيير اللون",
     "changeLanguage": "تغيير اللغة",
     "darkMode": "الوضع الداكن",
-    "lightMode": "الوضع الصباحي"
+    "lightMode": "الوضع الصباحي",
+    "login": "تسجيل الدخول",
+    "welcomeAgain": "مرحباً بك مرة أخرى",
+    "username": "اسم المستخدم",
+    "typeYourUsenameHere": "ادخل اسم المستخدم هنا",
+    "validationEmail": "الرجاء إدخال بريد إلكتروني صالح",
+    "validationMaxLength": "الرجاء إكمال الطول المطلوب",
+    "validationRequired": "هذا الحقل مطلوب",
+    "validationUrl": "الرجاء إدخال عنوان URL صالح",
+    "validationPhoneNumber": "الرجاء إدخال رقم هاتف صالح",
+    "invalidFieldValue": "قيمة حقل غير صالحة",
+    "typeYourPasswordHere": "أدخل كلمة المرور هنا",
+    "password": "كلمة المرور",
+    "fieldRequired": "هذا الحقل مطلوب",
+    "loginSuccess": "تم تسجيل الدخول بنجاح"
 }
