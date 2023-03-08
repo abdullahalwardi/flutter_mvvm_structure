@@ -1,4 +1,4 @@
-import 'package:app/data/models/settings/settings.dart';
+import 'package:app/data/client/models/settings/settings.dart';
 import 'package:app/data/shared_preference/shared_preference.dart';
 import 'package:app/persistent_store.dart';
 import 'package:app/provider_shared_preferences.dart';

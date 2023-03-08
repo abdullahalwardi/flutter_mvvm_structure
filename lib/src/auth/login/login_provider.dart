@@ -1,5 +1,5 @@
+import 'package:app/data/client/services/auth/auth_service.dart';
 import 'package:app/data/client/services/callback.dart';
-import 'package:app/services/networking/api_services/auth_service.dart';
 import 'package:riverpod/riverpod.dart';
 
 final loginProvider = FutureProvider.autoDispose<ApiResponse<dynamic>>(

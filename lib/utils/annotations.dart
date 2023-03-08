@@ -1,11 +1,11 @@
 
 // DON'T EDIT THIS FILE
 
-import 'package:app/services/convertors/nullable_date_time_convertor.dart';
-import 'package:app/services/convertors/nullable_phone_number_convertor.dart';
-import 'package:app/services/convertors/nullable_string_convertor.dart';
-import 'package:app/services/convertors/nullable_uri_convertor.dart';
-import 'package:app/services/convertors/xfile_multipart_convertor.dart';
+import 'package:app/data/client/services/convertors/nullable_date_time_convertor.dart';
+import 'package:app/data/client/services/convertors/nullable_phone_number_convertor.dart';
+import 'package:app/data/client/services/convertors/nullable_string_convertor.dart';
+import 'package:app/data/client/services/convertors/nullable_uri_convertor.dart';
+import 'package:app/data/client/services/convertors/xfile_multipart_convertor.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 const List<JsonConverter> apiConvertors = [
