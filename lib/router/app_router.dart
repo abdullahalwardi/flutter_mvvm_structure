@@ -18,14 +18,6 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           
           
           ],
-            redirect: (BuildContext context, GoRouterState state) {
-            if (ref.read(authenticationProvider.notifier).isNotSignedIn()) {
-              return RoutesDocument.home;
-            } else {
-              return null;
-            }
-          },
-          // errorBuilder: (context, state) => ErrorScreen(state.error),
         );
 });
 
