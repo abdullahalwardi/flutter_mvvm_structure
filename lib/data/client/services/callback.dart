@@ -6,4 +6,4 @@ typedef FutureApiResponse<T> = Future<HttpResponse<DefaultResponse<T>>>;
 typedef ApiResponse<T> = HttpResponse<DefaultResponse<T>>;
 
 typedef FuturePaginatedResponse<T>
-    = Future<HttpResponse<DefaultResponse<PaginatedResponse<T>>>>;
+    = Future<HttpResponse<PaginatedResponse<T>>>;
