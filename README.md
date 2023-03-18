@@ -15,3 +15,5 @@ and same for ios from ..ios/Runner/info.plist, and search for flutterbooksample.
 3- change app name from pubspec.yaml and from main.dart.
 
 4- flutter pub global activate build_runner & flutter pub run build_runner build.
+
+5- add this permission (<uses-permission android:name="android.permission.INTERNET"/>)
