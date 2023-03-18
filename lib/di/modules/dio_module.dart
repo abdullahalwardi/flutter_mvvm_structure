@@ -25,7 +25,8 @@ final dioProvider = Provider<Dio>(
     }
     ..interceptors.add(Authenticator(authenticationNotifier))
     ..interceptors
-        .add(InterceptorsWrapper(onError: (DioError e, handler) async {
+        .add(InterceptorsWrapper(
+          onError: (DioError e, handler) async {
       if (e.response?.statusCode == 401) {
         authenticationNotifier.logout();
         router.pushReplacement(RoutesDocument.home);
@@ -35,7 +36,30 @@ final dioProvider = Provider<Dio>(
         
       }
       handler.next(e);
-    }));
+    },
+        onResponse: (response, handler) {
+     if (response.data is Map<String, dynamic>) {
+      final data = response.data as Map<String, dynamic>;
+      if (data['result'] == null) {
+        data['result'] = {}; // Set result to an empty object if it's null
+        final modifiedResponse = Response(
+          requestOptions: response.requestOptions,
+          data: data,
+          headers: response.headers,
+          isRedirect: response.isRedirect,
+          redirects: response.redirects,
+          extra: response.extra,
+          statusCode: response.statusCode,
+          statusMessage: response.statusMessage,
+        );
+        return handler.next(modifiedResponse);
+      }else{
+        return handler.next(response);
+      }
+    }
+    },
+    ),
+    );
 
     if (kDebugMode) dio.interceptors.add(AwesomeDioInterceptor());
 
