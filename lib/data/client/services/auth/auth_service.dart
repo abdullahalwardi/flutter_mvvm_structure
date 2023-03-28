@@ -1,4 +1,4 @@
-import 'package:app/constants/api_document.dart';
+import 'package:app/utils/constants/api_document.dart';
 import 'package:app/data/client/services/callback.dart';
 import 'package:app/di/modules/dio_module.dart';
 import 'package:dio/dio.dart';

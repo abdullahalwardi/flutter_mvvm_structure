@@ -1,4 +1,4 @@
-import 'package:app/constants/api_document.dart';
+import 'package:app/utils/constants/api_document.dart';
 import 'package:app/data/client/interceptors/authenticator.dart';
 import 'package:app/router/app_router.dart';
 import 'package:app/src/auth/authentication_provider.dart';

@@ -1,5 +1,5 @@
-import 'package:app/constants/border_size.dart';
-import 'package:app/constants/stroke_width.dart';
+import 'package:app/utils/constants/border_size.dart';
+import 'package:app/utils/constants/stroke_width.dart';
 import 'package:app/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
