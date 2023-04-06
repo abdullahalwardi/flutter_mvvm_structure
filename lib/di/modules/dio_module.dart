@@ -47,7 +47,9 @@ Dio _dioProvider(
           if (response.data is Map<String, dynamic>) {
             final data = response.data as Map<String, dynamic>;
             if (data['result'] == null) {
-              data['result'] = {}; // Set result to an empty object if it's null
+              data['result'] ??= {}; // Set result to an empty object if it's null
+              data["message"] ??= "No data found";
+              data["statusCode"] ??= response.statusCode;
               final modifiedResponse = Response(
                 requestOptions: response.requestOptions,
                 data: data,
@@ -58,6 +60,7 @@ Dio _dioProvider(
                 statusCode: response.statusCode,
                 statusMessage: response.statusMessage,
               );
+              print(modifiedResponse);
               return handler.next(modifiedResponse);
             } else {
               return handler.next(response);
