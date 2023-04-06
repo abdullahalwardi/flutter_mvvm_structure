@@ -1,5 +1,5 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/settings/settings_provider.dart';
+import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

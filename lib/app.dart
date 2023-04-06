@@ -1,6 +1,6 @@
 import 'package:app/main.dart';
 import 'package:app/router/app_router.dart';
-import 'package:app/src/settings/settings_provider.dart';
+import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/platform_default.dart';
 import 'package:app/theme/theme.dart';
 import 'package:app/utils/snackbar.dart';
