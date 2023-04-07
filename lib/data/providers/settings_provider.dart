@@ -35,6 +35,5 @@ class SettingsNotifier extends PersistentStateNotifier<Settings> {
 }
 
 final settingsProvider = StateNotifierProvider<SettingsNotifier, Settings>(
-  SettingsNotifier.new,
-  
+  (ref)=> SettingsNotifier(ref),
 );
