@@ -41,6 +41,11 @@ Dio _dioProvider(
             final message = e.response!.data['message'];
             Utils.showErrorSnackBar(message);
           }
+          if (e.type == DioErrorType.unknown) {
+            Utils.showErrorSnackBar(
+                "حدث خطأ ما");
+       
+          }
           handler.next(e);
         },
         onResponse: (response, handler) {
