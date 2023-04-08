@@ -28,8 +28,16 @@ Dio _dioProvider(
     ..interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          if (options.method != 'GET' && options.data == null) {
-            return;
+          if (options.method != 'GET' && options.data == null ||
+              options.data is Map<String, dynamic> &&
+                  (options.data as Map<String, dynamic>).isEmpty) {
+            return handler.reject(
+              DioError(
+                requestOptions: options,
+                error: "No data found",
+                type: DioErrorType.cancel,
+              ),
+            );
           } else {
             return handler.next(options);
           }
@@ -42,9 +50,7 @@ Dio _dioProvider(
             Utils.showErrorSnackBar(message);
           }
           if (e.type == DioErrorType.unknown) {
-            Utils.showErrorSnackBar(
-                "حدث خطأ ما");
-       
+            Utils.showErrorSnackBar("حدث خطأ ما");
           }
           handler.next(e);
         },
@@ -54,7 +60,8 @@ Dio _dioProvider(
             if (data['data'] == null ||
                 data['message'] == null ||
                 data['statusCode'] == null) {
-              data['result'] ??= {}; // Set result to an empty object if it's null
+              data['result'] ??=
+                  {}; // Set result to an empty object if it's null
               data["message"] ??= "No data found";
               data["statusCode"] ??= response.statusCode;
               final modifiedResponse = Response(
