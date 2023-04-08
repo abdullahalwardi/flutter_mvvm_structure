@@ -51,6 +51,8 @@ Dio _dioProvider(
           }
           if (e.type == DioErrorType.unknown) {
             Utils.showErrorSnackBar("حدث خطأ ما");
+          } else {
+            Utils.showErrorSnackBar(e.response?.data['message']);
           }
           handler.next(e);
         },
