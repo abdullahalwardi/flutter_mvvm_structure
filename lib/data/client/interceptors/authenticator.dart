@@ -1,4 +1,4 @@
-import 'package:app/src/auth/authentication_provider.dart';
+import 'package:app/data/providers/authentication_provider.dart';
 import 'package:dio/dio.dart';
 
 class Authenticator extends Interceptor {

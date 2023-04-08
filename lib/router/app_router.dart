@@ -1,6 +1,4 @@
-import 'package:app/src/auth/authentication_provider.dart';
 import 'package:app/src/home/home_page.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod/riverpod.dart';
 
