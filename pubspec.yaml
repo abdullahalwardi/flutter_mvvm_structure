@@ -53,6 +53,7 @@ dependencies:
   infinite_scroll_pagination: ^3.2.0
   image_picker: ^0.8.6+3
   awesome_dio_interceptor: ^1.0.0
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:
