@@ -62,8 +62,7 @@ Dio _dioProvider(
             if (data['data'] == null ||
                 data['message'] == null ||
                 data['statusCode'] == null) {
-              data['result'] ??=
-                  {}; // Set result to an empty object if it's null
+              data['data'] ??= {}; // Set result to an empty object if it's null
               data["message"] ??= "No data found";
               data["statusCode"] ??= response.statusCode;
               final modifiedResponse = Response(
@@ -76,11 +75,29 @@ Dio _dioProvider(
                 statusCode: response.statusCode,
                 statusMessage: response.statusMessage,
               );
-              print(modifiedResponse);
               return handler.next(modifiedResponse);
-            } else {
+            }  else {
               return handler.next(response);
             }
+          } else if (response.data is List<dynamic>) {
+            final data = response.data as List<dynamic>;
+              final modifiedResponse = Response(
+                requestOptions: response.requestOptions,
+                data: {
+                  "data": data,
+                  "message": response.statusMessage,
+                  "statusCode": response.statusCode
+                },
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                redirects: response.redirects,
+                extra: response.extra,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+              );
+              return handler.next(modifiedResponse);
+            } else {
+            return handler.next(response);
           }
         },
       ),
