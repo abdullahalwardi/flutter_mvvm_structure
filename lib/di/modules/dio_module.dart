@@ -31,13 +31,17 @@ Dio _dioProvider(
           if (options.method != 'GET' && options.data == null ||
               options.data is Map<String, dynamic> &&
                   (options.data as Map<String, dynamic>).isEmpty) {
-            return handler.reject(
-              DioError(
-                requestOptions: options,
-                error: "No data found",
-                type: DioErrorType.cancel,
-              ),
-            );
+            if (options.queryParameters.isEmpty) {
+              return handler.reject(
+                DioError(
+                  requestOptions: options,
+                  error: "No data found",
+                  type: DioErrorType.cancel,
+                ),
+              );
+            } else {
+              return handler.next(options);
+            }
           } else {
             return handler.next(options);
           }
