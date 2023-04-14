@@ -50,13 +50,49 @@ Dio _dioProvider(
           if (e.response?.statusCode == 401) {
             authenticationNotifier.logout();
             router.pushReplacement(RoutesDocument.home);
-            final message = e.response!.data['message'];
-            Utils.showErrorSnackBar(message);
           }
-          if (e.type == DioErrorType.unknown) {
-            Utils.showErrorSnackBar("حدث خطأ ما");
-          } else {
-            Utils.showErrorSnackBar(e.response?.data['message']);
+             switch (e.type) {
+            case DioErrorType.badCertificate:
+              Utils.showErrorSnackBar("حدث خطأ ما");
+              break;
+            case DioErrorType.badResponse:
+              Utils.showErrorSnackBar("حدث خطا ما");
+              break;
+            case DioErrorType.cancel:
+              debugPrint(e.message);
+              break;
+            case DioErrorType.connectionError:
+              Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+              break;
+            case DioErrorType.connectionTimeout:
+              Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+              break;
+            case DioErrorType.receiveTimeout:
+              Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+              break;
+            case DioErrorType.sendTimeout:
+              Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+              break;
+            case DioErrorType.unknown:
+            if(e.response != null){
+              if (e.response!.data is String) {
+                final data = e.response!.data as String;
+                Utils.showErrorSnackBar(data);
+              } else if (e.response!.data is Map<String, dynamic>) {
+                final data = e.response!.data as Map<String, dynamic>;
+                if (data['message'] != null) {
+                  Utils.showErrorSnackBar(data['message']);
+                }else{
+                Utils.showErrorSnackBar("حدث خطأ ما");
+              }
+              }else{
+                Utils.showErrorSnackBar("حدث خطأ ما");
+              }
+            }else{
+              Utils.showErrorSnackBar("حدث خطأ ما");
+            }
+              
+              break;
           }
           handler.next(e);
         },
@@ -67,7 +103,7 @@ Dio _dioProvider(
                 data['message'] == null ||
                 data['statusCode'] == null) {
               data['data'] ??= {}; // Set result to an empty object if it's null
-              data["message"] ??= "No data found";
+              data["message"] ??= response.statusMessage;
               data["statusCode"] ??= response.statusCode;
               final modifiedResponse = Response(
                 requestOptions: response.requestOptions,
@@ -80,27 +116,27 @@ Dio _dioProvider(
                 statusMessage: response.statusMessage,
               );
               return handler.next(modifiedResponse);
-            }  else {
+            } else {
               return handler.next(response);
             }
           } else if (response.data is List<dynamic>) {
             final data = response.data as List<dynamic>;
-              final modifiedResponse = Response(
-                requestOptions: response.requestOptions,
-                data: {
-                  "data": data,
-                  "message": response.statusMessage,
-                  "statusCode": response.statusCode
-                },
-                headers: response.headers,
-                isRedirect: response.isRedirect,
-                redirects: response.redirects,
-                extra: response.extra,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-              );
-              return handler.next(modifiedResponse);
-            } else {
+            final modifiedResponse = Response(
+              requestOptions: response.requestOptions,
+              data: {
+                "data": data,
+                "message": response.statusMessage,
+                "statusCode": response.statusCode
+              },
+              headers: response.headers,
+              isRedirect: response.isRedirect,
+              redirects: response.redirects,
+              extra: response.extra,
+              statusCode: response.statusCode,
+              statusMessage: response.statusMessage,
+            );
+            return handler.next(modifiedResponse);
+          } else {
             return handler.next(response);
           }
         },
