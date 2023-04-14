@@ -69,9 +69,9 @@ Dio _dioProvider(
       },
         onResponse: (response, handler) {
         dynamic data = response.data;
-        if (data is List<dynamic>) {
+        if (response.data is List<dynamic>) {
           data = {
-            "data": data,
+            "data": response.data,
             "message": response.statusMessage,
             "statusCode": response.statusCode
           };
