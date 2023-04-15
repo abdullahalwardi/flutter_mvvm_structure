@@ -58,6 +58,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  custom_lint:
+  riverpod_lint: ^1.2.0
   go_router_builder: any
   retrofit_generator: '>=5.0.0 <6.0.0'
   build_runner: any
@@ -71,6 +73,7 @@ flutter_assets:
   assets_path: assets/
   output_path: lib/utils/constants/
   filename: assets.dart
+  
 
 flutter_gen:
   output: lib/gen/ # Optional (default: lib/gen/)

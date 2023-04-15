@@ -1,6 +1,5 @@
 # riverpod_structure
 A flutter project structure with riverpod, freezed, goRouter.
-This project is a modified version of https://github.com/masreplay/app
 
 ## Project Setup
 
@@ -17,3 +16,10 @@ and same for ios from ..ios/Runner/info.plist, and search for flutterbooksample.
 4- flutter pub global activate build_runner & flutter pub run build_runner build.
 
 5- add this permission (<uses-permission android:name="android.permission.INTERNET"/>)
+
+6- 
+dart run custom_lint
+# Install custom_lint for all projects
+dart pub global activate custom_lint
+# run custom_lint's command line in a project
+custom_lint
