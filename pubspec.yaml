@@ -17,7 +17,7 @@ dependencies:
 
   # Fonts And Icons
   cupertino_icons: ^1.0.2
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.3
 
   # Logger
   logger: ^1.1.0
@@ -45,7 +45,7 @@ dependencies:
   
   # Animations
   animated_text_kit: ^4.2.2
-  gap: ^2.0.1
+  gap: ^3.0.0
 
   # Utils
   form_validator: ^2.1.1
@@ -61,7 +61,7 @@ dev_dependencies:
   custom_lint:
   riverpod_lint: ^1.2.0
   go_router_builder: any
-  retrofit_generator: '>=5.0.0 <6.0.0'
+  retrofit_generator: ^6.0.0+1
   build_runner: any
   build_verify: any
   riverpod_generator: ^2.1.6
