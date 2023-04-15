@@ -64,7 +64,7 @@ dev_dependencies:
   retrofit_generator: '>=5.0.0 <6.0.0'
   build_runner: any
   build_verify: any
-  riverpod_generator: ^1.0.6
+  riverpod_generator: ^2.1.6
   flutter_lints: ^2.0.0
   freezed: ^2.3.2
   json_serializable: ^6.5.4
