@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:app/data/providers/authentication_provider.dart';
 import 'package:app/utils/constants/api_document.dart';
 import 'package:app/data/client/interceptors/authenticator.dart';
@@ -40,32 +42,55 @@ Dio _dioProvider(
           authenticationNotifier.logout();
           router.pushReplacement(RoutesDocument.home);
         }
-        switch (e.type) {
-          case DioErrorType.badCertificate:
-            Utils.showErrorSnackBar("حدث خطأ ما");
-            break;
-          case DioErrorType.badResponse:
-            Utils.showErrorSnackBar("حدث خطا ما");
-            break;
-          case DioErrorType.cancel:
-            debugPrint(e.message);
-            break;
-          case DioErrorType.connectionError:
-          case DioErrorType.connectionTimeout:
-          case DioErrorType.receiveTimeout:
-          case DioErrorType.sendTimeout:
-            Utils.showErrorSnackBar("حدث خطأ في الاتصال");
-            break;
-          case DioErrorType.unknown:
-            final data = e.response?.data;
-            Utils.showErrorSnackBar(data is Map<String, dynamic>
-                ? data['message'] ?? "حدث خطأ ما"
-                : data is String
-                    ? data
-                    : "حدث خطأ ما");
-            break;
+          switch (e.type) {
+    case DioErrorType.badCertificate:
+      Utils.showErrorSnackBar("حدث خطأ ما");
+      break;
+    case DioErrorType.badResponse:
+      Utils.showErrorSnackBar("حدث خطأ ما");
+      break;
+    case DioErrorType.cancel:
+      debugPrint(e.message);
+      break;
+    case DioErrorType.connectionError:
+    case DioErrorType.connectionTimeout:
+    case DioErrorType.receiveTimeout:
+    case DioErrorType.sendTimeout:
+      Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+      break;
+    case DioErrorType.unknown:
+      String message = "حدث خطأ ما";
+      if (e.error is FormatException) {
+        message = e.error.toString().replaceRange(0, 54, "").replaceAll("^", "");
+      } else {
+        final data = e.response?.data;
+        if (data is Map<String, dynamic>) {
+          message = data['message'] ?? message;
+        } else if (data is String) {
+          message = json.decode(json.encode(data));
         }
-        handler.next(e);
+      }
+      final parsedResponse = Response(
+        requestOptions: e.requestOptions,
+        data: {
+          "data": {},
+          "message": message,
+          "statusCode": 400,
+        },
+        statusMessage: e.message,
+      );
+      Utils.showErrorSnackBar(message);
+      handler.reject(
+        DioError(
+          requestOptions: e.requestOptions,
+          response: parsedResponse,
+          error: message,
+          type: DioErrorType.unknown,
+        ),
+      );
+      return; // add this line to prevent calling handler.next(e)
+  }
+  handler.next(e);
       },
         onResponse: (response, handler) {
         dynamic data = response.data;
@@ -82,7 +107,13 @@ Dio _dioProvider(
           data['data'] ??= {}; // Set result to an empty object if it's null
           data["message"] ??= response.statusMessage;
           data["statusCode"] ??= response.statusCode;
-        }
+        }else if (response.data is String) {
+            data = {
+              "data": {},
+              "message": response.data,
+              "statusCode": response.statusCode
+            };
+          }
         final modifiedResponse = Response(
           requestOptions: response.requestOptions,
           data: data,
