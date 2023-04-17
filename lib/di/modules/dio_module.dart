@@ -47,13 +47,20 @@ Dio _dioProvider(
       Utils.showErrorSnackBar("حدث خطأ ما");
       break;
     case DioErrorType.badResponse:
-      String message = "حدث خطأ ما";
-    if (e.error is FormatException || e.response?.data is String) {
-        message = e.error.toString().replaceRange(0, 54, "").replaceAll("^", "").replaceAll("\n", "");
-    }else{
-      message = e.response?.data['message'] ?? message;
-    }
-       Utils.showErrorSnackBar(e.response?.data ?? "حدث خطأ ما");
+      debugPrint(e.error.toString());
+              String message = "حدث خطأ ما";
+              if (e.error is FormatException) {
+                message = e.error
+                    .toString()
+                    .replaceRange(0, 54, "")
+                    .replaceAll("^", "")
+                    .replaceAll("\n", "");
+              } else if (e.response?.data is String) {
+                message = e.response?.data;
+              } else {
+                message = e.response?.data['message'] ?? message;
+              }
+              Utils.showErrorSnackBar(e.response?.data ?? "حدث خطأ ما");
       break;
     case DioErrorType.cancel:
       debugPrint(e.message);
