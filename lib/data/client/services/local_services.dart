@@ -1,7 +1,8 @@
-
 import 'package:app/data/client/services/callback.dart';
+import 'package:app/utils/snackbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 Future<void> fetchPage<T>(
@@ -56,4 +57,18 @@ Future<void> openSMSMessage(String phoneNumber, {String? message}) async {
   var uri = 'sms:$phoneNumber';
   if (message != null) uri += "?body=$message";
   if (await canLaunchUrlString(uri)) await launchUrlString(uri);
+}
+
+Future<bool> _requestPermission(Permission permission, {String? errorMessage}) async {
+  if (await permission.isGranted) {
+    return true;
+  } else {
+    var result = await permission.request();
+    if (result == PermissionStatus.granted) {
+      return true;
+    } else {
+      Utils.showErrorSnackBar(errorMessage ?? "Permission denied");
+      return false;
+    }
+  }
 }
