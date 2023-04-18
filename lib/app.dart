@@ -34,17 +34,15 @@ class _AppState extends ConsumerState<App> {
       theme: getThemeData(ThemeMode.light),
       darkTheme: getThemeData(ThemeMode.dark),
       locale: PlatformDefault.locale(settings.locale),
-      builder: (context, widget) => ResponsiveWrapper.builder(
-        BouncingScrollWrapper.builder(context, widget!),
-        maxWidth: 1600,
-        minWidth: 1550,
-        defaultScale: true,
-        breakpoints: const [
-          ResponsiveBreakpoint.resize(450, name: MOBILE),
-          ResponsiveBreakpoint.autoScale(800, name: TABLET),
-          ResponsiveBreakpoint.resize(1000, name: DESKTOP),
-          ],
-          ),
+      builder: (context, child) => ResponsiveBreakpoints.builder(
+        child: child!,
+        breakpoints: [
+          const Breakpoint(start: 0, end: 450, name: MOBILE),
+          const Breakpoint(start: 451, end: 800, name: TABLET),
+          const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+          const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+        ],
+      ),
     );
   }
 }

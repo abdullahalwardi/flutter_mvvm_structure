@@ -37,7 +37,7 @@ dependencies:
 
   # Routing
   go_router: ^6.0.6
-  responsive_framework: ^0.2.0
+  responsive_framework: ^1.0.0
   dio: ^5.0.1
 
   # UI
