@@ -25,4 +25,16 @@ class Utils {
       ..removeCurrentSnackBar()
       ..showSnackBar(snackBar);
   }
+    static showNotificatonSnackBar(String? title) {
+    if (title == null) return;
+    SnackBar snackBar = SnackBar(
+      
+      content: Text(title),
+      
+      behavior: SnackBarBehavior.floating,
+    );
+    messengerKey.currentState!
+      ..removeCurrentSnackBar()
+      ..showSnackBar(snackBar);
+  }
 }
