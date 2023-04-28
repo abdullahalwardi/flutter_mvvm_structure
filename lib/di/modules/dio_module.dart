@@ -11,10 +11,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-final dioProvider = Provider<Dio>((ref) => _dioProvider(
+part 'dio_module.g.dart';
+
+final dioProvider = Provider<Dio>((ref) => _dio(
     ref.read(authenticationProvider.notifier), ref.read(goRouterProvider)));
 
-Dio _dioProvider(
+Dio _dio(
     AuthenticationNotifier authenticationNotifier, GoRouter router) {
   final dio = Dio();
   dio

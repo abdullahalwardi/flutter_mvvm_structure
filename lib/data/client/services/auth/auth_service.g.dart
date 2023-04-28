@@ -21,15 +21,13 @@ class _AuthBaseService implements AuthBaseService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<DefaultResponse<Authentication>>> login(
-      {required body}) async {
+  Future<HttpResponse<DefaultResponse<dynamic>>> login({required body}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(body.toJson());
+    final _data = body;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<HttpResponse<DefaultResponse<Authentication>>>(Options(
+        _setStreamType<HttpResponse<DefaultResponse<dynamic>>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -41,9 +39,9 @@ class _AuthBaseService implements AuthBaseService {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = DefaultResponse<Authentication>.fromJson(
+    final value = DefaultResponse<dynamic>.fromJson(
       _result.data!,
-      (json) => Authentication.fromJson(json as Map<String, dynamic>),
+      (json) => json as dynamic,
     );
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;

@@ -1,6 +1,5 @@
 import 'package:app/data/shared_preference/share_preference.dart';
 import 'package:riverpod/riverpod.dart';
-
 class PersistentStateNotifier<T> extends StateNotifier<T> {
   final ObjectSharedPreference<T> preference;
 

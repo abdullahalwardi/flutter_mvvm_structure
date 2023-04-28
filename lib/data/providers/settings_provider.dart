@@ -5,7 +5,6 @@ import 'package:app/persistent_store.dart';
 import 'package:app/theme/platform_default.dart';
 import 'package:app/provider_shared_preferences.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final _settingsPreference =
     Provider((ref) => ProvideSerializablePreference<Settings>(
