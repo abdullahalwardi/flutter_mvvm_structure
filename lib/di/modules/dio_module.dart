@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:app/data/providers/authentication_provider.dart';
 import 'package:app/utils/constants/api_document.dart';
 import 'package:app/data/client/interceptors/authenticator.dart';
@@ -11,12 +10,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-part 'dio_module.g.dart';
-
-final dioProvider = Provider<Dio>((ref) => _dio(
+final dioProvider = Provider<Dio>((ref) => dioModule(
     ref.read(authenticationProvider.notifier), ref.read(goRouterProvider)));
 
-Dio _dio(
+Dio dioModule(
     AuthenticationNotifier authenticationNotifier, GoRouter router) {
   final dio = Dio();
   dio
