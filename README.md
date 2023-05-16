@@ -23,3 +23,5 @@ dart run custom_lint
 dart pub global activate custom_lint
 # run custom_lint's command line in a project
 custom_lint
+
+7- update the assetslinks.json file
