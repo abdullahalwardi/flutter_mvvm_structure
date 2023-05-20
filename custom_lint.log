@@ -63,3 +63,66 @@ at:
 #1      Future.any.onValue (dart:async/future.dart:615:5)
 <asynchronous suspension>
 
+The Dart VM service is listening on http://127.0.0.1:65069/M7QEYHnTux4=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:65069/M7QEYHnTux4=/devtools?uri=ws://127.0.0.1:65069/M7QEYHnTux4=/ws
+[custom_lint] 2023-05-20T13:59:34.981872 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:19:49: Error: 'CyclicInitializationError' isn't a type.
+[custom_lint] 2023-05-20T13:59:34.981872 const isCyclicInitializationError = TypeMatcher<CyclicInitializationError>();
+[custom_lint] 2023-05-20T13:59:34.981872                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T13:59:34.981872 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:31:39: Error: 'NullThrownError' isn't a type.
+[custom_lint] 2023-05-20T13:59:34.981872 const isNullThrownError = TypeMatcher<NullThrownError>();
+[custom_lint] 2023-05-20T13:59:34.981872                                       ^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T13:59:34.981872
+[custom_lint] 2023-05-20T13:59:34.981872
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:227:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:615:5)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:65228/MzZ18EmfPvE=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:65228/MzZ18EmfPvE=/devtools?uri=ws://127.0.0.1:65228/MzZ18EmfPvE=/ws
+[custom_lint] 2023-05-20T14:00:07.712928 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:19:49: Error: 'CyclicInitializationError' isn't a type.
+[custom_lint] 2023-05-20T14:00:07.712928 const isCyclicInitializationError = TypeMatcher<CyclicInitializationError>();
+[custom_lint] 2023-05-20T14:00:07.712928                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T14:00:07.712928 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:31:39: Error: 'NullThrownError' isn't a type.
+[custom_lint] 2023-05-20T14:00:07.712928 const isNullThrownError = TypeMatcher<NullThrownError>();
+[custom_lint] 2023-05-20T14:00:07.712928                                       ^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T14:00:07.712928
+[custom_lint] 2023-05-20T14:00:07.712928
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:227:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:615:5)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:65380/5Oc_iAOgiws=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:65380/5Oc_iAOgiws=/devtools?uri=ws://127.0.0.1:65380/5Oc_iAOgiws=/ws
+[custom_lint] 2023-05-20T14:00:33.441497 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:19:49: Error: 'CyclicInitializationError' isn't a type.
+[custom_lint] 2023-05-20T14:00:33.441497 const isCyclicInitializationError = TypeMatcher<CyclicInitializationError>();
+[custom_lint] 2023-05-20T14:00:33.441497                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T14:00:33.441497 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib/src/error_matchers.dart:31:39: Error: 'NullThrownError' isn't a type.
+[custom_lint] 2023-05-20T14:00:33.441497 const isNullThrownError = TypeMatcher<NullThrownError>();
+[custom_lint] 2023-05-20T14:00:33.441497                                       ^^^^^^^^^^^^^^^
+[custom_lint] 2023-05-20T14:00:33.441497
+[custom_lint] 2023-05-20T14:00:33.441497
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:227:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:615:5)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:49639/ajLJ0G6DE0I=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:49639/ajLJ0G6DE0I=/devtools?uri=ws://127.0.0.1:49639/ajLJ0G6DE0I=/ws
+The Dart VM service is listening on http://127.0.0.1:49929/2pdW0xLtdb4=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:49929/2pdW0xLtdb4=/devtools?uri=ws://127.0.0.1:49929/2pdW0xLtdb4=/ws
+The Dart VM service is listening on http://127.0.0.1:50407/224cnMS9Uzk=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50407/224cnMS9Uzk=/devtools?uri=ws://127.0.0.1:50407/224cnMS9Uzk=/ws
