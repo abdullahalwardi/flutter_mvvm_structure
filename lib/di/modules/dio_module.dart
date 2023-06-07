@@ -59,7 +59,7 @@ Dio dioModule(
               } else {
                 message = e.response?.data['message'] ?? message;
               }
-              Utils.showErrorSnackBar(e.response?.data ?? "حدث خطأ ما");
+              Utils.showErrorSnackBar(message);
       break;
     case DioErrorType.cancel:
       debugPrint(e.message);
