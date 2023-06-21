@@ -1,38 +1,48 @@
-import 'package:app/common_lib.dart';
-import 'package:app/data/client/models/settings/settings.dart';
-import 'package:app/data/shared_preference/serializable_preference.dart';
-import 'package:app/persistent_store.dart';
-import 'package:app/theme/platform_default.dart';
-import 'package:app/provider_shared_preferences.dart';
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final _settingsPreference =
-    Provider((ref) => ProvideSerializablePreference<Settings>(
-          ref.watch(sharedPreferences),
-          key: "settings",
-          fromJson: Settings.fromJson,
-          toJson: (value) => value.toJson(),
-        ));
+import '../../theme/theme_extension.dart';
+import 'object_preference_provider.dart';
+import 'package:app/data/shared_preference/preferences.dart';
 
-class SettingsNotifier extends PersistentStateNotifier<Settings> {
-  SettingsNotifier(ref)
-      : super(const Settings(), preference: ref.read(_settingsPreference));
+part 'settings_provider.freezed.dart';
+part 'settings_provider.g.dart';
 
-  void switchThemeMode(BuildContext context) {
-    state = state.copyWith(
-      themeMode: PlatformDefault.switchTheme(context, state.themeMode),
-    );
-  }
+@freezed
+class AppSettings with _$AppSettings {
+  const AppSettings._();
 
-  void switchLocale() {
-    state = state.copyWith(
-      locale: AppLocalizations.supportedLocales.next(
-        PlatformDefault.locale(state.locale),
-      ),
-    );
-  }
+  const factory AppSettings({
+    @Default(ThemeMode.system) ThemeMode themeMode,
+    @Default(null) String? localeCode,
+  }) = _AppSettings;
+
+  Locale? get locale => localeCode == null ? null : Locale(localeCode!);
+
+  factory AppSettings.fromJson(Map<String, dynamic> json) =>
+      _$AppSettingsFromJson(json);
 }
 
-final settingsProvider = StateNotifierProvider<SettingsNotifier, Settings>(
-  (ref)=> SettingsNotifier(ref),
-);
+@riverpod
+class Settings extends _$Settings with ObjectPreferenceProvider {
+  @override
+  @protected
+  String get key => Preferences.settings;
+
+  @override
+  AppSettings fromJson(Map<String, dynamic> map) => AppSettings.fromJson(map);
+
+  @override
+  Map<String, dynamic> toJson(AppSettings value) => value.toJson();
+
+  @override
+  AppSettings build() => firstBuild(const AppSettings());
+
+  Future<void> toggleThemeMode(BuildContext context) =>
+      update((state) => state.copyWith(
+          themeMode: ThemeX.getOppositeThemeMode(state.themeMode, context)));
+
+  Future<void> setLocale(Locale? locale) =>
+      update((state) => state.copyWith(localeCode: locale?.languageCode));
+}

@@ -1,10 +1,8 @@
 import 'package:app/src/home/home_page.dart';
 import 'package:go_router/go_router.dart';
-import 'package:riverpod/riverpod.dart';
 
 // GoRouter configuration
-final goRouterProvider = Provider<GoRouter>((ref) {
-  return GoRouter(
+final router = GoRouter(
           debugLogDiagnostics: true,
           initialLocation: RoutesDocument.home,
           routes: [
@@ -12,12 +10,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               path: RoutesDocument.home,
               builder: (context, state) => const HomePage(),
             ),
-          
-          
-          
           ],
         );
-});
 
 class RoutesDocument {
   const RoutesDocument._();

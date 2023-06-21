@@ -1,11 +1,9 @@
-import 'package:app/utils/constants/api_document.dart';
+import 'package:app/data/client/http/dio_module.dart';
 import 'package:app/data/client/services/callback.dart';
-import 'package:app/di/modules/dio_module.dart';
+import 'package:app/utils/constants/api_document.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retrofit/retrofit.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 
 part 'auth_service.g.dart';
 
@@ -24,7 +22,6 @@ abstract class AuthBaseService {
 }
 
 final authServiceProvider = Provider<AuthBaseService>((ref) {
-  final dio = ref.watch(dioProvider);
  
-  return AuthBaseService(dio);
+  return AuthBaseService(ref.dio);
 });

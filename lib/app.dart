@@ -1,8 +1,8 @@
 import 'package:app/main.dart';
 import 'package:app/router/app_router.dart';
 import 'package:app/data/providers/settings_provider.dart';
-import 'package:app/theme/platform_default.dart';
-import 'package:app/theme/theme.dart';
+import 'package:app/theme/app_theme.dart';
+import 'package:app/utils/extensions.dart';
 import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -20,20 +20,23 @@ class _AppState extends ConsumerState<App> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = AppTheme();
     final settings = ref.watch(settingsProvider);
-    final router = ref.watch(goRouterProvider);
 
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       scaffoldMessengerKey: Utils.messengerKey,
+      // Locale
+      locale: settings.locale,
+      onGenerateTitle: (context) => context.l10n.appName,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      // Theme
       themeMode: settings.themeMode,
-      theme: getThemeData(ThemeMode.light),
-      darkTheme: getThemeData(ThemeMode.dark),
-      locale: PlatformDefault.locale(settings.locale),
+      darkTheme: theme.buildDarkTheme(),
+      theme: theme.buildLightTheme(),
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: child!,
         breakpoints: [

@@ -1,5 +1,6 @@
 
-import 'package:app/theme/l10n.dart';
+import 'package:app/common_lib.dart';
+import 'package:app/utils/extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:form_validator/form_validator.dart';
 
@@ -9,29 +10,29 @@ class AppFormValidatorLocale extends FormValidatorLocale {
   AppFormValidatorLocale(this.context);
 
   @override
-  String email(String v) => context.l10n.validationEmail;
+  String name() => context.l10n.localeName;
 
   @override
-  String maxLength(String v, int n) => context.l10n.validationMaxLength;
+  String minLength(String v, int n) => context.l10n.validatorMinLength(n);
 
   @override
-  String minLength(String v, int n) => context.l10n.validationMaxLength;
+  String maxLength(String v, int n) => context.l10n.validatorMaxLength(n);
 
   @override
-  String required() => context.l10n.validationRequired;
+  String email(String v) => context.l10n.validatorEmail;
 
   @override
-  String url(String v) => context.l10n.validationUrl;
+  String phoneNumber(String v) => context.l10n.validatorPhoneNumber;
 
   @override
-  String name() => "all";
+  String required() => context.l10n.validatorRequired;
 
   @override
-  String phoneNumber(String v) => context.l10n.validationPhoneNumber;
+  String url(String v) => context.l10n.validatorUrl;
 
   @override
-  String ip(String v) => "";
+  String ip(String v) => throw UnimplementedError();
 
   @override
-  String ipv6(String v) => "";
+  String ipv6(String v) => throw UnimplementedError();
 }

@@ -1,0 +1,74 @@
+{
+  "Get all retrofit": {
+    "scope": "dart",
+    "prefix": "getAllRetrofit",
+    "body": [
+      "@GET(\"/$1/getList\")",
+      "Future<HttpResponse<List<$2>>> getAll();"
+    ]
+  },
+  "Get all pagination": {
+    "scope": "dart",
+    "prefix": "getAllPaginationRetrofit",
+    "body": [
+      "@GET(\"/$1/getList\")",
+      "Future<HttpResponse<Pagination<$2>>> getAll(",
+      "  @Queries() $3 filter,",
+      ");"
+    ]
+  },
+  "Get item retrofit": {
+    "scope": "dart",
+    "prefix": "getItemRetrofit",
+    "body": [
+      "@GET(\"$1/{id}\")",
+      "Future<HttpResponse<$2>> getItem(@Path(\"id\") Id id);"
+    ]
+  },
+  "Create retrofit": {
+    "scope": "dart",
+    "prefix": "createRetrofit",
+    "body": [
+      "@POST(\"/$1/create\")",
+      "Future<HttpResponse<CreatedResponse>> create(",
+      "  @Body() $3 request,",
+      ");"
+    ]
+  },
+  "Delete retrofit": {
+    "scope": "dart",
+    "prefix": "deleteRetrofit",
+    "body": [
+      "@GET(\"/$1/{id}/delete\")",
+      "Future<HttpResponse<DeletedResponse>> delete(@Path(\"id\") Id id);"
+    ]
+  },
+  "Update retrofit": {
+    "scope": "dart",
+    "prefix": "updateRetrofit",
+    "body": [
+      "@POST(\"/$1/{id}/update\")",
+      "Future<HttpResponse<UpdatedResponse>> update(",
+      "  @Path(\"id\") Id id,",
+      "  @Body() $2 request,",
+      ");"
+    ]
+  },
+  "retrofit client": {
+    "scope": "dart",
+    "prefix": "clientRetrofit",
+    "body": [
+      "import '_clients.dart';",
+      "",
+      "part \"$TM_FILENAME_BASE.g.dart\";",
+      "",
+      "@riverpod",
+      "${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} ${TM_FILENAME_BASE/(.+)/${1:/camelcase}/}(${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}Ref ref) => ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(ref.dio);",
+      "",
+      "@RestApi()",
+      "abstract class ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} {",
+      "  factory ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(Dio dio, {String baseUrl}) = _${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/};",
+      "}"
+    ]
+  }
+}

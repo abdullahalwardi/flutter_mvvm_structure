@@ -1,0 +1,20 @@
+{
+  "riverpodRequest": {
+    "scope": "dart",
+    "prefix": "riverpodRequest",
+    "body": [
+      "@riverpod",
+      "class $1 extends _$$1 with AsyncXProvider<$2> {",
+      "  @override",
+      "  Future<AsyncX<$2>> build() => AsyncX.idle();",
+      "",
+      "  @useResult",
+      "  Future<AsyncValue<AsyncX<$2>>> run() =>",
+      "      handle(() {",
+      "        $3",
+      "      });",
+      "}"
+    ],
+    "description": "used with api request for riverpod"
+  }
+}

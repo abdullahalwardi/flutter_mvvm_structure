@@ -1,0 +1,42 @@
+{
+  "frfResponse": {
+    "scope": "dart",
+    "prefix": "frfResponse",
+    "body": [
+      "import '_models.dart';",
+      "",
+      "part '$TM_FILENAME_BASE.freezed.dart';",
+      "part '$TM_FILENAME_BASE.g.dart';",
+      "",
+      "@freezedResponse",
+      "class ${1} with _$${1}{",
+      "  const ${1}._();",
+      "",
+      "  @jsonSerializableResponse",
+      "  const factory ${1}() = _${1};",
+      "",
+      "  factory ${1}.fromJson(Map<String, dynamic> json) => _$${1}FromJson(json);",
+      "}"
+    ],
+    "description": "description"
+  },
+  "frfRequest": {
+    "scope": "dart",
+    "prefix": "frfRequest",
+    "body": [
+      "import '_models.dart';",
+      "",
+      "part '$TM_FILENAME_BASE.freezed.dart';",
+      "part '$TM_FILENAME_BASE.g.dart';",
+      "",
+      "@freezedRequest",
+      "class ${1} with _$${1}{",
+      "  const ${1}._();",
+      "",
+      "  @jsonSerializableRequest",
+      "  const factory ${1}() = _${1};",
+      "}"
+    ],
+    "description": "description"
+  }
+}

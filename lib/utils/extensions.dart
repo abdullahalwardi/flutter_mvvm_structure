@@ -1,9 +1,10 @@
-
-import 'package:app/utils/app_validator.dart';
+import 'package:app/data/client/_clients.dart';
+import 'package:app/l10n/l10n.dart';
 import 'package:app/utils/locale.dart';
-import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
+import 'package:form_validator/form_validator.dart';
 import 'package:intl/intl.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 extension DeviceHeight on BuildContext {
   double get height => MediaQuery.of(this).size.height;
@@ -13,22 +14,19 @@ extension DeviceWidth on BuildContext {
   double get width => MediaQuery.of(this).size.width;
 }
 
-extension ValidationExtension on BuildContext {
-  AppValidationBuilder get validator {
-    return AppValidationBuilder(
-      context: this,
-      locale: AppFormValidatorLocale(this),
+extension ValidatorX on BuildContext {
+  ValidationBuilder get validator {
+    final locale = AppFormValidatorLocale(this);
+    return ValidationBuilder(
       optional: false,
+      requiredMessage: locale.required(),
+      locale: locale,
     );
   }
+}
 
-  AppValidationBuilder get optionalValidator {
-    return AppValidationBuilder(
-      context: this,
-      locale: AppFormValidatorLocale(this),
-      optional: true,
-    );
-  }
+extension FormStateX on GlobalKey<FormState> {
+  bool isNotValid() => !currentState!.validate();
 }
 
 extension DateTimeExtension on DateTime {
@@ -59,12 +57,46 @@ extension ThemeExtension on BuildContext {
   TextTheme get textTheme => theme.textTheme;
 }
 
-extension SnackBarExtension on BuildContext {
-  void showErrorSnackBar(String message) {
-    Utils.showErrorSnackBar(message);
-  }
 
-  void showSuccessSnackBar(String message) {
-    Utils.showSuccessSnackBar(message);
+extension HttpResponseX<T> on Future<HttpResponse<T>> {
+  Future<T> get data => then((value) => value.data);
+}
+
+extension ValueNotifierUpdated<T> on ValueNotifier<T> {
+  void update(T newValue) => value = newValue;
+
+  void updateNullable(T? newValue) {
+    if (newValue != null) value = newValue;
   }
+}
+
+extension on ValidationBuilder {
+  ValidationBuilder iraqiPhoneNumber(BuildContext context) {
+    return add((v) {
+      return RegExp(r"^(0|964|00964|\+964)?7[0-9]{9}$").hasMatch(v!)
+          ? null
+          : context.l10n.validatorPhoneNumber;
+    });
+  }
+}
+
+extension AppLocalizationsExtension on BuildContext {
+  AppLocalizations get l10n => AppLocalizations.of(this)!;
+  String get locale => l10n.localeName;
+}
+
+extension DateTimeX on DateTime {
+  String formatDate([String? locale]) =>
+      DateFormat('yyyy/MM/dd', locale).format(this);
+
+  String formatTime([String? locale]) =>
+      DateFormat('hh:mm a', locale).format(this);
+
+  String formatDOW([String? locale]) => DateFormat('EEEE', locale).format(this);
+
+  String format([String? locale]) =>
+      DateFormat('yyyy/MM/dd hh:mm', locale).format(this);
+
+  String formatTimeago([String? locale]) =>
+      timeago.format(this, locale: locale).toUpperCase();
 }

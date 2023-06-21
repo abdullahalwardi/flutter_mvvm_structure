@@ -1,26 +1,23 @@
-import 'package:app/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
-class FilledLoadingButton extends StatefulWidget {
-  const FilledLoadingButton(
-      {super.key, required this.onPressed, this.isLoading = false, required this.child});
+class FilledLoadingButton extends StatelessWidget {
+  const FilledLoadingButton({
+    super.key,
+    required this.isLoading,
+    required this.child,
+    required this.onPressed,
+  });
 
-  final VoidCallback? onPressed;
   final bool isLoading;
   final Widget child;
 
-  @override
-  State<FilledLoadingButton> createState() => _FilledLoadingButtonState();
-}
+  final VoidCallback onPressed;
 
-class _FilledLoadingButtonState extends State<FilledLoadingButton> {
   @override
   Widget build(BuildContext context) {
     return FilledButton(
-        onPressed: widget.onPressed,
-        child: widget.isLoading
-            ?  CircularProgressIndicator(color: context.colorScheme.onPrimary,)
-            : widget.child,
-            );
+      onPressed: isLoading ? null : onPressed,
+      child: isLoading ? const CircularProgressIndicator() : child,
+    );
   }
 }

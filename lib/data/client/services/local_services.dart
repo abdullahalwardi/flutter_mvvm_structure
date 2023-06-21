@@ -1,5 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:app/data/client/services/callback.dart';
+import 'package:app/utils/extensions.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -55,4 +61,36 @@ Future<void> openSMSMessage(String phoneNumber, {String? message}) async {
   var uri = 'sms:$phoneNumber';
   if (message != null) uri += "?body=$message";
   if (await canLaunchUrlString(uri)) await launchUrlString(uri);
+}
+
+Future<CroppedFile?> cropImage(BuildContext context) async {
+  final result = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+  final theme = Theme.of(context);
+  return await ImageCropper().cropImage(
+    sourcePath: result!.path,
+    aspectRatioPresets: [
+      CropAspectRatioPreset.original,
+      CropAspectRatioPreset.square,
+      CropAspectRatioPreset.ratio3x2,
+      CropAspectRatioPreset.ratio4x3,
+      CropAspectRatioPreset.ratio16x9
+    ],
+    uiSettings: [
+      AndroidUiSettings(
+        toolbarTitle: context.l10n.crop,
+        statusBarColor: theme.colorScheme.primary,
+        toolbarColor: theme.colorScheme.primary,
+        cropGridColor: theme.colorScheme.outline,
+        backgroundColor: theme.colorScheme.background,
+        activeControlsWidgetColor: theme.colorScheme.primary,
+        toolbarWidgetColor: theme.colorScheme.onPrimary,
+        initAspectRatio: CropAspectRatioPreset.original,
+        lockAspectRatio: false,
+      ),
+      IOSUiSettings(
+        title: context.l10n.crop,
+      )
+    ],
+  );
 }

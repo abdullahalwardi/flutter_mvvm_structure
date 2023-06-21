@@ -1,43 +1,29 @@
-import 'package:app/data/client/models/settings/settings.dart';
-import 'package:app/data/shared_preference/shared_preference.dart';
-import 'package:app/persistent_store.dart';
-import 'package:app/provider_shared_preferences.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:app/data/client/models/authentication_model.dart';
+import 'package:app/data/shared_preference/preferences.dart';
+import 'package:flutter/material.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'object_preference_provider.dart';
 
-final authPreference =
-    Provider((ref) => ProvideSerializablePreference<dynamic>(
-          ref.watch(sharedPreferences),
-          key: "authentication",
-          fromJson: Settings.fromJson,
-          toJson: (value) => value.toJson(),
-        ));
+part 'authentication_provider.g.dart';
 
-final authenticationProvider =
-    StateNotifierProvider<AuthenticationNotifier, dynamic>(
-  AuthenticationNotifier.new,
-);
+@riverpod
+class Authentication extends _$Authentication
+    with NullableObjectPreferenceProvider {
+  @override
+  @protected
+  String get key => Preferences.authentication;
 
-class AuthenticationNotifier extends PersistentStateNotifier<dynamic> {
-  AuthenticationNotifier(ref)
-      : super(const Settings(), preference: ref.read(authPreference));
+  @override
+  AuthenticationModel? build() => firstBuild();
 
-  void login(dynamic authentication) {
-    state = authentication;
-  }
+  @override
+  AuthenticationModel? fromJson(Map<String, dynamic>? map) =>
+      map == null ? null : AuthenticationModel.fromJson(map);
 
-  bool isSignedIn() {
-    return state.token != null;
-  }
+  @override
+  Map<String, dynamic>? toJson(AuthenticationModel? value) => value?.toJson();
 
-  bool isNotSignedIn() {
-    return state.token == null;
-  }
-
-  get token => state.token;
-
-  void logout() {
-    state = state.copyWith(
-      token: null,
-    );
+  Future<void> logout() async {
+    await clear();
   }
 }

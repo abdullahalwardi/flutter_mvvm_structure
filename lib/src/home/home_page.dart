@@ -2,7 +2,6 @@ import 'package:app/common_lib.dart';
 import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -13,7 +12,7 @@ class HomePage extends ConsumerStatefulWidget {
 
 class _HomePageState extends ConsumerState<HomePage> {
   void _switchThemeMode() {
-    ref.read(settingsProvider.notifier).switchThemeMode(context);
+    ref.read(settingsProvider.notifier).toggleThemeMode(context);
   }
 
   @override
@@ -28,10 +27,10 @@ class _HomePageState extends ConsumerState<HomePage> {
             Text(context.l10n.appName),
             Text(
               settings.themeMode.localize(context),
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             TextButton.icon(
-              onPressed: ref.read(settingsProvider.notifier).switchLocale,
+              onPressed: ()=> Future.sync(()=>ref.read(settingsProvider.notifier).setLocale(settings.locale?.languageCode == 'en' ? const Locale('es') : const Locale('en'))),
               icon: const Icon(Icons.language),
               label: Text(context.l10n.localeName),
             )

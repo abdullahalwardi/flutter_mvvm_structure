@@ -1,0 +1,20 @@
+{
+  "repository": {
+    "scope": "dart",
+    "prefix": "repository",
+    "body": [
+      "import '_repositories.dart';",
+      "",
+      "part \"$TM_FILENAME_BASE.g.dart\";",
+      "",
+      "@riverpod",
+      "${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} ${TM_FILENAME_BASE/(.+)/${1:/camelcase}/}(${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}Ref ref) => ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(ref.read($2));",
+      "",
+      "class ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} {",
+      "  const ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(this._client);",
+      "",
+      "  final $3 _client;",
+      "}"
+    ]
+  }
+}

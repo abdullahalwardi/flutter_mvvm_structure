@@ -1,5 +1,4 @@
 
-import 'package:app/theme/l10n.dart';
 import 'package:app/utils/extensions.dart';
 import 'package:flutter/material.dart';
 

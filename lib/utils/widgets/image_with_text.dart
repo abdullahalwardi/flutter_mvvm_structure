@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:app/common_lib.dart';
+import 'package:flutter/material.dart';
 
 class ImageWithText extends StatelessWidget {
   const ImageWithText(

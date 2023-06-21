@@ -1,3 +1,30 @@
 {
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+      },
+      "search.exclude": {
+        "build": true,
+        ".dart_tool": true,
+        ".idea": true,
+        "linux": true,
+        "windows": true
+      },
+      "explorer.fileNesting.enabled": true,
+      "editor.stickyScroll.enabled": true,
+      "explorer.fileNesting.expand": false,
+      "explorer.fileNesting.patterns": {
+        "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock",
+        "analysis_options.yaml": " all_lint_rules.yaml",
+        ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+        "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+        "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).gr.dart",
+        "mason.yaml": "mason-lock.json"
+      },
+      "cSpell.words": [
+        "ekyc",
+        "horiz"
+      ],
     "cmake.sourceDirectory": "${workspaceFolder}/linux"
 }

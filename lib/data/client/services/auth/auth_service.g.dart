@@ -21,7 +21,8 @@ class _AuthBaseService implements AuthBaseService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<DefaultResponse<dynamic>>> login({required body}) async {
+  Future<HttpResponse<DefaultResponse<dynamic>>> login(
+      {required dynamic body}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

@@ -13,6 +13,7 @@ class PhoneNumber {
     return countryCode + number;
   }
 
+  @override
   String toString() =>
       'PhoneNumber(countryISOCode: $countryISOCode, countryCode: $countryCode, number: $number)';
 }
