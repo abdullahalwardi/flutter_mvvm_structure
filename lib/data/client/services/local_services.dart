@@ -94,3 +94,10 @@ Future<CroppedFile?> cropImage(BuildContext context) async {
     ],
   );
 }
+
+String splitMoney(double value) {
+  return value.toStringAsFixed(3).splitMapJoin(
+        RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+        onMatch: (m) => '${m[1]},',
+      );
+}

@@ -4,5 +4,5 @@ export 'package:retrofit/retrofit.dart';
 // ignore: invalid_export_of_internal_element
 export 'package:riverpod_annotation/riverpod_annotation.dart';
 
-export 'package:app/utils/annotations/annotations.dart';
+export 'package:app/utils/annotations/annotations_lib.dart';
 export './http/http_lib.dart';

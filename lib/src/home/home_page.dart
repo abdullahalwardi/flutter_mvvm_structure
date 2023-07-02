@@ -3,11 +3,11 @@ import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends ConsumerStatefulWidget {
+class HomePage extends StatefulHookConsumerWidget {
   const HomePage({super.key});
 
   @override
-  ConsumerState<HomePage> createState() => _HomePageState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _HomePageState();
 }
 
 class _HomePageState extends ConsumerState<HomePage> {
@@ -30,7 +30,11 @@ class _HomePageState extends ConsumerState<HomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             TextButton.icon(
-              onPressed: ()=> Future.sync(()=>ref.read(settingsProvider.notifier).setLocale(settings.locale?.languageCode == 'en' ? const Locale('es') : const Locale('en'))),
+              onPressed: () => Future.sync(() => ref
+                  .read(settingsProvider.notifier)
+                  .setLocale(settings.locale?.languageCode == 'en'
+                      ? const Locale('es')
+                      : const Locale('en'))),
               icon: const Icon(Icons.language),
               label: Text(context.l10n.localeName),
             )
