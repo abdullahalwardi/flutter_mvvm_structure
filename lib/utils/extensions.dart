@@ -29,17 +29,7 @@ extension FormStateX on GlobalKey<FormState> {
   bool isNotValid() => !currentState!.validate();
 }
 
-extension DateTimeExtension on DateTime {
-  String format() {
-    var inputFormat = DateFormat('MM/dd/yyyy HH:mm');
-    return inputFormat.format(this);
-  }
 
-  String formatDate() {
-    var inputFormat = DateFormat('MM/dd/yyyy');
-    return inputFormat.format(this);
-  }
-}
 
 extension NullableDateTimeExtension on DateTime? {
   String formatDate() {
@@ -99,4 +89,13 @@ extension DateTimeX on DateTime {
 
   String formatTimeago([String? locale]) =>
       timeago.format(this, locale: locale).toUpperCase();
+}
+
+extension AdditionalColors on ColorScheme {
+  Color get primaryText => const Color(0xff035EC9);
+  Color get secondaryText => const Color(0xFF7C7C7C);
+  Color get defaultText => const Color(0xff202020);
+  Color get otherText => const Color(0xffFD7E14);
+  Color get successText => const Color(0xff198754);
+  Color get dangerColor => const Color(0xffDC3747);
 }
