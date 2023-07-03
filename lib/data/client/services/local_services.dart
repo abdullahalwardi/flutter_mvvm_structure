@@ -101,3 +101,11 @@ String splitMoney(double value) {
         onMatch: (m) => '${m[1]},',
       );
 }
+
+List<DateTime> getDates(DateTime fromDate, DateTime toDate) {
+  List<DateTime> dateList = [];
+  for (int i = 0; i <= toDate.difference(fromDate).inDays; i++) {
+    dateList.add(fromDate.add(Duration(days: i)));
+  }
+  return dateList;
+}
