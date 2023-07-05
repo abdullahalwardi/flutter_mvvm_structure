@@ -19,4 +19,5 @@ final router = GoRouter(
 class RoutesDocument {
   const RoutesDocument._();
   static const String home = '/home';
+  static const String login = '/login';
 }

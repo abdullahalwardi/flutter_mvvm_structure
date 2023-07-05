@@ -1,5 +1,6 @@
 import 'package:app/data/models/authentication_model.dart';
 import 'package:app/data/shared_preference/preferences.dart';
+import 'package:app/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'object_preference_provider.dart';
@@ -25,6 +26,8 @@ class Authentication extends _$Authentication
 
   Future<void> logout() async {
     await clear();
+    // ignore: avoid_manual_providers_as_generated_provider_dependency
+    ref.read(routerProvider).pushReplacement(RoutesDocument.login);
   }
 
   bool isSignedIn() => build()?.token != null;
