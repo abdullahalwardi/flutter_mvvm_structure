@@ -1,6 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
-
-import 'package:app/data/client/services/callback.dart';
+import 'package:app/data/services/clients/callback.dart';
 import 'package:app/utils/extensions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -109,3 +107,10 @@ List<DateTime> getDates(DateTime fromDate, DateTime toDate) {
   }
   return dateList;
 }
+
+ double calculateProgress(double value, double end) {
+    if(value == 0) return 0;
+
+    final x = value * 100;
+    return x / end;
+  }

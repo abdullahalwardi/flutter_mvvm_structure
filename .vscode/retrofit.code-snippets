@@ -4,7 +4,7 @@
     "prefix": "getAllRetrofit",
     "body": [
       "@GET(\"/$1/getList\")",
-      "Future<HttpResponse<List<$2>>> getAll();"
+      "FutureApiResponse<List<$2>> getAll();"
     ]
   },
   "Get all pagination": {
@@ -12,7 +12,7 @@
     "prefix": "getAllPaginationRetrofit",
     "body": [
       "@GET(\"/$1/getList\")",
-      "Future<HttpResponse<Pagination<$2>>> getAll(",
+      "FuturePaginatedResponse<$2> getAll(",
       "  @Queries() $3 filter,",
       ");"
     ]
@@ -22,7 +22,7 @@
     "prefix": "getItemRetrofit",
     "body": [
       "@GET(\"$1/{id}\")",
-      "Future<HttpResponse<$2>> getItem(@Path(\"id\") Id id);"
+      "FutureApiResponse<$2> getItem(@Path(\"id\") Id id);"
     ]
   },
   "Create retrofit": {
@@ -30,7 +30,7 @@
     "prefix": "createRetrofit",
     "body": [
       "@POST(\"/$1/create\")",
-      "Future<HttpResponse<CreatedResponse>> create(",
+      "FutureApiResponse<CreatedResponse> create(",
       "  @Body() $3 request,",
       ");"
     ]
@@ -39,16 +39,16 @@
     "scope": "dart",
     "prefix": "deleteRetrofit",
     "body": [
-      "@GET(\"/$1/{id}/delete\")",
-      "Future<HttpResponse<DeletedResponse>> delete(@Path(\"id\") Id id);"
+      "@DELETE(\"/$1/{id}/delete\")",
+      "FutureApiResponse<DeletedResponse> delete(@Path(\"id\") Id id);"
     ]
   },
   "Update retrofit": {
     "scope": "dart",
     "prefix": "updateRetrofit",
     "body": [
-      "@POST(\"/$1/{id}/update\")",
-      "Future<HttpResponse<UpdatedResponse>> update(",
+      "@PUT(\"/$1/{id}/update\")",
+      "FutureApiResponse<UpdatedResponse> update(",
       "  @Path(\"id\") Id id,",
       "  @Body() $2 request,",
       ");"

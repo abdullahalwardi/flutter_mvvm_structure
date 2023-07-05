@@ -349,3 +349,690 @@ The Dart VM service is listening on http://127.0.0.1:50449/EwN218TCslw=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50449/EwN218TCslw=/devtools?uri=ws://127.0.0.1:50449/EwN218TCslw=/ws
 The Dart VM service is listening on http://127.0.0.1:52424/lcu2ezp8Us0=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:52424/lcu2ezp8Us0=/devtools?uri=ws://127.0.0.1:52424/lcu2ezp8Us0=/ws
+The Dart VM service is listening on http://127.0.0.1:63219/CVwaEEm_srU=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:63219/CVwaEEm_srU=/devtools?uri=ws://127.0.0.1:63219/CVwaEEm_srU=/ws
+The Dart VM service is listening on http://127.0.0.1:60145/4hEnoSK8jZg=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:60145/4hEnoSK8jZg=/devtools?uri=ws://127.0.0.1:60145/4hEnoSK8jZg=/ws
+The Dart VM service is listening on http://127.0.0.1:60826/zrhnFZMakVs=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:60826/zrhnFZMakVs=/devtools?uri=ws://127.0.0.1:60826/zrhnFZMakVs=/ws
+The Dart VM service is listening on http://127.0.0.1:57435/oEw5hwh0Sh8=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:57435/oEw5hwh0Sh8=/devtools?uri=ws://127.0.0.1:57435/oEw5hwh0Sh8=/ws
+The Dart VM service is listening on http://127.0.0.1:57879/Ghpo_f7O4oc=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:57879/Ghpo_f7O4oc=/devtools?uri=ws://127.0.0.1:57879/Ghpo_f7O4oc=/ws
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2023-07-05T10:19:02.661918
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #0      AnalysisSessionImpl._checkConsistency (package:analyzer/src/dart/analysis/session.dart:135:7)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:121:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:286:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:134:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #4      _ChangeBuilderImpl.addDartFileEdit (package:custom_lint_core/src/change_reporter.dart:116:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #5      StatefulToStatelessProvider.run.<anonymous closure> (package:riverpod_lint/src/assists/stateful_to_stateless_provider.dart:33:21)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #6      _RiverpodAstRegistryVisitor._runSubscriptions (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:958:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #7      _RiverpodAstRegistryVisitor.visitStatefulProviderDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:915:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #8      StatefulProviderDeclaration.accept (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:203:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #9      ResolvedRiverpodLibraryResult.visitChildren (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:69:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #10     _RiverpodAstRegistryVisitor.visitResolvedRiverpodUnit (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:870:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #11     ResolvedRiverpodLibraryResult.accept (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:53:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #12     RiverpodAstRegistry.run (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:517:10)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #13     _ParseRiverpod._setupRiverpod.<anonymous closure> (package:riverpod_lint/src/riverpod_custom_lint.dart:92:47)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #14     _rootRun (dart:async/zone.dart:1399:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #15     _CustomZone.run (dart:async/zone.dart:1301:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #16     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #17     runPostRunCallbacks (package:custom_lint_core/src/plugin_base.dart:16:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #18     _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:463:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #19     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:564:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 #20     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.661918 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.661918
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2023-07-05T10:19:02.663025
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #0      AnalysisSessionImpl._checkConsistency (package:analyzer/src/dart/analysis/session.dart:135:7)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:121:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:286:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:134:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #4      _ChangeBuilderImpl.addDartFileEdit (package:custom_lint_core/src/change_reporter.dart:116:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #5      StatefulToStatelessProvider.run.<anonymous closure> (package:riverpod_lint/src/assists/stateful_to_stateless_provider.dart:33:21)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #6      _RiverpodAstRegistryVisitor._runSubscriptions (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:958:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #7      _RiverpodAstRegistryVisitor.visitStatefulProviderDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:915:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #8      StatefulProviderDeclaration.accept (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:203:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #9      ResolvedRiverpodLibraryResult.visitChildren (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:69:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #10     _RiverpodAstRegistryVisitor.visitResolvedRiverpodUnit (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:870:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #11     ResolvedRiverpodLibraryResult.accept (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:53:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #12     RiverpodAstRegistry.run (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:517:10)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #13     _ParseRiverpod._setupRiverpod.<anonymous closure> (package:riverpod_lint/src/riverpod_custom_lint.dart:92:47)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #14     _rootRun (dart:async/zone.dart:1399:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #15     _CustomZone.run (dart:async/zone.dart:1301:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #16     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #17     runPostRunCallbacks (package:custom_lint_core/src/plugin_base.dart:16:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #18     _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:463:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #19     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:564:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 #20     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.663025 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663025
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2023-07-05T10:19:02.663789
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #0      AnalysisSessionImpl._checkConsistency (package:analyzer/src/dart/analysis/session.dart:135:7)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:121:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:286:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:134:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #4      _ChangeBuilderImpl.addDartFileEdit (package:custom_lint_core/src/change_reporter.dart:116:33)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #5      StatefulToStatelessProvider.run.<anonymous closure> (package:riverpod_lint/src/assists/stateful_to_stateless_provider.dart:33:21)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #6      _RiverpodAstRegistryVisitor._runSubscriptions (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:958:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #7      _RiverpodAstRegistryVisitor.visitStatefulProviderDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:915:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #8      StatefulProviderDeclaration.accept (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:203:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #9      ResolvedRiverpodLibraryResult.visitChildren (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:69:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #10     _RiverpodAstRegistryVisitor.visitResolvedRiverpodUnit (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:870:12)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #11     ResolvedRiverpodLibraryResult.accept (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:53:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #12     RiverpodAstRegistry.run (package:riverpod_analyzer_utils/src/riverpod_ast/visitor.dart:517:10)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #13     _ParseRiverpod._setupRiverpod.<anonymous closure> (package:riverpod_lint/src/riverpod_custom_lint.dart:92:47)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #14     _rootRun (dart:async/zone.dart:1399:13)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #15     _CustomZone.run (dart:async/zone.dart:1301:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #16     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1233:23)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #17     runPostRunCallbacks (package:custom_lint_core/src/plugin_base.dart:16:19)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #18     _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:463:5)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #19     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:564:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 #20     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+[WrapWithConsumer] 2023-07-05T10:19:02.663789 <asynchronous suspension>
+[WrapWithConsumer] 2023-07-05T10:19:02.663789
+The Dart VM service is listening on http://127.0.0.1:59169/xeDNjgWun5Q=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:59169/xeDNjgWun5Q=/devtools?uri=ws://127.0.0.1:59169/xeDNjgWun5Q=/ws
+The Dart VM service is listening on http://127.0.0.1:59287/6dnfs62Ncow=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:59287/6dnfs62Ncow=/devtools?uri=ws://127.0.0.1:59287/6dnfs62Ncow=/ws
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/services/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:PathNotFoundException(path=/Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/client/clients/auth/auth_service.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:146:18)
+#2      FileSource.contentsFromFile (package:analyzer/src/source/source_resource.dart:64:14)
+#3      FileSource.contents (package:analyzer/src/source/source_resource.dart:51:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:34:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:823:25)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:855:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:776:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:7)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:211:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:141:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:518:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:136:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:353:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:267:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:261:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:238:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:60831/Id68R7JhSw8=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:60831/Id68R7JhSw8=/devtools?uri=ws://127.0.0.1:60831/Id68R7JhSw8=/ws
+The Dart VM service is listening on http://127.0.0.1:60896/E4tLqEuwDbk=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:60896/E4tLqEuwDbk=/devtools?uri=ws://127.0.0.1:60896/E4tLqEuwDbk=/ws

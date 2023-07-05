@@ -1,4 +1,4 @@
-import 'package:app/data/client/_clients.dart';
+import 'package:app/data/services/clients/_clients.dart';
 import 'package:app/l10n/l10n.dart';
 import 'package:app/utils/locale.dart';
 import 'package:flutter/material.dart';

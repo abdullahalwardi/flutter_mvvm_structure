@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:app/data/client/_clients.dart';
+import 'package:app/data/services/clients/_clients.dart';
 import 'package:app/data/providers/authentication_provider.dart';
 import 'package:app/utils/constants/api_document.dart';
-import 'package:app/data/client/interceptors/authenticator.dart';
+import 'package:app/data/services/interceptors/authenticator.dart';
 import 'package:app/router/app_router.dart';
 import 'package:app/utils/snackbar.dart';
 import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
@@ -103,14 +103,16 @@ Dio dio(
             "message": response.statusMessage,
             "statusCode": response.statusCode
           };
-        } else if (data is Map<String, dynamic> &&
-            (data['data'] == null ||
-                data['message'] == null ||
-                data['statusCode'] == null)) {
-          data['data'] ??= {}; // Set result to an empty object if it's null
-          data["message"] ??= response.statusMessage;
-          data["statusCode"] ??= response.statusCode;
-        }else if (response.data is String) {
+        } 
+        // else if (data is Map<String, dynamic> &&
+        //     (data['data'] == null ||
+        //         data['message'] == null ||
+        //         data['statusCode'] == null)) {
+        //   data['data'] ??= {}; // Set result to an empty object if it's null
+        //   data["message"] ??= response.statusMessage;
+        //   data["statusCode"] ??= response.statusCode;
+        // }
+        else if (response.data is String) {
             data = {
               "data": {},
               "message": response.data,

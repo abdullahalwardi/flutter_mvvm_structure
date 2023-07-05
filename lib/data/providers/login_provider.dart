@@ -1,15 +1,25 @@
-import 'package:app/data/client/services/auth/auth_service.dart';
-import 'package:app/data/client/services/callback.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:app/data/models/authentication_model.dart';
+import 'package:app/data/providers/authentication_provider.dart';
+import 'package:app/data/services/clients/auth_client.dart';
+import 'package:riverpod_state/riverpod_state.dart';
 
-final loginProvider = FutureProvider.autoDispose<ApiResponse<dynamic>>(
-  (ref) async {
-    final loginRequest = ref.watch(loginRequestStateProvider);
-    final authService = ref.read(authServiceProvider);
-    return await authService.login(body: loginRequest);
-  },
-);
+import '../services/clients/_clients.dart';
 
-final loginRequestStateProvider = StateProvider.autoDispose<dynamic>(
-    (ref) => "");
+part 'login_provider.g.dart';
 
+@riverpod
+class Login extends _$Login with AsyncXNotifierMixin<AuthenticationModel> {
+  @override
+  BuildXCallback<AuthenticationModel> build() => idle();
+
+  @useResult
+  RunXCallback<AuthenticationModel> run(dynamic data) => handle(() async{
+    final response = await ref.read(authClientProvider).login(data);
+    final result = response.data;
+    await ref
+            .read(authenticationProvider.notifier)
+            .update((state) => result);
+        return result;
+  });
+
+}

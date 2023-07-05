@@ -1,4 +1,4 @@
-import 'package:app/data/client/models/authentication_model.dart';
+import 'package:app/data/models/authentication_model.dart';
 import 'package:app/data/shared_preference/preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -26,4 +26,6 @@ class Authentication extends _$Authentication
   Future<void> logout() async {
     await clear();
   }
+
+  bool isSignedIn() => build()?.token != null;
 }
