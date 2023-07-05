@@ -3,7 +3,7 @@
     "scope": "dart",
     "prefix": "frfResponse",
     "body": [
-      "import '../_models.dart';",
+      "import './_models.dart';",
       "",
       "part '$TM_FILENAME_BASE.freezed.dart';",
       "part '$TM_FILENAME_BASE.g.dart';",
@@ -24,7 +24,7 @@
     "scope": "dart",
     "prefix": "frfRequest",
     "body": [
-      "import '../_models.dart';",
+      "import './_models.dart';",
       "",
       "part '$TM_FILENAME_BASE.freezed.dart';",
       "part '$TM_FILENAME_BASE.g.dart';",
