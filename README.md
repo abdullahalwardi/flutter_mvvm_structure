@@ -5,7 +5,7 @@ A flutter project structure with riverpod, freezed, goRouter.
 
 Things to do when you setup your project with riverpod structure:
 
-1- change host name for deeplinking from ../android/app/src/main/Android.Manifest.xml for android, and search for (<!-- Deep linking -->),
+1- After replacing the Manifest Make sure of changing android:label, then change host name for deeplinking from ../android/app/src/main/Android.Manifest.xml for android, and search for (<!-- Deep linking -->),
 then change the host name in http and https.
 and same for ios from ..ios/Runner/info.plist, and search for flutterbooksample.com, then change the name to your host name.
 
