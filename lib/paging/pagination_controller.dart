@@ -1,11 +1,11 @@
 import 'dart:developer';
 
+import 'package:app/data/models/_models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:app/data/models/pagination.dart';
 
-typedef PageChanged<T> = Future<Pagination<T>> Function(int pageKey);
+typedef PageChanged<T> = Future<PaginatedResponse<T>> Function(int pageKey);
 
 class _PagingControllerHookCreator {
   const _PagingControllerHookCreator();
@@ -63,12 +63,12 @@ extension PagingControllerX<ItemType> on PagingController<int, ItemType> {
       try {
         final page = await callback(pageKey);
 
-        final isLastPage = page.items.length < perPage;
+        final isLastPage = page.result.length < perPage;
         if (isLastPage) {
-          appendLastPage(page.items);
+          appendLastPage(page.result);
         } else {
           final nextPageKey = pageKey + 1;
-          appendPage(page.items, nextPageKey);
+          appendPage(page.result, nextPageKey);
         }
       } catch (e, stackTrace) {
         log(toString(), error: error, stackTrace: stackTrace);
