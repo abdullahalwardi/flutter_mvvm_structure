@@ -1,5 +1,5 @@
 # riverpod_structure
-A flutter project structure with riverpod, freezed, goRouter.
+A flutter project structure with riverpod, shared preferences, retrofit, goRouter.
 
 ## Project Setup
 
