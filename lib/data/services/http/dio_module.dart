@@ -47,8 +47,8 @@ Dio dio(
                     .replaceAll("\n", "");
               } else if (e.response?.data is String) {
                 message = e.response?.data;
-              } else {
-                message = e.response?.data['message'] ?? message;
+              } else if (e.response?.data['message'] != null) {
+                message = e.response?.data['message'];
               }
               Utils.showErrorSnackBar(message);
       break;
