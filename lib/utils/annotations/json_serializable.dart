@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// Api field rename
-const filedRename = FieldRename.snake;
+const filedRename = FieldRename.none;
 
 /// Api any model
 const jsonSerializable = JsonSerializable(
