@@ -1,0 +1,4 @@
+class Assets {
+  Assets._();
+  
+}
