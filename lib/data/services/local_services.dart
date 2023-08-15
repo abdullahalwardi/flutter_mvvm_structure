@@ -114,3 +114,14 @@ List<DateTime> getDates(DateTime fromDate, DateTime toDate) {
     final x = value * 100;
     return x / end;
   }
+
+  int getMonthsDifference(DateTime startDate, DateTime endDate) {
+    int months = (endDate.year - startDate.year) * 12 + endDate.month - startDate.month;
+    
+    // Check if there are any remaining days in the last month
+    if (endDate.day >= startDate.day) {
+      months += 1;
+    }
+
+    return months;
+  }
