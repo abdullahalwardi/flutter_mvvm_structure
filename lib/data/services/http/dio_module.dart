@@ -30,7 +30,6 @@ Dio dio(
       onError: (e, handler) async {
         if (e.response?.statusCode == 401) {
           ref.read(authenticationProvider.notifier).logout();
-          router.pushReplacement(RoutesDocument.home);
         }
           switch (e.type) {
     case DioErrorType.badCertificate:
