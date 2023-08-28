@@ -1126,3 +1126,19 @@ at:
 #1      Future.any.onValue (dart:async/future.dart:615:5)
 <asynchronous suspension>
 
+The Dart VM service is listening on http://127.0.0.1:55149/o6fWA31jCow=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:55149/o6fWA31jCow=/devtools?uri=ws://127.0.0.1:55149/o6fWA31jCow=/ws
+[custom_lint] 2023-08-28T16:25:01.801732 /Users/abdullahalwardi/.pub-cache/hosted/pub.dev/watcher-1.0.2/lib/src/constructable_file_system_event.dart:7:57: Error: The class 'FileSystemEvent' can't be extended, implemented, or mixed in outside of its library because it's a sealed class.
+[custom_lint] 2023-08-28T16:25:01.801732 abstract class _ConstructableFileSystemEvent implements FileSystemEvent {
+[custom_lint] 2023-08-28T16:25:01.801732                                                         ^
+[custom_lint] 2023-08-28T16:25:01.801732
+[custom_lint] 2023-08-28T16:25:01.801732
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:227:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:615:5)
+<asynchronous suspension>
+
