@@ -27,7 +27,7 @@ class Authentication extends _$Authentication
   Future<void> logout() async {
     await clear();
     // ignore: avoid_manual_providers_as_generated_provider_dependency
-    ref.read(routerProvider).pushReplacement(RoutesDocument.login);
+    ref.read(routerProvider).go(RoutesDocument.login);
   }
 
   bool isSignedIn() => build()?.token != null;
