@@ -3,9 +3,9 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
 class PhoneNumberFormField extends StatelessWidget {
-  const PhoneNumberFormField({super.key, required this.controller, required this.onChanged});
+  const PhoneNumberFormField({super.key, required this.controller, required this.onChanged, required this.onCountryCodeChanged});
 
-  final ValueChanged onChanged;
+  final ValueChanged onChanged, onCountryCodeChanged;
   final TextEditingController controller;
 
   @override
@@ -13,9 +13,9 @@ class PhoneNumberFormField extends StatelessWidget {
     return CustomTextFormField(
       controller: controller,
       hintText: "77xxxxxxxxx",
-      onChanged: (value) {},
+      onChanged: onChanged,
       prefixIcon: CountryCodePicker(
-        onChanged: onChanged,
+        onChanged: onCountryCodeChanged,
         initialSelection: "IQ",
       ),
       validator: context.validator.phone().required().build(),
