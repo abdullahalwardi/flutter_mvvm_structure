@@ -1,3 +1,4 @@
+import 'package:app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,7 @@ class AppTheme {
       inputDecorationTheme: _buildInputDecorationTheme(brightness),
       colorScheme: _buildColorScheme(brightness),
       filledButtonTheme: _buildFilledButtonTheme(brightness),
+      outlinedButtonTheme: _buildOutlinedButtonTheme(brightness),
       textButtonTheme: _buildTextButtonTheme(brightness),
     );
 
@@ -89,6 +91,17 @@ class AppTheme {
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4),
+        ),
+      ),
+    );
+  }
+
+  OutlinedButtonThemeData _buildOutlinedButtonTheme(Brightness brightness) {
+    return OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(BorderSize.extraSmall),
         ),
       ),
     );
