@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'package:app/data/services/clients/_clients.dart';
+
 import 'package:app/data/providers/authentication_provider.dart';
-import 'package:app/utils/constants/api_document.dart';
+import 'package:app/data/services/clients/_clients.dart';
 import 'package:app/data/services/interceptors/authenticator.dart';
-import 'package:app/router/app_router.dart';
+import 'package:app/utils/constants/api_document.dart';
 import 'package:app/utils/snackbar.dart';
 import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 import 'package:flutter/foundation.dart';

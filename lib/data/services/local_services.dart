@@ -94,7 +94,7 @@ Future<CroppedFile?> cropImage(BuildContext context) async {
 }
 
 String splitMoney(double value) {
-  return value.toStringAsFixed(3).splitMapJoin(
+  return value.toStringAsFixed(0).splitMapJoin(
         RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
         onMatch: (m) => '${m[1]},',
       );
@@ -125,3 +125,19 @@ List<DateTime> getDates(DateTime fromDate, DateTime toDate) {
 
     return months;
   }
+
+  /// FNV-1a 64bit hash algorithm optimized for Dart Strings
+int fastHash(String string) {
+  var hash = 0xcbf29ce484222325;
+
+  var i = 0;
+  while (i < string.length) {
+    final codeUnit = string.codeUnitAt(i++);
+    hash ^= codeUnit >> 8;
+    hash *= 0x100000001b3;
+    hash ^= codeUnit & 0xFF;
+    hash *= 0x100000001b3;
+  }
+
+  return hash;
+}
