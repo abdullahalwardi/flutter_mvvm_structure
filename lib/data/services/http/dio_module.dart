@@ -32,10 +32,10 @@ Dio dio(
           ref.read(authenticationProvider.notifier).logout();
         }
           switch (e.type) {
-    case DioErrorType.badCertificate:
+    case DioExceptionType.badCertificate:
       Utils.showErrorSnackBar("حدث خطأ ما");
       break;
-    case DioErrorType.badResponse:
+    case DioExceptionType.badResponse:
       debugPrint(e.error.toString());
               String message = "حدث خطأ ما";
               if (e.error is FormatException) {
@@ -51,16 +51,16 @@ Dio dio(
               }
               Utils.showErrorSnackBar(message);
       break;
-    case DioErrorType.cancel:
+    case DioExceptionType.cancel:
       debugPrint(e.message);
       break;
-    case DioErrorType.connectionError:
-    case DioErrorType.connectionTimeout:
-    case DioErrorType.receiveTimeout:
-    case DioErrorType.sendTimeout:
+    case DioExceptionType.connectionError:
+    case DioExceptionType.connectionTimeout:
+    case DioExceptionType.receiveTimeout:
+    case DioExceptionType.sendTimeout:
       Utils.showErrorSnackBar("حدث خطأ في الاتصال");
       break;
-    case DioErrorType.unknown:
+    case DioExceptionType.unknown:
       String message = "حدث خطأ ما";
       if (e.error is FormatException) {
         message = e.error.toString().replaceRange(0, 54, "").replaceAll("^", "");
@@ -83,11 +83,11 @@ Dio dio(
       );
       Utils.showErrorSnackBar(message);
       handler.reject(
-        DioError(
+        DioException(
           requestOptions: e.requestOptions,
           response: parsedResponse,
           error: message,
-          type: DioErrorType.unknown,
+          type: DioExceptionType.unknown,
         ),
       );
       return; // add this line to prevent calling handler.next(e)
