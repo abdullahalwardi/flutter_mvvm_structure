@@ -7,13 +7,13 @@ import 'package:path_provider/path_provider.dart';
 class FilePlugin {
   Future<Uri> createAssetFileUri(String prefix, String fileName) async {
     final byteData = await rootBundle.load('$prefix$fileName');
-    final file = File('${await _getTemporaryDirectoryPath()}/$fileName');
+    final file = File('${await getTemporaryDirectoryPath()}/$fileName');
     await file.create(recursive: true);
     await file.writeAsBytes(byteData.buffer.asUint8List());
     return file.uri;
   }
 
-  Future<String> _getTemporaryDirectoryPath() async {
+  Future<String> getTemporaryDirectoryPath() async {
     if (Platform.isAndroid) {
       final result = await getExternalStorageDirectories();
       if (result == null || result.isEmpty) {
