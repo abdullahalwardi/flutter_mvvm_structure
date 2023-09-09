@@ -21,7 +21,7 @@
 //           currentCacheSize += file.lengthSync();
 //           if (currentCacheSize > maxCacheSize) {
 //             // Delete the oldest files until cache size is within limit
-//             await file.delete();
+
 
 //             // Also remove the corresponding video data from Isar
 //             final videoId = await getVideoIdFromFile(file);
@@ -30,6 +30,7 @@
 //                   await isar.postSchemes.where().idEqualTo(videoId).findFirst();
 //               if (video != null && video.id != null) {
 //                 await isar.postSchemes.delete(video.id!);
+//                 await file.delete();
 //                 debugPrint("video deleted from cache: ${video.id}");
 //               }
 //             }
