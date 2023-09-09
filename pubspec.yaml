@@ -24,11 +24,16 @@ dependencies:
 
   # Database And Cache
   shared_preferences: ^2.0.15
+  # isar: ^3.1.0+1
+  # isar_flutter_libs: ^3.1.0+1
 
   # State Management
   flutter_riverpod: ^2.1.1
   riverpod_annotation: ^2.0.4
   riverpod: ^2.1.3
+  hooks_riverpod: ^2.3.6
+  flutter_hooks: ^0.20.1
+  riverpod_state: ^0.1.1
 
   # Models
   freezed_annotation: ^2.2.0
@@ -58,14 +63,13 @@ dependencies:
   cached_network_image: ^3.2.3
   image_cropper: ^5.0.0
   timeago: ^3.4.0
-  hooks_riverpod: ^2.3.6
-  flutter_hooks: ^0.20.1
-  riverpod_state: ^0.1.1
   country_code_picker: ^3.0.0
+  # ffmpeg_kit_flutter: ^6.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # isar_generator: ^3.1.0+1
   custom_lint:
   riverpod_lint: ^2.0.4
   go_router_builder: any

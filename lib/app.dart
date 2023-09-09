@@ -18,6 +18,19 @@ class App extends ConsumerStatefulWidget {
 
 class _AppState extends ConsumerState<App> {
 
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   WidgetsBinding.instance.scheduleFrameCallback((timeStamp) async {
+  //     await ref
+  //         .read(getIsarInstanceProvider(const [PostSchemeSchema]).future)
+  //         .then((isar) {
+  //       debugPrint("this is isar instance: ${isar.path}");
+  //       CacheManager().clearCacheAndDatabase(isar);
+  //     }); // Open the Isar instance
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
     final theme = AppTheme();
