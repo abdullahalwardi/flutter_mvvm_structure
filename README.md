@@ -9,7 +9,12 @@ Things to do when you setup your project with riverpod structure:
 then change the host name in http and https.
 and same for ios from ..ios/Runner/info.plist, and search for flutterbooksample.com, then change the name to your host name.
 
-2- run this command (flutter pub run change_app_package_name:main <your new package name>)  to change your app package name.
+2- run these commands:
+flutter pub run change_app_package_name:main <your new package name>,
+flutter pub global run rename --bundleId <your new package name>,
+flutter pub global run rename --appname <your new App name>,
+in search replace (package:app) with (package:<your new App name>)
+to change your app package name and name.
 
 3- change app name from pubspec.yaml and from main.dart.
 
@@ -17,8 +22,7 @@ and same for ios from ..ios/Runner/info.plist, and search for flutterbooksample.
 
 5- add this permission (<uses-permission android:name="android.permission.INTERNET"/>)
 
-6- 
-dart run custom_lint
+6- dart run custom_lint
 # Install custom_lint for all projects
 dart pub global activate custom_lint
 # run custom_lint's command line in a project
