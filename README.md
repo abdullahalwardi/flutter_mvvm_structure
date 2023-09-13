@@ -1,5 +1,5 @@
-# riverpod_structure
-A flutter project structure with riverpod, shared preferences, retrofit, goRouter.
+# Riverpod structure
+A flutter project built on MVVM design pattern, structured with riverpod, shared preferences, retrofit, goRouter.
 
 ## Project Setup
 
