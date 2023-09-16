@@ -141,3 +141,11 @@ int fastHash(String string) {
 
   return hash;
 }
+
+// String getImageFromYoutubeUrl(String url) {
+//   String? id = YoutubePlayer.convertUrlToId(url);
+//   if (id != null) {
+//     return "https://img.youtube.com/vi/$id/0.jpg";
+//   }
+//   return "";
+// }
