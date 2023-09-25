@@ -59,9 +59,9 @@ class RoutesDocument {
   static const String login = '/login';
 
   // // Product
-  // String productDetails(String id) => 'product-details/$id';
+  // static String productDetails(String id) => 'product-details/$id';
 }
 
   // final encodedItemId = Uri.encodeComponent(item.id);
   // context.push(
-  //     "${RoutesDocument.pharmacyHome}/${RoutesDocument().productDetails(encodedItemId)}");
+  //     "${RoutesDocument.pharmacyHome}/${RoutesDocument.productDetails(encodedItemId)}");
