@@ -178,6 +178,24 @@ String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
   
 // }
 
+// Widget handleSnapshotState(
+//   BuildContext context,
+//   AsyncSnapshot<QuerySnapshot> snapshot, {
+//   required Widget Function() onLoading,
+//   required Widget Function(Object?) onError,
+//   required Widget Function(QuerySnapshot) onData,
+// }) {
+//   if (snapshot.connectionState == ConnectionState.waiting) {
+//           return onLoading();
+//         } else if (snapshot.hasError) {
+//           return onError(snapshot.error);
+//         } else if (snapshot.hasData) {
+//           return onData(snapshot.data!);
+//         } else {
+//           return onLoading();
+//         }
+// }
+
 // String getImageFromYoutubeUrl(String url) {
 //   String? id = YoutubePlayer.convertUrlToId(url);
 //   if (id != null) {
