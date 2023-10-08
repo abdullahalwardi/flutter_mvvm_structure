@@ -142,6 +142,42 @@ int fastHash(String string) {
   return hash;
 }
 
+String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
+  if (phoneNumber.startsWith("0")) {
+    return phoneNumber.replaceFirst("0", countryCode);
+  }else{
+    return "$countryCode$phoneNumber";
+  }
+}
+
+// Future<void> initializeFirebaseMessaging() async {
+//   FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+//   await messaging.requestPermission();
+
+  
+
+  
+
+//   // Retrieve the FCM token
+//   Future<void> retrieveFCMAndAPNsToken() async {
+//     // Request permission for remote notifications
+//     await messaging.requestPermission();
+
+//     // Retrieve the FCM token
+//     final fcmToken = await messaging.getToken();
+//     final apnsToken = await messaging.getAPNSToken();
+//     debugPrint('FCM Token: $fcmToken');
+//     debugPrint('APNs Token: $apnsToken');
+//   }
+
+//   await retrieveFCMAndAPNsToken();
+
+//   await messaging.subscribeToTopic("all");
+
+  
+// }
+
 // String getImageFromYoutubeUrl(String url) {
 //   String? id = YoutubePlayer.convertUrlToId(url);
 //   if (id != null) {

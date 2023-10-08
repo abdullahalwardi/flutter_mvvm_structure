@@ -14,6 +14,7 @@ class PhoneNumberFormField extends StatelessWidget {
     return CustomTextFormField(
       controller: controller,
       hintText: "77xxxxxxxxx",
+      keyboardType: TextInputType.phone,
       onChanged: onChanged,
       prefixIcon: CountryCodePicker(
         onChanged: onCountryCodeChanged,
