@@ -1,3 +1,4 @@
+import 'package:app/data/services/local_services.dart';
 import 'package:app/src/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,8 +15,10 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
 final router = GoRouter(
   debugLogDiagnostics: true,
   initialLocation: RoutesDocument.home,
+  navigatorKey: _rootNavigatorKey,
   routes: [
     GoRoute(
+      parentNavigatorKey: _rootNavigatorKey,
       path: RoutesDocument.home,
       builder: (context, state) => const HomePage(),
     ),
@@ -26,6 +29,7 @@ final router = GoRouter(
     //   },
     //   routes: <RouteBase>[
     //     GoRoute(
+    //       parentNavigatorKey: _shellNavigatorKey,
     //         path: RoutesDocument.pharmacyHome,
     //         builder: (context, state) => const PharmacyHomePage(),
     //         routes: [
@@ -39,14 +43,17 @@ final router = GoRouter(
     //     GoRoute(
     //       path: RoutesDocument.pharmacyOrders,
     //       builder: (context, state) => const PharmacyOrdersPage(),
+    //       parentNavigatorKey: _shellNavigatorKey,
     //     ),
     //     GoRoute(
     //       path: RoutesDocument.pharmacyCart,
     //       builder: (context, state) => const PharmacyCartPage(),
+    //       parentNavigatorKey: _shellNavigatorKey,
     //     ),
     //     GoRoute(
     //       path: RoutesDocument.pharmacyAccount,
     //       builder: (context, state) => const PharmacyAccountPage(),
+    //       parentNavigatorKey: _shellNavigatorKey,
     //     ),
     //   ],
     // ),
@@ -55,13 +62,13 @@ final router = GoRouter(
 
 class RoutesDocument {
   const RoutesDocument._();
-  static const String home = '/home';
+  static const String home = '/';
   static const String login = '/login';
 
   // // Product
   // static String productDetails(String id) => 'product-details/$id';
 }
 
-  // final encodedItemId = Uri.encodeComponent(item.id);
+  // final encodedItemId = getEncodedComponent(item.id);
   // context.push(
   //     "${RoutesDocument.pharmacyHome}/${RoutesDocument.productDetails(encodedItemId)}");

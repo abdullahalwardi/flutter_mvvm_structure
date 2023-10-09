@@ -150,15 +150,14 @@ String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
   }
 }
 
+
+String getEncodedComponent(String component) => Uri.encodeComponent(component);
+
 // Future<void> initializeFirebaseMessaging() async {
 //   FirebaseMessaging messaging = FirebaseMessaging.instance;
 
 //   await messaging.requestPermission();
-
   
-
-  
-
 //   // Retrieve the FCM token
 //   Future<void> retrieveFCMAndAPNsToken() async {
 //     // Request permission for remote notifications
@@ -191,6 +190,24 @@ String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
 //           return onError(snapshot.error);
 //         } else if (snapshot.hasData) {
 //           return onData(snapshot.data!);
+//         } else {
+//           return onLoading();
+//         }
+// }
+
+// Widget handleQueryBuilderSnapshotState<T>(
+//   BuildContext context,
+//   FirestoreQueryBuilderSnapshot<T> snapshot, {
+//   required Widget Function() onLoading,
+//   required Widget Function(Object?) onError,
+//   required Widget Function(List<QueryDocumentSnapshot<T>>) onData,
+// }) {
+//   if (snapshot.isFetching) {
+//           return onLoading();
+//         } else if (snapshot.hasError) {
+//           return onError(snapshot.error);
+//         } else if (snapshot.hasData) {
+//           return onData(snapshot.docs);
 //         } else {
 //           return onLoading();
 //         }
