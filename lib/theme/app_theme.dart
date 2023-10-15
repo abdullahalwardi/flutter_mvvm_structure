@@ -22,6 +22,9 @@ class AppTheme {
     );
   }
 
+  final borderRadius = BorderRadius.circular(BorderSize.extraSmall);
+  final padding = const EdgeInsets.symmetric(vertical: 16, horizontal: 14);
+
   Brightness getBrightness() {
     return currentBrightness.value;
   }
@@ -49,7 +52,7 @@ class AppTheme {
     }
 
     return InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      contentPadding: padding,
       fillColor: colorScheme.surfaceVariant.withOpacity(0.5),
       filled: true,
       activeIndicatorBorder: BorderSide.none,
@@ -88,9 +91,9 @@ class AppTheme {
   FilledButtonThemeData _buildFilledButtonTheme(Brightness brightness) {
     return FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        padding: padding,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: borderRadius,
         ),
       ),
     );
@@ -99,9 +102,9 @@ class AppTheme {
   OutlinedButtonThemeData _buildOutlinedButtonTheme(Brightness brightness) {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        padding: padding,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(BorderSize.extraSmall),
+          borderRadius: borderRadius,
         ),
       ),
     );
@@ -110,9 +113,9 @@ class AppTheme {
   TextButtonThemeData _buildTextButtonTheme(Brightness brightness) {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        padding:padding,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: borderRadius,
         ),
       ),
     );
