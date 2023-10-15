@@ -19,6 +19,8 @@ class PhoneNumberFormField extends StatelessWidget {
       prefixIcon: CountryCodePicker(
         onChanged: onCountryCodeChanged,
         initialSelection: "IQ",
+        padding: EdgeInsets.zero,
+        showFlag: false,
       ),
       validator: context.validator.phone().required().build(),
     );
