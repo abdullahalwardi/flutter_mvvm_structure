@@ -11296,3 +11296,5 @@ The Dart DevTools debugger and profiler is available at: http://127.0.0.1:64745/
 [ConvertToStatefulBaseWidget] 2023-10-16T13:43:02.004 #40     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:611:18)
 [ConvertToStatefulBaseWidget] 2023-10-16T13:43:02.004 <asynchronous suspension>
 [ConvertToStatefulBaseWidget] 2023-10-16T13:43:02.004
+The Dart VM service is listening on http://127.0.0.1:57172/gOg5fwJ6WR8=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:57172/gOg5fwJ6WR8=/devtools?uri=ws://127.0.0.1:57172/gOg5fwJ6WR8=/ws

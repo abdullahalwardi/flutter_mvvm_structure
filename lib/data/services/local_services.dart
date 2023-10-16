@@ -177,19 +177,19 @@ String getEncodedComponent(String component) => Uri.encodeComponent(component);
   
 // }
 
-// Widget handleSnapshotState(
+// Widget handleSnapshotState<T>(
 //   BuildContext context,
-//   AsyncSnapshot<QuerySnapshot> snapshot, {
+//   AsyncSnapshot<T?> snapshot, {
 //   required Widget Function() onLoading,
 //   required Widget Function(Object?) onError,
-//   required Widget Function(QuerySnapshot) onData,
+//   required Widget Function(T?) onData,
 // }) {
 //   if (snapshot.connectionState == ConnectionState.waiting) {
 //           return onLoading();
 //         } else if (snapshot.hasError) {
 //           return onError(snapshot.error);
 //         } else if (snapshot.hasData) {
-//           return onData(snapshot.data!);
+//           return onData(snapshot.data);
 //         } else {
 //           return onLoading();
 //         }
@@ -212,6 +212,10 @@ String getEncodedComponent(String component) => Uri.encodeComponent(component);
 //           return onLoading();
 //         }
 // }
+
+//  Widget buildError(BuildContext context, String error) {
+//       return Center(child: Text(error));
+//     }
 
 // String getImageFromYoutubeUrl(String url) {
 //   String? id = YoutubePlayer.convertUrlToId(url);
