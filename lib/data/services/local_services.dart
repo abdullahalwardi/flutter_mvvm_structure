@@ -217,6 +217,14 @@ String getEncodedComponent(String component) => Uri.encodeComponent(component);
 //       return Center(child: Text(error));
 //     }
 
+// void handleErrorMessageSnackBar(BuildContext context, Object? error){
+//   if(error is FirebaseException){
+//     context.showErrorSnackBar(error.message ?? context.l10n.defaultErrorMessage);
+//   }else{
+//     context.showErrorSnackBar(error?.toString() ?? context.l10n.defaultErrorMessage);
+//   }
+// }
+
 // String getImageFromYoutubeUrl(String url) {
 //   String? id = YoutubePlayer.convertUrlToId(url);
 //   if (id != null) {
