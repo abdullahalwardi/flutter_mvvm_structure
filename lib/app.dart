@@ -21,6 +21,20 @@ class _AppState extends ConsumerState<App> {
   // @override
   // void initState() {
   //   super.initState();
+    
+  //   initializeFirebaseMessaging();
+  //   FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
+  //     debugPrint("remote message received: ${message.messageId}");
+  //     debugPrint("notification received: ${message.notification?.body}");
+  //     if (message.notification != null) {
+  //       LocalNotificationsServices.showNotification(message);
+  //     }
+  //   });
+  // }
+
+  // @override
+  // void initState() {
+  //   super.initState();
   //   WidgetsBinding.instance.scheduleFrameCallback((timeStamp) async {
   //     await ref
   //         .read(getIsarInstanceProvider(const [PostSchemeSchema]).future)

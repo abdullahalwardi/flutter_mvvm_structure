@@ -29,3 +29,13 @@ dart pub global activate custom_lint
 custom_lint
 
 7- update the assetslinks.json file
+
+9- follow the official build and release guide (https://docs.flutter.dev/deployment/android) and then update the key.properties.
+
+10- To get the release certificate fingerprint on MacOs: (keytool -list -v \
+-alias <your-key-name> -keystore <path-to-production-keystore>)
+
+11- To get the debug certificate fingerprint on MacOs: (keytool -list -v \
+-alias androiddebugkey -keystore ~/.android/debug.keystore)
+
+12- follow this video for ios notification config (https://youtu.be/Hg1ZJjWzRxs?feature=shared)
