@@ -39,3 +39,5 @@ custom_lint
 -alias androiddebugkey -keystore ~/.android/debug.keystore)
 
 12- follow this video for ios notification config (https://youtu.be/Hg1ZJjWzRxs?feature=shared)
+
+13- if web run these commands (gcloud init) && (gsutil cors set cors.json storage bucket)
