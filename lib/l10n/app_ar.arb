@@ -34,5 +34,6 @@
     "validatorPhoneNumber": "رقم الهاتف غير صحيح",
     "validatorRequired": "هذا الحقل مطلوب",
     "validatorUrl": "الرابط غير صحيح",
+    "pickDate": "اختر التاريخ",
     "defaultErrorMessage": "حدث خطأ ما, يرجى المحاولة مرة أخرى"
 }

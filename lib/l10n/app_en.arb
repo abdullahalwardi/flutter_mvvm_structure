@@ -45,5 +45,6 @@
     "noItemsFoundError": "No items found",
     "themeLight": "Light",
     "themeDark": "Dark",
+    "pickDate": "Pick date",
     "themeSystem": "System"
 }
