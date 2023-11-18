@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:app/common_lib.dart';
 
 class CustomDatePickerFormField extends StatelessWidget {
-  const CustomDatePickerFormField(
-      {super.key, required this.selectedDateNotifier, this.pickTime = false});
+  const CustomDatePickerFormField({
+    super.key,
+    required this.selectedDateNotifier,
+    this.pickTime = false,
+    required this.firstDate,
+    required this.lastDate,
+    this.initialDate,
+    required this.labelText,
+  });
 
   final ValueNotifier<DateTime?> selectedDateNotifier;
   final bool pickTime;
+  final DateTime? initialDate;
+  final DateTime firstDate, lastDate;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +27,9 @@ class CustomDatePickerFormField extends StatelessWidget {
             onTap: () async {
               selectedDateNotifier.value = await showDatePicker(
                 context: context,
-                initialDate: DateTime.now(),
-                firstDate: DateTime(
-                  DateTime.now().year - 100,
-                  DateTime.now().month,
-                  DateTime.now().day,
-                ),
-                lastDate: DateTime.now(),
+                initialDate: initialDate,
+                firstDate: firstDate,
+                lastDate: lastDate,
               );
               if (pickTime) {
                 final time = await showTimePicker(
@@ -56,9 +62,7 @@ class CustomDatePickerFormField extends StatelessWidget {
                 children: [
                   const Gap(Insets.medium),
                   Text(
-                    selectedDate == null
-                        ? context.l10n.pickDate
-                        : selectedDate.format(),
+                    selectedDate == null ? labelText : selectedDate.format(),
                     style: TextStyle(
                       color: context.colorScheme.primary,
                     ),
