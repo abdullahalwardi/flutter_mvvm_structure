@@ -213,9 +213,16 @@ String getEncodedComponent(String component) => Uri.encodeComponent(component);
 //         }
 // }
 
-//  Widget buildError(BuildContext context, String error) {
-//       return Center(child: Text(error));
-//     }
+// Widget buildError(BuildContext context, Object? error) {
+//   debugPrint(error.toString());
+//   if (error is FirebaseException) {
+//     return Center(
+//         child: Text(error.message ?? context.l10n.defaultErrorMessage));
+//   } else {
+//     return Center(
+//         child: Text(error?.toString() ?? context.l10n.defaultErrorMessage));
+//   }
+// }
 
 // void handleErrorMessageSnackBar(BuildContext context, Object? error){
 //   if(error is FirebaseException){
