@@ -10,7 +10,7 @@ part 'login_provider.g.dart';
 @riverpod
 class Login extends _$Login with AsyncXNotifierMixin<AuthenticationModel> {
   @override
-  BuildXCallback<AuthenticationModel> build() => idle();
+  Future<AsyncX<AuthenticationModel>> build() => idle();
 
   @useResult
   RunXCallback<AuthenticationModel> run(dynamic data) => handle(() async{

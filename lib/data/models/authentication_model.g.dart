@@ -6,16 +6,16 @@ part of 'authentication_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AuthenticationModel _$$_AuthenticationModelFromJson(
+_$AuthenticationModelImpl _$$AuthenticationModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AuthenticationModel(
+    _$AuthenticationModelImpl(
       token: json['token'] as String,
-      refreshToken: json['refresh_token'] as String,
+      refreshToken: json['refreshToken'] as String,
     );
 
-Map<String, dynamic> _$$_AuthenticationModelToJson(
-        _$_AuthenticationModel instance) =>
+Map<String, dynamic> _$$AuthenticationModelImplToJson(
+        _$AuthenticationModelImpl instance) =>
     <String, dynamic>{
       'token': instance.token,
-      'refresh_token': instance.refreshToken,
+      'refreshToken': instance.refreshToken,
     };

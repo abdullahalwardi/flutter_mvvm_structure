@@ -12,9 +12,7 @@ class _AuthClient implements AuthClient {
   _AuthClient(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'http://67.217.62.164:6001/api/User';
-  }
+  });
 
   final Dio _dio;
 
@@ -38,7 +36,11 @@ class _AuthClient implements AuthClient {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = AuthenticationModel.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
@@ -55,6 +57,23 @@ class _AuthClient implements AuthClient {
       }
     }
     return requestOptions;
+  }
+
+  String _combineBaseUrls(
+    String dioBaseUrl,
+    String? baseUrl,
+  ) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }
 
@@ -76,4 +95,5 @@ final authClientProvider = AutoDisposeProvider<AuthClient>.internal(
 );
 
 typedef AuthClientRef = AutoDisposeProviderRef<AuthClient>;
-// ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

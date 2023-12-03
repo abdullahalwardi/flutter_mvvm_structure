@@ -68,22 +68,22 @@ class _$AppSettingsCopyWithImpl<$Res, $Val extends AppSettings>
 }
 
 /// @nodoc
-abstract class _$$_AppSettingsCopyWith<$Res>
+abstract class _$$AppSettingsImplCopyWith<$Res>
     implements $AppSettingsCopyWith<$Res> {
-  factory _$$_AppSettingsCopyWith(
-          _$_AppSettings value, $Res Function(_$_AppSettings) then) =
-      __$$_AppSettingsCopyWithImpl<$Res>;
+  factory _$$AppSettingsImplCopyWith(
+          _$AppSettingsImpl value, $Res Function(_$AppSettingsImpl) then) =
+      __$$AppSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ThemeMode themeMode, String? localeCode});
 }
 
 /// @nodoc
-class __$$_AppSettingsCopyWithImpl<$Res>
-    extends _$AppSettingsCopyWithImpl<$Res, _$_AppSettings>
-    implements _$$_AppSettingsCopyWith<$Res> {
-  __$$_AppSettingsCopyWithImpl(
-      _$_AppSettings _value, $Res Function(_$_AppSettings) _then)
+class __$$AppSettingsImplCopyWithImpl<$Res>
+    extends _$AppSettingsCopyWithImpl<$Res, _$AppSettingsImpl>
+    implements _$$AppSettingsImplCopyWith<$Res> {
+  __$$AppSettingsImplCopyWithImpl(
+      _$AppSettingsImpl _value, $Res Function(_$AppSettingsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_AppSettingsCopyWithImpl<$Res>
     Object? themeMode = null,
     Object? localeCode = freezed,
   }) {
-    return _then(_$_AppSettings(
+    return _then(_$AppSettingsImpl(
       themeMode: null == themeMode
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
@@ -107,13 +107,13 @@ class __$$_AppSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AppSettings extends _AppSettings {
-  const _$_AppSettings(
+class _$AppSettingsImpl extends _AppSettings {
+  const _$AppSettingsImpl(
       {this.themeMode = ThemeMode.system, this.localeCode = null})
       : super._();
 
-  factory _$_AppSettings.fromJson(Map<String, dynamic> json) =>
-      _$$_AppSettingsFromJson(json);
+  factory _$AppSettingsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppSettingsImplFromJson(json);
 
   @override
   @JsonKey()
@@ -131,7 +131,7 @@ class _$_AppSettings extends _AppSettings {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AppSettings &&
+            other is _$AppSettingsImpl &&
             (identical(other.themeMode, themeMode) ||
                 other.themeMode == themeMode) &&
             (identical(other.localeCode, localeCode) ||
@@ -145,12 +145,12 @@ class _$_AppSettings extends _AppSettings {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppSettingsCopyWith<_$_AppSettings> get copyWith =>
-      __$$_AppSettingsCopyWithImpl<_$_AppSettings>(this, _$identity);
+  _$$AppSettingsImplCopyWith<_$AppSettingsImpl> get copyWith =>
+      __$$AppSettingsImplCopyWithImpl<_$AppSettingsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppSettingsToJson(
+    return _$$AppSettingsImplToJson(
       this,
     );
   }
@@ -158,11 +158,12 @@ class _$_AppSettings extends _AppSettings {
 
 abstract class _AppSettings extends AppSettings {
   const factory _AppSettings(
-      {final ThemeMode themeMode, final String? localeCode}) = _$_AppSettings;
+      {final ThemeMode themeMode,
+      final String? localeCode}) = _$AppSettingsImpl;
   const _AppSettings._() : super._();
 
   factory _AppSettings.fromJson(Map<String, dynamic> json) =
-      _$_AppSettings.fromJson;
+      _$AppSettingsImpl.fromJson;
 
   @override
   ThemeMode get themeMode;
@@ -170,6 +171,6 @@ abstract class _AppSettings extends AppSettings {
   String? get localeCode;
   @override
   @JsonKey(ignore: true)
-  _$$_AppSettingsCopyWith<_$_AppSettings> get copyWith =>
+  _$$AppSettingsImplCopyWith<_$AppSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

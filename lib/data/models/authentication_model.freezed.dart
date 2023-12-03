@@ -68,22 +68,22 @@ class _$AuthenticationModelCopyWithImpl<$Res, $Val extends AuthenticationModel>
 }
 
 /// @nodoc
-abstract class _$$_AuthenticationModelCopyWith<$Res>
+abstract class _$$AuthenticationModelImplCopyWith<$Res>
     implements $AuthenticationModelCopyWith<$Res> {
-  factory _$$_AuthenticationModelCopyWith(_$_AuthenticationModel value,
-          $Res Function(_$_AuthenticationModel) then) =
-      __$$_AuthenticationModelCopyWithImpl<$Res>;
+  factory _$$AuthenticationModelImplCopyWith(_$AuthenticationModelImpl value,
+          $Res Function(_$AuthenticationModelImpl) then) =
+      __$$AuthenticationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String token, String refreshToken});
 }
 
 /// @nodoc
-class __$$_AuthenticationModelCopyWithImpl<$Res>
-    extends _$AuthenticationModelCopyWithImpl<$Res, _$_AuthenticationModel>
-    implements _$$_AuthenticationModelCopyWith<$Res> {
-  __$$_AuthenticationModelCopyWithImpl(_$_AuthenticationModel _value,
-      $Res Function(_$_AuthenticationModel) _then)
+class __$$AuthenticationModelImplCopyWithImpl<$Res>
+    extends _$AuthenticationModelCopyWithImpl<$Res, _$AuthenticationModelImpl>
+    implements _$$AuthenticationModelImplCopyWith<$Res> {
+  __$$AuthenticationModelImplCopyWithImpl(_$AuthenticationModelImpl _value,
+      $Res Function(_$AuthenticationModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_AuthenticationModelCopyWithImpl<$Res>
     Object? token = null,
     Object? refreshToken = null,
   }) {
-    return _then(_$_AuthenticationModel(
+    return _then(_$AuthenticationModelImpl(
       token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -108,13 +108,13 @@ class __$$_AuthenticationModelCopyWithImpl<$Res>
 /// @nodoc
 
 @jsonSerializable
-class _$_AuthenticationModel extends _AuthenticationModel {
-  const _$_AuthenticationModel(
+class _$AuthenticationModelImpl extends _AuthenticationModel {
+  const _$AuthenticationModelImpl(
       {required this.token, required this.refreshToken})
       : super._();
 
-  factory _$_AuthenticationModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AuthenticationModelFromJson(json);
+  factory _$AuthenticationModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuthenticationModelImplFromJson(json);
 
   @override
   final String token;
@@ -130,7 +130,7 @@ class _$_AuthenticationModel extends _AuthenticationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthenticationModel &&
+            other is _$AuthenticationModelImpl &&
             (identical(other.token, token) || other.token == token) &&
             (identical(other.refreshToken, refreshToken) ||
                 other.refreshToken == refreshToken));
@@ -143,13 +143,13 @@ class _$_AuthenticationModel extends _AuthenticationModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuthenticationModelCopyWith<_$_AuthenticationModel> get copyWith =>
-      __$$_AuthenticationModelCopyWithImpl<_$_AuthenticationModel>(
+  _$$AuthenticationModelImplCopyWith<_$AuthenticationModelImpl> get copyWith =>
+      __$$AuthenticationModelImplCopyWithImpl<_$AuthenticationModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuthenticationModelToJson(
+    return _$$AuthenticationModelImplToJson(
       this,
     );
   }
@@ -158,11 +158,11 @@ class _$_AuthenticationModel extends _AuthenticationModel {
 abstract class _AuthenticationModel extends AuthenticationModel {
   const factory _AuthenticationModel(
       {required final String token,
-      required final String refreshToken}) = _$_AuthenticationModel;
+      required final String refreshToken}) = _$AuthenticationModelImpl;
   const _AuthenticationModel._() : super._();
 
   factory _AuthenticationModel.fromJson(Map<String, dynamic> json) =
-      _$_AuthenticationModel.fromJson;
+      _$AuthenticationModelImpl.fromJson;
 
   @override
   String get token;
@@ -170,6 +170,6 @@ abstract class _AuthenticationModel extends AuthenticationModel {
   String get refreshToken;
   @override
   @JsonKey(ignore: true)
-  _$$_AuthenticationModelCopyWith<_$_AuthenticationModel> get copyWith =>
+  _$$AuthenticationModelImplCopyWith<_$AuthenticationModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

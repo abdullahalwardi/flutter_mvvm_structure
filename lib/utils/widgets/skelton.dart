@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 
 class CustomSkeleton extends StatelessWidget {
-  const CustomSkeleton({Key? key, this.height, this.width, this.layer = 1})
-      : super(key: key);
+  const CustomSkeleton({super.key, this.height, this.width, this.layer = 1});
 
   final double? height, width;
   final int layer;
@@ -24,7 +23,7 @@ class CustomSkeleton extends StatelessWidget {
 }
 
 class CircleSkeleton extends StatelessWidget {
-  const CircleSkeleton({Key? key, this.size = 24}) : super(key: key);
+  const CircleSkeleton({super.key, this.size = 24});
 
   final double? size;
 

@@ -68,22 +68,22 @@ class _$PaginationCopyWithImpl<T, $Res, $Val extends Pagination<T>>
 }
 
 /// @nodoc
-abstract class _$$_PaginationCopyWith<T, $Res>
+abstract class _$$PaginationImplCopyWith<T, $Res>
     implements $PaginationCopyWith<T, $Res> {
-  factory _$$_PaginationCopyWith(
-          _$_Pagination<T> value, $Res Function(_$_Pagination<T>) then) =
-      __$$_PaginationCopyWithImpl<T, $Res>;
+  factory _$$PaginationImplCopyWith(
+          _$PaginationImpl<T> value, $Res Function(_$PaginationImpl<T>) then) =
+      __$$PaginationImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({int total, List<T> items});
 }
 
 /// @nodoc
-class __$$_PaginationCopyWithImpl<T, $Res>
-    extends _$PaginationCopyWithImpl<T, $Res, _$_Pagination<T>>
-    implements _$$_PaginationCopyWith<T, $Res> {
-  __$$_PaginationCopyWithImpl(
-      _$_Pagination<T> _value, $Res Function(_$_Pagination<T>) _then)
+class __$$PaginationImplCopyWithImpl<T, $Res>
+    extends _$PaginationCopyWithImpl<T, $Res, _$PaginationImpl<T>>
+    implements _$$PaginationImplCopyWith<T, $Res> {
+  __$$PaginationImplCopyWithImpl(
+      _$PaginationImpl<T> _value, $Res Function(_$PaginationImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_PaginationCopyWithImpl<T, $Res>
     Object? total = null,
     Object? items = null,
   }) {
-    return _then(_$_Pagination<T>(
+    return _then(_$PaginationImpl<T>(
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -107,14 +107,14 @@ class __$$_PaginationCopyWithImpl<T, $Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false, genericArgumentFactories: true)
-class _$_Pagination<T> extends _Pagination<T> {
-  const _$_Pagination({required this.total, required final List<T> items})
+class _$PaginationImpl<T> extends _Pagination<T> {
+  const _$PaginationImpl({required this.total, required final List<T> items})
       : _items = items,
         super._();
 
-  factory _$_Pagination.fromJson(
+  factory _$PaginationImpl.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$$_PaginationFromJson(json, fromJsonT);
+      _$$PaginationImplFromJson(json, fromJsonT);
 
   @override
   final int total;
@@ -135,7 +135,7 @@ class _$_Pagination<T> extends _Pagination<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Pagination<T> &&
+            other is _$PaginationImpl<T> &&
             (identical(other.total, total) || other.total == total) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
@@ -148,19 +148,19 @@ class _$_Pagination<T> extends _Pagination<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaginationCopyWith<T, _$_Pagination<T>> get copyWith =>
-      __$$_PaginationCopyWithImpl<T, _$_Pagination<T>>(this, _$identity);
+  _$$PaginationImplCopyWith<T, _$PaginationImpl<T>> get copyWith =>
+      __$$PaginationImplCopyWithImpl<T, _$PaginationImpl<T>>(this, _$identity);
 }
 
 abstract class _Pagination<T> extends Pagination<T> {
   const factory _Pagination(
       {required final int total,
-      required final List<T> items}) = _$_Pagination<T>;
+      required final List<T> items}) = _$PaginationImpl<T>;
   const _Pagination._() : super._();
 
   factory _Pagination.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =
-      _$_Pagination<T>.fromJson;
+      _$PaginationImpl<T>.fromJson;
 
   @override
   int get total;
@@ -168,6 +168,6 @@ abstract class _Pagination<T> extends Pagination<T> {
   List<T> get items;
   @override
   @JsonKey(ignore: true)
-  _$$_PaginationCopyWith<T, _$_Pagination<T>> get copyWith =>
+  _$$PaginationImplCopyWith<T, _$PaginationImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

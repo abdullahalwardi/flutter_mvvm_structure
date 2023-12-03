@@ -6,7 +6,7 @@
       "@riverpod",
       "class $1 extends _$$1 with AsyncXNotifierMixin<$2> {",
       "  @override",
-      "  BuildXCallback<$2> build() => idle();",
+      "  Future<AsyncX<$2>> build() => idle();",
       "",
       "  @useResult",
       "  RunXCallback<$2> run() =>",

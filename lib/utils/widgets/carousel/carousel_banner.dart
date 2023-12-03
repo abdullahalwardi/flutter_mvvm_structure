@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class CarouselBanner extends StatelessWidget {
   const CarouselBanner({
-    Key? key,
+    super.key,
     this.image,
     required this.press,
-  }) : super(key: key);
+  });
   final String? image;
   final VoidCallback press;
 

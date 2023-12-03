@@ -80,7 +80,7 @@ PagedChildBuilderDelegate<ItemType>
             context.l10n.noItemsFoundError,
             style: theme.textTheme.titleLarge,
           ),
-          // TODO: Add image or change filter button
+          // todo: Add image or change filter button
           FilledButton(
             onPressed: controller.refresh,
             child: Text(context.l10n.retry),

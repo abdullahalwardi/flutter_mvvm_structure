@@ -11338,3 +11338,938 @@ The Dart VM service is listening on http://127.0.0.1:54745/u-esUJ55eD0=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:54745/u-esUJ55eD0=/devtools?uri=ws://127.0.0.1:54745/u-esUJ55eD0=/ws
 The Dart VM service is listening on http://127.0.0.1:50537/r5uJjJs22fU=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50537/r5uJjJs22fU=/devtools?uri=ws://127.0.0.1:50537/r5uJjJs22fU=/ws
+The Dart VM service is listening on http://127.0.0.1:65461/nLpGReMua4M=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:65461/nLpGReMua4M=/devtools?uri=ws://127.0.0.1:65461/nLpGReMua4M=/ws
+The Dart VM service is listening on http://127.0.0.1:53916/t7uDcWsL8hE=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:53916/t7uDcWsL8hE=/devtools?uri=ws://127.0.0.1:53916/t7uDcWsL8hE=/ws
+The Dart VM service is listening on http://127.0.0.1:54058/pXM7Ox1sH5w=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:54058/pXM7Ox1sH5w=/devtools?uri=ws://127.0.0.1:54058/pXM7Ox1sH5w=/ws
+The Dart VM service is listening on http://127.0.0.1:50172/qbO_ouOPeG8=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50172/qbO_ouOPeG8=/devtools?uri=ws://127.0.0.1:50172/qbO_ouOPeG8=/ws
+The Dart VM service is listening on http://127.0.0.1:50245/cJRNEEXF7lY=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50245/cJRNEEXF7lY=/devtools?uri=ws://127.0.0.1:50245/cJRNEEXF7lY=/ws
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:20.580497
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:523:21)
+<asynchronous suspension>
+#5      SocketCustomLintServerToClientChannel.init (package:custom_lint/src/v2/server_to_client_channel.dart:136:5)
+<asynchronous suspension>
+#6      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:364:5)
+<asynchronous suspension>
+#7      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#8      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#9      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:50345/h6wYiOrCj0c=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50345/h6wYiOrCj0c=/devtools?uri=ws://127.0.0.1:50345/h6wYiOrCj0c=/ws
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:19:56.222145
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:523:21)
+<asynchronous suspension>
+#5      SocketCustomLintServerToClientChannel.init (package:custom_lint/src/v2/server_to_client_channel.dart:136:5)
+<asynchronous suspension>
+#6      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:364:5)
+<asynchronous suspension>
+#7      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#8      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#9      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:50496/Qe1uasqq1LI=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50496/Qe1uasqq1LI=/devtools?uri=ws://127.0.0.1:50496/Qe1uasqq1LI=/ws
+The Dart VM service is listening on http://127.0.0.1:50576/yVaW28hP77o=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:50576/yVaW28hP77o=/devtools?uri=ws://127.0.0.1:50576/yVaW28hP77o=/ws
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:21:07.381556
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:523:21)
+<asynchronous suspension>
+#5      SocketCustomLintServerToClientChannel.init (package:custom_lint/src/v2/server_to_client_channel.dart:136:5)
+<asynchronous suspension>
+#6      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:364:5)
+<asynchronous suspension>
+#7      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#8      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#9      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:04.747196
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:23:04.824561 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:04.824561
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:23:05.026165 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:05.026165
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:23:09.223178
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:23:27.831342 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:27.831342
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:23:28.126737 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:23:28.126737
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:24:09.897621 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:09.897621
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:24:10.145624 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:10.145624
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:24:13.305285 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:13.305285
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.973695
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:13.977381
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.163944
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 Plugin avoid_build_context_in_providers threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949 <asynchronous suspension>
+[avoid_build_context_in_providers] 2023-12-03T03:24:14.166949
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 Plugin WrapWithConsumer threw while analyzing /Users/abdullahalwardi/Documents/GitHub/riverpod_structure/lib/data/providers/login_provider.dart:
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 The code that triggered this error is: BuildXCallback<AuthenticationModel>
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 #11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[WrapWithConsumer] 2023-12-03T03:24:14.325363 <asynchronous suspension>
+[WrapWithConsumer] 2023-12-03T03:24:14.325363
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request throw the exception:Unsupported operation: Returning a typedef of type Future/FutureOr/Stream is not supported
+The code that triggered this error is: BuildXCallback<AuthenticationModel>
+#0      _computeExposedType (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:135:7)
+#1      ClassBasedProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/generator_provider_declaration.dart:224:9)
+#2      _ParseRiverpodUnitVisitor.visitClassDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:212:55)
+#3      ClassDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:2893:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:12998:20)
+#5      CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3631:21)
+#6      RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#7      CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3624:50)
+#8      new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#9      _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#10     RiverpodAssist.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:49:5)
+<asynchronous suspension>
+#11     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:271:11)
+#1      _$_CustomLintResponseAnalyzerPluginResponse.map (package:custom_lint/src/v2/protocol.freezed.dart:924:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:265:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:242:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:177:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+

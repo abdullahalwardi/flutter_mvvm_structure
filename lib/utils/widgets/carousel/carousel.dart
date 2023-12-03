@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Carousel extends StatefulWidget {
   final List<String> ads;
-  const Carousel({Key? key, required this.ads}) : super(key: key);
+  const Carousel({super.key, required this.ads});
 
   @override
   State<Carousel> createState() => _CarouselState();

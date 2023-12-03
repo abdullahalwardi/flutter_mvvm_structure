@@ -9,9 +9,9 @@ class AppValidationBuilder extends ValidationBuilder {
 
   AppValidationBuilder({
     required this.context,
-    required bool optional,
-    FormValidatorLocale? locale,
-  }) : super(locale: locale, optional: optional);
+    required super.optional,
+    super.locale,
+  });
 
   @override
   AppValidationBuilder add(StringValidationCallback validator) {

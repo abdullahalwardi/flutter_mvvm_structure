@@ -6,14 +6,15 @@ part of 'settings.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Settings _$$_SettingsFromJson(Map<String, dynamic> json) => _$_Settings(
+_$SettingsImpl _$$SettingsImplFromJson(Map<String, dynamic> json) =>
+    _$SettingsImpl(
       themeMode: $enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']) ??
           ThemeMode.system,
       locale: _$JsonConverterFromJson<String, Locale>(
           json['locale'], const LocaleStringJsonConvertor().fromJson),
     );
 
-Map<String, dynamic> _$$_SettingsToJson(_$_Settings instance) =>
+Map<String, dynamic> _$$SettingsImplToJson(_$SettingsImpl instance) =>
     <String, dynamic>{
       'themeMode': _$ThemeModeEnumMap[instance.themeMode]!,
       'locale': _$JsonConverterToJson<String, Locale>(
