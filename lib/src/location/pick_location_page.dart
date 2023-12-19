@@ -1,6 +1,6 @@
 // import 'dart:async';
 
-// import 'package:alwa/common_lib.dart';
+// import 'package:app/common_lib.dart';
 // import 'package:flutter/material.dart';
 // import 'package:geolocator/geolocator.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -68,7 +68,9 @@
 //     if (permission == LocationPermission.denied) {
 //       permission = await Geolocator.requestPermission();
 //       if (permission == LocationPermission.denied) {
-//         return Future.error('Location permissions are denied');
+//         context.showErrorSnackBar(
+//             context.l10n.locationPermissionIsRequiredToContinue);
+//         context.go(RoutesDocument.login);
 //       }
 //     }
 
@@ -101,10 +103,19 @@
 //   }
 
 //   @override
+//   void dispose() {
+//     _controller.future.then((value) => value.dispose());
+//     super.dispose();
+//   }
+
+//   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
 //       body: _currentLocation == null || marker == null
-//           ? const Center(child: CircularProgressIndicator())
+//           ? const Center(
+//               child: CircularProgressIndicator(
+//               strokeWidth: 2,
+//             ))
 //           : Stack(
 //               children: [
 //                 GoogleMap(
@@ -173,7 +184,7 @@
 //                       child: const Text("تحديد"),
 //                     ),
 //                   ),
-//                 )
+//                 ),
 //               ],
 //             ),
 //       floatingActionButton: Padding(

@@ -6,15 +6,17 @@
 // import 'package:app/src/location/current_location_card.dart';
 // import 'package:app/utils/widgets/flex_padded.dart';
 
-// class UseCurrentLocationCard extends StatelessWidget {
-//   const UseCurrentLocationCard({
+// class PickLocationCard extends StatelessWidget {
+//   const PickLocationCard({
 //     super.key,
 //     required this.press,
 //     this.initialLocation,
+//     required this.label,
 //   });
 
 //   final VoidCallback press;
 //   final LatLng? initialLocation;
+//   final String label;
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@
 //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //           children: [
 //             Text(
-//               context.l10n.pickProjectLocation,
+//               label,
 //               style: Theme.of(context).textTheme.titleSmall,
 //             ),
 //             TextButton.icon(

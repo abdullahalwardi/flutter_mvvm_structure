@@ -35,5 +35,7 @@
     "validatorRequired": "هذا الحقل مطلوب",
     "validatorUrl": "الرابط غير صحيح",
     "pickDate": "اختر التاريخ",
+    "relocate": "إعادة تحديد الموقع",
+    "locationPermissionIsRequiredToContinue": "يجب السماح بالوصول إلى الموقع للمتابعة",
     "defaultErrorMessage": "حدث خطأ ما, يرجى المحاولة مرة أخرى"
 }

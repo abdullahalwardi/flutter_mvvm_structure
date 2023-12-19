@@ -46,5 +46,7 @@
     "themeLight": "Light",
     "themeDark": "Dark",
     "pickDate": "Pick date",
+    "relocate": "Relocate",
+    "locationPermissionIsRequiredToContinue": "Location permission is required to continue",
     "themeSystem": "System"
 }

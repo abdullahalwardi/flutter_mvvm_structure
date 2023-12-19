@@ -1,19 +1,23 @@
-
 // import 'dart:async';
 
 // import 'package:flutter/material.dart';
 // import 'package:geolocator/geolocator.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
-// import 'package:workers/common_lib.dart';
+// import 'package:app/common_lib.dart';
 
 // class CurrentLocationCard extends StatefulHookConsumerWidget {
-//   const CurrentLocationCard({super.key,this.initialLocation,});
+//   const CurrentLocationCard({
+//     super.key,
+//     this.initialLocation,
+//   });
 
 //   final LatLng? initialLocation;
 
 //   @override
-//   ConsumerState<ConsumerStatefulWidget> createState() => _CurrentLocationCardState();
+//   ConsumerState<ConsumerStatefulWidget> createState() =>
+//       _CurrentLocationCardState();
 // }
+
 // class _CurrentLocationCardState extends ConsumerState<CurrentLocationCard> {
 //   // LatLng? _location;
 //   // LatLng? _idleLocation;
@@ -58,7 +62,9 @@
 //     if (permission == LocationPermission.denied) {
 //       permission = await Geolocator.requestPermission();
 //       if (permission == LocationPermission.denied) {
-//         return Future.error('Location permissions are denied');
+//         context.showErrorSnackBar(
+//             context.l10n.locationPermissionIsRequiredToContinue);
+//         context.go(RoutesDocument.login);
 //       }
 //     }
 
@@ -105,20 +111,20 @@
 //               strokeWidth: 2,
 //             ))
 //           : GoogleMap(
-              // scrollGesturesEnabled: false,
-              // zoomGesturesEnabled: false,
-              // tiltGesturesEnabled: false,
-              // rotateGesturesEnabled: false,
-//             myLocationEnabled: true,
-//             myLocationButtonEnabled: false,
-//             zoomControlsEnabled: false,
-//             onMapCreated: _controller.complete,
-//             initialCameraPosition: CameraPosition(
-//               target: widget.initialLocation ?? _currentLocation!,
-//               zoom: 18,
+//               scrollGesturesEnabled: false,
+//               zoomGesturesEnabled: false,
+//               tiltGesturesEnabled: false,
+//               rotateGesturesEnabled: false,
+//               myLocationEnabled: true,
+//               myLocationButtonEnabled: false,
+//               zoomControlsEnabled: false,
+//               onMapCreated: _controller.complete,
+//               initialCameraPosition: CameraPosition(
+//                 target: widget.initialLocation ?? _currentLocation!,
+//                 zoom: 18,
+//               ),
+//               markers: {if (_currentLocation != null) marker!},
 //             ),
-//             markers: {if (_currentLocation != null) marker!},
-//           ),
 //     );
 //   }
 // }
