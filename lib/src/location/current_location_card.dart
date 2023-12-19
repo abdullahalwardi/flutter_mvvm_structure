@@ -64,13 +64,35 @@
 //       if (permission == LocationPermission.denied) {
 //         context.showErrorSnackBar(
 //             context.l10n.locationPermissionIsRequiredToContinue);
-//         context.go(RoutesDocument.login);
+//         context.pop();
 //       }
 //     }
 
 //     if (permission == LocationPermission.deniedForever) {
-//       return Future.error(
-//           'Location permissions are permanently denied, we cannot request permissions.');
+//       showDialog(
+//         context: context,
+//         builder: (context) {
+//           return AlertDialog(
+//             title: Text(context.l10n.locationPermissionIsDeniedForEver),
+//             content: Text(context.l10n.locationPermissionIsRequiredToContinue),
+//             actions: [
+//               TextButton(
+//                 onPressed: () {
+//                   context.pop();
+//                   context.pop();
+//                 },
+//                 child: Text(context.l10n.cancel),
+//               ),
+//               TextButton(
+//                 onPressed: () {
+//                   Geolocator.openAppSettings();
+//                 },
+//                 child: Text(context.l10n.enableLocationPermission),
+//               ),
+//             ],
+//           );
+//         },
+//       );
 //     }
 
 //     await Geolocator.getCurrentPosition(
