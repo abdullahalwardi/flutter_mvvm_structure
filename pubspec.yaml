@@ -50,9 +50,10 @@ dependencies:
   
   # Animations
   animated_text_kit: ^4.2.2
-  gap: ^3.0.0
+  
 
   # Utils
+  gap: ^3.0.0
   form_validator: ^2.1.1
   since_date: ^0.0.2
   infinite_scroll_pagination: ^4.0.0
