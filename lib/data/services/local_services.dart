@@ -239,3 +239,12 @@ String getEncodedComponent(String component) => Uri.encodeComponent(component);
 //   }
 //   return "";
 // }
+
+// Future<Uint8List?> convertWidgetToImage(GlobalKey globalKey) async {
+//   RenderRepaintBoundary boundary =
+//       globalKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
+//   ui.Image image = await boundary.toImage(pixelRatio: 100);
+//   ByteData? byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+//   Uint8List? pngBytes = byteData?.buffer.asUint8List();
+//   return pngBytes;
+// }
