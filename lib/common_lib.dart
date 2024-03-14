@@ -15,3 +15,5 @@ export 'package:app/utils/widgets/form_fields/password_text_form_field.dart';
 export 'package:app/router/app_router.dart';
 export 'package:app/utils/snackbar.dart';
 export 'package:flutter_svg/flutter_svg.dart';
+export 'package:app/utils/widgets/flex_padded.dart';
+
