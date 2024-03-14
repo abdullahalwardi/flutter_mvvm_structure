@@ -12343,3 +12343,247 @@ The Dart VM service is listening on http://127.0.0.1:54953/OFY94jC-_Gc=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:54953/OFY94jC-_Gc=/devtools?uri=ws://127.0.0.1:54953/OFY94jC-_Gc=/ws
 The Dart VM service is listening on http://127.0.0.1:63531/0xsb3FpMKGs=/
 The Dart DevTools debugger and profiler is available at: http://127.0.0.1:63531/0xsb3FpMKGs=/devtools?uri=ws://127.0.0.1:63531/0xsb3FpMKGs=/ws
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+The plugin flutter_gen_runner was not found in the package config at /Users/abdullahalwardi/Documents/GitHub/riverpod_structure. Make sure to run `pub get` first.
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:1013:11)
+#1      MappedIterator.moveNext (dart:_internal/iterable.dart:403:20)
+#2      Future.wait (dart:async/future.dart:516:26)
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:1008:34)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:518:21)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:490:22)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54:23)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:347:23)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:328:9)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:160:22)
+<asynchronous suspension>
+
+The Dart VM service is listening on http://127.0.0.1:58970/RW1wbM9uz1s=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:58970/RW1wbM9uz1s=/devtools?uri=ws://127.0.0.1:58970/RW1wbM9uz1s=/ws
+The Dart VM service is listening on http://127.0.0.1:59136/fOrWTY4K198=/
+The Dart DevTools debugger and profiler is available at: http://127.0.0.1:59136/fOrWTY4K198=/devtools?uri=ws://127.0.0.1:59136/fOrWTY4K198=/ws

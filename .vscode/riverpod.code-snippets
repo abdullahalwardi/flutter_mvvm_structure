@@ -1,20 +1,20 @@
 {
-  "riverpodRequest": {
-    "scope": "dart",
-    "prefix": "riverpodRequest",
-    "body": [
-      "@riverpod",
-      "class $1 extends _$$1 with AsyncXNotifierMixin<$2> {",
-      "  @override",
-      "  Future<AsyncX<$2>> build() => idle();",
-      "",
-      "  @useResult",
-      "  RunXCallback<$2> run() =>",
-      "      handle(() {",
-      "        $3",
-      "      });",
-      "}"
-    ],
-    "description": "used with api request for riverpod"
+    "riverpodRequest": {
+      "scope": "dart",
+      "prefix": "riverpodRequest",
+      "body": [
+        "@riverpod",
+        "class $1 extends _$$1 with AsyncXNotifierMixin<$2> {",
+        "  @override",
+        "  Future<AsyncX<$2>> build() => idle();",
+        "",
+        "  @useResult",
+        "  RunXCallback<$2> run() =>",
+        "      handle(() {",
+        "        $3",
+        "      });",
+        "}"
+      ],
+      "description": "used with api request for riverpod"
+    }
   }
-}

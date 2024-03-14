@@ -76,6 +76,7 @@ dev_dependencies:
   go_router_builder: any
   retrofit_generator: ^8.0.4
   build_runner: any
+  flutter_gen_runner: any
   build_verify: any
   riverpod_generator: ^2.1.6
   flutter_lints: ^3.0.1
