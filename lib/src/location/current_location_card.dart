@@ -9,9 +9,11 @@
 //   const CurrentLocationCard({
 //     super.key,
 //     this.initialLocation,
+//     this.pickedLocationNotifier,
 //   });
 
 //   final LatLng? initialLocation;
+//   final ValueNotifier<LatLng?>? pickedLocationNotifier;
 
 //   @override
 //   ConsumerState<ConsumerStatefulWidget> createState() =>
@@ -35,7 +37,7 @@
 //   void initState() {
 //     super.initState();
 
-//     getCurrentLocation().then((value) {
+//     getCurrentLocation().whenComplete(() {
 //       marker = Marker(
 //         markerId: MarkerId(
 //           LatLng(_currentLocation!.latitude, _currentLocation!.longitude)
@@ -45,6 +47,9 @@
 //             LatLng(_currentLocation!.latitude, _currentLocation!.longitude),
 //         icon: _currentLocationIcon,
 //       );
+//       if (widget.pickedLocationNotifier != null) {
+//         widget.pickedLocationNotifier!.value = _currentLocation;
+//       }
 //     });
 //   }
 
