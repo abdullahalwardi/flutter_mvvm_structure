@@ -41,3 +41,5 @@ custom_lint
 12- follow this video for ios notification config (https://youtu.be/Hg1ZJjWzRxs?feature=shared)
 
 13- if web run these commands (gcloud init) && (gsutil cors set cors.json storage bucket)
+
+14- for hosting assetslink for deeplinking follow this article: (https://medium.com/androiddevelopers/android-app-links-deploy-assetlinks-json-in-minutes-d7082dffcac)
