@@ -91,7 +91,9 @@ class AppTheme {
   FilledButtonThemeData _buildFilledButtonTheme(Brightness brightness) {
     return FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        padding: padding,
+        minimumSize: const Size(0, 55),
+        maximumSize: const Size(double.infinity, double.infinity),
+        // padding: padding,
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius,
         ),
