@@ -20,7 +20,7 @@ class _AuthClient implements AuthClient {
 
   @override
   Future<HttpResponse<AuthenticationModel>> login(dynamic data) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = data;

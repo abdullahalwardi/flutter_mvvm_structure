@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_build_context_in_providers
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -38,6 +39,7 @@ class Settings extends _$Settings with ObjectPreferenceProvider {
 
   @override
   AppSettings build() => firstBuild(const AppSettings());
+
 
   Future<void> toggleThemeMode(BuildContext context) =>
       update((state) => state.copyWith(

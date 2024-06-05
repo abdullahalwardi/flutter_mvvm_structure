@@ -1,6 +1,6 @@
 {
-    "name": "riverpod_structure",
-    "short_name": "riverpod_structure",
+    "name": "flutter_mvvm_structure",
+    "short_name": "flutter_mvvm_structure",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

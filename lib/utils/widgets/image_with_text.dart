@@ -22,7 +22,7 @@ class ImageWithText extends StatelessWidget {
           Text(
             text,
             style: context.textTheme.bodyMedium?.copyWith(
-              color: textColor ?? context.colorScheme.onBackground,
+              color: textColor ?? context.colorScheme.onSurface,
               fontSize: fontSize,
               fontWeight: fontWeight,
             ),

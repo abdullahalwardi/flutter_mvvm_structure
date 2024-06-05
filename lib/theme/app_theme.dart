@@ -53,7 +53,7 @@ class AppTheme {
 
     return InputDecorationTheme(
       contentPadding: padding,
-      fillColor: colorScheme.surfaceVariant.withOpacity(0.5),
+      fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.5),
       filled: true,
       activeIndicatorBorder: BorderSide.none,
       border: buildBorder(colorScheme.outline.withOpacity(0.5)),

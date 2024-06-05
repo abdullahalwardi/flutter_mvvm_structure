@@ -80,7 +80,7 @@ Future<CroppedFile?> cropImage(BuildContext context) async {
         statusBarColor: theme.colorScheme.primary,
         toolbarColor: theme.colorScheme.primary,
         cropGridColor: theme.colorScheme.outline,
-        backgroundColor: theme.colorScheme.background,
+        backgroundColor: theme.colorScheme.surface,
         activeControlsWidgetColor: theme.colorScheme.primary,
         toolbarWidgetColor: theme.colorScheme.onPrimary,
         initAspectRatio: CropAspectRatioPreset.original,

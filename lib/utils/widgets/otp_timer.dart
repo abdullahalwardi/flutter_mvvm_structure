@@ -64,7 +64,7 @@ class _OtpTimerState extends State<OtpTimer> {
           widget.iconAssetPath,
           height: 22,
           width: 22,
-          color:Color(0xff757680),
+          color:const Color(0xff757680),
         ),
         const SizedBox(width: 8),
         Text(

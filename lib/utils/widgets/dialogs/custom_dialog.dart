@@ -1,6 +1,5 @@
 import 'package:app/common_lib.dart';
 import 'package:app/utils/widgets/buttons/filled_loading_button.dart';
-import 'package:app/utils/widgets/flex_padded.dart';
 import 'package:flutter/material.dart';
 
 class CustomDialog extends HookConsumerWidget {

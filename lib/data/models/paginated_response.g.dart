@@ -12,7 +12,7 @@ PaginatedResponse<T> _$PaginatedResponseFromJson<T>(
 ) =>
     PaginatedResponse<T>(
       result: (json['result'] as List<dynamic>).map(fromJsonT).toList(),
-      count: json['count'] as int,
+      count: (json['count'] as num).toInt(),
       message: json['message'] as String,
-      statusCode: json['statusCode'] as int,
+      statusCode: (json['statusCode'] as num).toInt(),
     );
