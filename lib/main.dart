@@ -14,6 +14,8 @@ Future<void> main() async {
 
   timeago.setLocaleMessages('ar', timeago.ArMessages()); // Add french messages
 
+    // HttpOverrides.global = MyHttpOverrides();
+
   runApp(
     ProviderScope(
       overrides: [
