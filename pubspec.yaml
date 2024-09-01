@@ -68,6 +68,7 @@ dependencies:
   # ffmpeg_kit_flutter: ^6.0.2
 
   path_provider: any
+  flutter_kurdish_localization: ^1.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

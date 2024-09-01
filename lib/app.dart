@@ -6,6 +6,8 @@ import 'package:app/utils/extensions.dart';
 import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_kurdish_localization/kurdish_material_localization_delegate.dart';
+import 'package:flutter_kurdish_localization/kurdish_widget_localization_delegate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -58,7 +60,11 @@ class _AppState extends ConsumerState<App> {
       // Locale
       locale: settings.locale,
       onGenerateTitle: (context) => context.l10n.appName,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: const [
+              ...AppLocalizations.localizationsDelegates,
+              KurdishMaterialLocalizations.delegate,
+              KurdishWidgetLocalizations.delegate,
+            ],
       supportedLocales: AppLocalizations.supportedLocales,
       // Theme
       themeMode: settings.themeMode,
