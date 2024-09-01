@@ -1,7 +1,7 @@
 import 'package:app/common_lib.dart';
 import 'package:flutter/material.dart';
 
-class CustomDropdownButtonFormField extends StatelessWidget {
+class CustomDropdownButtonFormField<T> extends StatelessWidget {
   const CustomDropdownButtonFormField({
     super.key,
     required this.items,
@@ -10,19 +10,22 @@ class CustomDropdownButtonFormField extends StatelessWidget {
     this.prefixIcon,
     this.validator,
     this.fillColor,
+    this.value,
     required this.onChanged,
   });
 
   final String hintText;
   final Widget? suffixIcon, prefixIcon;
   final Color? fillColor;
-  final String? Function(String?)? validator;
-  final ValueChanged<String?>? onChanged;
-  final List<DropdownMenuItem<String>>? items;
+  final String? Function(T?)? validator;
+  final ValueChanged<T?>? onChanged;
+  final List<DropdownMenuItem<T>>? items;
+  final T? value;
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
+      value: value,
       items: items,
       decoration: InputDecoration(
         fillColor: fillColor,
