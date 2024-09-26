@@ -62,7 +62,7 @@ dependencies:
   url_launcher: ^6.1.10
   skeletons: ^0.0.3
   cached_network_image: ^3.2.3
-  image_cropper: ^6.0.0
+  image_cropper: ^8.0.2
   timeago: ^3.4.0
   country_code_picker: ^3.0.0
   # ffmpeg_kit_flutter: ^6.0.2

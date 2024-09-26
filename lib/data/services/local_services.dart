@@ -67,13 +67,6 @@ Future<CroppedFile?> cropImage(BuildContext context) async {
   final theme = Theme.of(context);
   return await ImageCropper().cropImage(
     sourcePath: result!.path,
-    aspectRatioPresets: [
-      CropAspectRatioPreset.original,
-      CropAspectRatioPreset.square,
-      CropAspectRatioPreset.ratio3x2,
-      CropAspectRatioPreset.ratio4x3,
-      CropAspectRatioPreset.ratio16x9
-    ],
     uiSettings: [
       AndroidUiSettings(
         toolbarTitle: context.l10n.crop,
