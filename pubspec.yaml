@@ -76,12 +76,12 @@ dev_dependencies:
   custom_lint:
   riverpod_lint: ^2.0.4
   go_router_builder: any
-  retrofit_generator: ^8.0.4
+  retrofit_generator: ^9.1.5
   build_runner: any
   flutter_gen_runner: any
   build_verify: any
   riverpod_generator: ^2.1.6
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
   freezed: ^2.3.2
   json_serializable: ^6.5.4
   change_app_package_name: ^1.1.0
