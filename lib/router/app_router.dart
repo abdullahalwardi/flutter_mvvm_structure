@@ -1,7 +1,9 @@
+import 'package:app/data/shared_preference/preferences.dart';
 import 'package:app/src/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final Provider<GoRouter> routerProvider = Provider((ref) => router);
 
@@ -15,6 +17,16 @@ final router = GoRouter(
   debugLogDiagnostics: true,
   initialLocation: RoutesDocument.home,
   navigatorKey: _rootNavigatorKey,
+  redirect: (context, state) async{
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final authenticationRaw =
+        sharedPreferences.getString(Preferences.authentication);
+    if(authenticationRaw == null){
+      return RoutesDocument.login;
+    }
+    return null;
+   
+  },  
   routes: [
     GoRoute(
       parentNavigatorKey: _rootNavigatorKey,
