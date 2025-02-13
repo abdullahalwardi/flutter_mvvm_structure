@@ -16,8 +16,8 @@ dependencies:
   intl: ^0.19.0
 
   # Fonts And Icons
-  cupertino_icons: ^1.0.2
-  google_fonts: ^6.1.0
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
 
   # Logger
   logger: ^2.0.2
@@ -62,12 +62,12 @@ dependencies:
   url_launcher: ^6.1.10
   skeletons: ^0.0.3
   cached_network_image: ^3.2.3
-  image_cropper: ^8.0.2
+  image_cropper: ^9.0.0
   timeago: ^3.4.0
   country_code_picker: ^3.0.0
   # ffmpeg_kit_flutter: ^6.0.2
 
-  path_provider: any
+  path_provider: 2.1.5
   flutter_kurdish_localization: ^1.1.2
 dev_dependencies:
   flutter_test:
@@ -75,11 +75,11 @@ dev_dependencies:
   # isar_generator: ^3.1.0+1
   custom_lint:
   riverpod_lint: ^2.0.4
-  go_router_builder: any
+  go_router_builder: 2.8.0
   retrofit_generator: ^9.1.5
-  build_runner: any
-  flutter_gen_runner: any
-  build_verify: any
+  build_runner: 2.4.15
+  flutter_gen_runner: 5.9.0
+  build_verify: 3.1.0
   riverpod_generator: ^2.1.6
   flutter_lints: ^5.0.0
   freezed: ^2.3.2

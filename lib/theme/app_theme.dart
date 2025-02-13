@@ -66,7 +66,7 @@ class AppTheme {
   }
 
   TextTheme _buildTextTheme(TextTheme textTheme) {
-    return GoogleFonts.ibmPlexSansArabicTextTheme(textTheme);
+    return GoogleFonts.cairoTextTheme(textTheme);
   }
 
   ExtraColors buildExtraColors() {

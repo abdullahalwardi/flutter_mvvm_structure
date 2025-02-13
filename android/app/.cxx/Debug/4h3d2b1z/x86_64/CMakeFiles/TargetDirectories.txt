@@ -1,0 +1,2 @@
+/Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure/android/app/.cxx/Debug/4h3d2b1z/x86_64/CMakeFiles/edit_cache.dir
+/Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure/android/app/.cxx/Debug/4h3d2b1z/x86_64/CMakeFiles/rebuild_cache.dir

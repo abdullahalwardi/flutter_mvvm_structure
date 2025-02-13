@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'provider.g.dart';
 
 @riverpod
-SharedPreferences sharedPreferences(SharedPreferencesRef ref) =>
+SharedPreferences sharedPreferences(Ref ref) =>
     throw UnimplementedError();
 
 extension SharedPreferencesRefX on Ref {

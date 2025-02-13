@@ -13,7 +13,7 @@ part 'dio_module.g.dart';
 
 @riverpod
 Dio dio(
-    DioRef ref) {
+    Ref ref) {
   final dio = Dio();
   dio
     ..options.baseUrl = ApiDocument.baseUrl

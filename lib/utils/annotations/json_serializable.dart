@@ -27,7 +27,7 @@ const jsonSerializableRequest = JsonSerializable(
   explicitToJson: true,
 );
 
-/// Api generic model with <T>
+/// Api generic model with T
 const jsonSerializableResponseGeneric = Freezed(
   toJson: false,
   fromJson: true,

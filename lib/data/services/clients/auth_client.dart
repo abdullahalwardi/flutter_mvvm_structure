@@ -1,12 +1,13 @@
 import 'package:app/data/models/authentication_model.dart';
 import 'package:app/data/services/clients/callback.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '_clients.dart';
 
 part "auth_client.g.dart";
 
 @riverpod
-AuthClient authClient(AuthClientRef ref) => AuthClient(ref.dio);
+AuthClient authClient(Ref ref) => AuthClient(ref.dio);
 
 @RestApi()
 abstract class AuthClient {
