@@ -69,17 +69,18 @@ dependencies:
 
   path_provider: 2.1.5
   flutter_kurdish_localization: ^1.1.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
   # isar_generator: ^3.1.0+1
   custom_lint:
   riverpod_lint: ^2.0.4
-  go_router_builder: 2.8.0
-  retrofit_generator: ^9.1.5
-  build_runner: 2.4.15
-  flutter_gen_runner: 5.9.0
-  build_verify: 3.1.0
+  # go_router_builder: 2.8.0
+  retrofit_generator: any
+  build_runner: any
+  flutter_gen_runner: any
+  # build_verify: any
   riverpod_generator: ^2.1.6
   flutter_lints: ^5.0.0
   freezed: ^2.3.2
