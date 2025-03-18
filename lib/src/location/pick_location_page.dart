@@ -1,6 +1,7 @@
 // import 'dart:async';
 
-// import 'package:app/common_lib.dart';
+// import 'package:elixir/common_lib.dart';
+// import 'package:elixir/data/providers/settings_provider.dart';
 // import 'package:flutter/material.dart';
 // import 'package:geolocator/geolocator.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -17,7 +18,7 @@
 //   final LatLng? initialLocation;
 //   final ValueChanged<LatLng> onLocationChanged;
 //   final VoidCallback onBackPressed;
-//   final VoidCallback onSelectPressed;
+//   final void Function(LatLng?) onSelectPressed;
 
 //   @override
 //   ConsumerState<ConsumerStatefulWidget> createState() =>
@@ -41,7 +42,7 @@
 //   void initState() {
 //     super.initState();
 
-//     getCurrentLocation().then((value) {
+//     initMap().then((value) {
 //       marker = Marker(
 //         markerId: MarkerId(
 //           LatLng(_currentLocation!.latitude, _currentLocation!.longitude)
@@ -51,10 +52,11 @@
 //             LatLng(_currentLocation!.latitude, _currentLocation!.longitude),
 //         icon: _currentLocationIcon,
 //       );
+//       setState(() {});
 //     });
 //   }
 
-//   Future getCurrentLocation() async {
+//   Future initMap() async {
 //     bool serviceEnabled;
 //     LocationPermission permission;
 
@@ -101,24 +103,70 @@
 //       );
 //     }
 
-//     await Geolocator.getCurrentPosition(
-//             desiredAccuracy: LocationAccuracy.bestForNavigation)
-//         .then(
-//       (location) async {
-//         _currentLocation = LatLng(location.latitude, location.longitude);
-//         setState(() {});
+//     if (widget.initialLocation == null) {
+//       debugPrint("widget.initialLocation == null");
+//       await Geolocator.getCurrentPosition(
+//               desiredAccuracy: LocationAccuracy.bestForNavigation)
+//           .then(
+//         (location) async {
+//           _currentLocation = LatLng(location.latitude, location.longitude);
 
-//         _controller.future.then((value) {
-//           value.animateCamera(
-//             CameraUpdate.newCameraPosition(
-//               CameraPosition(
-//                 zoom: 13.5,
-//                 target: LatLng(
-//                     _currentLocation!.latitude, _currentLocation!.longitude),
+//           _controller.future.then((value) {
+//             value.animateCamera(
+//               CameraUpdate.newCameraPosition(
+//                 CameraPosition(
+//                   zoom: 13.5,
+//                   target: LatLng(
+//                       _currentLocation!.latitude, _currentLocation!.longitude),
+//                 ),
 //               ),
+//             );
+//           });
+//         },
+//       );
+//     } else {
+//       debugPrint("widget.initialLocation != null");
+//       _currentLocation = widget.initialLocation;
+
+//       _controller.future.then((value) {
+//         value.animateCamera(
+//           CameraUpdate.newCameraPosition(
+//             CameraPosition(
+//               zoom: 13.5,
+//               target: LatLng(
+//                   _currentLocation!.latitude, _currentLocation!.longitude),
 //             ),
+//           ),
+//         );
+//       });
+//     }
+//   }
+
+//   Future getCurrentLocaion() async {
+//     debugPrint("getCurrentLocaion");
+//     await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+//         .then(
+//       (position) async {
+//         setState(() {
+//           _currentLocation = LatLng(position.latitude, position.longitude);
+//           _controller.future.then((value) {
+//             value.animateCamera(
+//               CameraUpdate.newCameraPosition(
+//                 CameraPosition(
+//                   zoom: 13.5,
+//                   target: _currentLocation!,
+//                 ),
+//               ),
+//             );
+//           });
+//           marker = Marker(
+//             markerId: MarkerId(_currentLocation.toString()),
+//             position: _currentLocation!,
+//             icon: _currentLocationIcon,
 //           );
-//           setState(() {});
+
+//           if (_currentLocation == null) return;
+//           widget.onLocationChanged(_currentLocation!);
 //         });
 //       },
 //     );
@@ -132,6 +180,7 @@
 
 //   @override
 //   Widget build(BuildContext context) {
+//     final localeCode = ref.watch(settingsProvider).localeCode;
 //     return Scaffold(
 //       body: _currentLocation == null || marker == null
 //           ? const Center(
@@ -156,14 +205,18 @@
 //                         position: position.target,
 //                         icon: _currentLocationIcon,
 //                       );
-//                       widget.onLocationChanged(LatLng(
-//                           position.target.latitude, position.target.longitude));
+//                       _currentLocation = LatLng(
+//                           position.target.latitude, position.target.longitude);
+//                       if (_currentLocation == null) return;
+//                       widget.onLocationChanged(_currentLocation!);
 //                     });
 //                   },
 //                   markers: {if (_currentLocation != null) marker!},
 //                 ),
 //                 Align(
-//                   alignment: Alignment.topLeft,
+//                   alignment: localeCode == "en"
+//                       ? Alignment.topLeft
+//                       : Alignment.topRight,
 //                   child: Padding(
 //                     padding: const EdgeInsets.only(top: 6),
 //                     child: IconButton(
@@ -195,15 +248,14 @@
 //                       onPressed: _currentLocation == null
 //                           ? null
 //                           : () {
-//                               widget.onLocationChanged(
-//                                 LatLng(
+//                               setState(() {
+//                                 widget.onSelectPressed.call(LatLng(
 //                                   _currentLocation!.latitude,
 //                                   _currentLocation!.longitude,
-//                                 ),
-//                               );
-//                               widget.onSelectPressed();
+//                                 ));
+//                               });
 //                             },
-//                       child: const Text("تحديد"),
+//                       child: Text(context.l10n.selectLocation),
 //                     ),
 //                   ),
 //                 ),
@@ -212,7 +264,7 @@
 //       floatingActionButton: Padding(
 //         padding: const EdgeInsets.only(bottom: Insets.extraLarge * 2),
 //         child: FloatingActionButton(
-//           onPressed: getCurrentLocation,
+//           onPressed: () async => getCurrentLocaion(),
 //           child: const Icon(Icons.gps_fixed_outlined),
 //         ),
 //       ),
