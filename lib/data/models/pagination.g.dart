@@ -6,11 +6,11 @@ part of 'pagination.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PaginationImpl<T> _$$PaginationImplFromJson<T>(
+_Pagination<T> _$PaginationFromJson<T>(
   Map<String, dynamic> json,
   T Function(Object? json) fromJsonT,
 ) =>
-    _$PaginationImpl<T>(
+    _Pagination<T>(
       total: (json['total'] as num).toInt(),
       items: (json['items'] as List<dynamic>).map(fromJsonT).toList(),
     );

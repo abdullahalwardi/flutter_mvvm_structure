@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,96 +10,74 @@ part of 'pagination.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Pagination<T> _$PaginationFromJson<T>(
-    Map<String, dynamic> json, T Function(Object?) fromJsonT) {
-  return _Pagination<T>.fromJson(json, fromJsonT);
-}
 
 /// @nodoc
 mixin _$Pagination<T> {
-  int get total => throw _privateConstructorUsedError;
-  List<T> get items => throw _privateConstructorUsedError;
+  int get total;
+  List<T> get items;
 
-  @JsonKey(ignore: true)
-  $PaginationCopyWith<T, Pagination<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PaginationCopyWith<T, $Res> {
-  factory $PaginationCopyWith(
-          Pagination<T> value, $Res Function(Pagination<T>) then) =
-      _$PaginationCopyWithImpl<T, $Res, Pagination<T>>;
-  @useResult
-  $Res call({int total, List<T> items});
-}
-
-/// @nodoc
-class _$PaginationCopyWithImpl<T, $Res, $Val extends Pagination<T>>
-    implements $PaginationCopyWith<T, $Res> {
-  _$PaginationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Pagination
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $PaginationCopyWith<T, Pagination<T>> get copyWith =>
+      _$PaginationCopyWithImpl<T, Pagination<T>>(
+          this as Pagination<T>, _$identity);
+
   @override
-  $Res call({
-    Object? total = null,
-    Object? items = null,
-  }) {
-    return _then(_value.copyWith(
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-      items: null == items
-          ? _value.items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<T>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Pagination<T> &&
+            (identical(other.total, total) || other.total == total) &&
+            const DeepCollectionEquality().equals(other.items, items));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, total, const DeepCollectionEquality().hash(items));
+
+  @override
+  String toString() {
+    return 'Pagination<$T>(total: $total, items: $items)';
   }
 }
 
 /// @nodoc
-abstract class _$$PaginationImplCopyWith<T, $Res>
-    implements $PaginationCopyWith<T, $Res> {
-  factory _$$PaginationImplCopyWith(
-          _$PaginationImpl<T> value, $Res Function(_$PaginationImpl<T>) then) =
-      __$$PaginationImplCopyWithImpl<T, $Res>;
-  @override
+abstract mixin class $PaginationCopyWith<T, $Res> {
+  factory $PaginationCopyWith(
+          Pagination<T> value, $Res Function(Pagination<T>) _then) =
+      _$PaginationCopyWithImpl;
   @useResult
   $Res call({int total, List<T> items});
 }
 
 /// @nodoc
-class __$$PaginationImplCopyWithImpl<T, $Res>
-    extends _$PaginationCopyWithImpl<T, $Res, _$PaginationImpl<T>>
-    implements _$$PaginationImplCopyWith<T, $Res> {
-  __$$PaginationImplCopyWithImpl(
-      _$PaginationImpl<T> _value, $Res Function(_$PaginationImpl<T>) _then)
-      : super(_value, _then);
+class _$PaginationCopyWithImpl<T, $Res>
+    implements $PaginationCopyWith<T, $Res> {
+  _$PaginationCopyWithImpl(this._self, this._then);
 
+  final Pagination<T> _self;
+  final $Res Function(Pagination<T>) _then;
+
+  /// Create a copy of Pagination
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? total = null,
     Object? items = null,
   }) {
-    return _then(_$PaginationImpl<T>(
+    return _then(_self.copyWith(
       total: null == total
-          ? _value.total
+          ? _self.total
           : total // ignore: cast_nullable_to_non_nullable
               as int,
       items: null == items
-          ? _value._items
+          ? _self.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<T>,
     ));
@@ -107,14 +86,13 @@ class __$$PaginationImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false, genericArgumentFactories: true)
-class _$PaginationImpl<T> extends _Pagination<T> {
-  const _$PaginationImpl({required this.total, required final List<T> items})
+class _Pagination<T> extends Pagination<T> {
+  const _Pagination({required this.total, required final List<T> items})
       : _items = items,
         super._();
-
-  factory _$PaginationImpl.fromJson(
+  factory _Pagination.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$$PaginationImplFromJson(json, fromJsonT);
+      _$PaginationFromJson(json, fromJsonT);
 
   @override
   final int total;
@@ -126,48 +104,72 @@ class _$PaginationImpl<T> extends _Pagination<T> {
     return EqualUnmodifiableListView(_items);
   }
 
+  /// Create a copy of Pagination
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Pagination<$T>(total: $total, items: $items)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$PaginationCopyWith<T, _Pagination<T>> get copyWith =>
+      __$PaginationCopyWithImpl<T, _Pagination<T>>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaginationImpl<T> &&
+            other is _Pagination<T> &&
             (identical(other.total, total) || other.total == total) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, total, const DeepCollectionEquality().hash(_items));
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'Pagination<$T>(total: $total, items: $items)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$PaginationCopyWith<T, $Res>
+    implements $PaginationCopyWith<T, $Res> {
+  factory _$PaginationCopyWith(
+          _Pagination<T> value, $Res Function(_Pagination<T>) _then) =
+      __$PaginationCopyWithImpl;
+  @override
+  @useResult
+  $Res call({int total, List<T> items});
+}
+
+/// @nodoc
+class __$PaginationCopyWithImpl<T, $Res>
+    implements _$PaginationCopyWith<T, $Res> {
+  __$PaginationCopyWithImpl(this._self, this._then);
+
+  final _Pagination<T> _self;
+  final $Res Function(_Pagination<T>) _then;
+
+  /// Create a copy of Pagination
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$PaginationImplCopyWith<T, _$PaginationImpl<T>> get copyWith =>
-      __$$PaginationImplCopyWithImpl<T, _$PaginationImpl<T>>(this, _$identity);
+  $Res call({
+    Object? total = null,
+    Object? items = null,
+  }) {
+    return _then(_Pagination<T>(
+      total: null == total
+          ? _self.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int,
+      items: null == items
+          ? _self._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<T>,
+    ));
+  }
 }
 
-abstract class _Pagination<T> extends Pagination<T> {
-  const factory _Pagination(
-      {required final int total,
-      required final List<T> items}) = _$PaginationImpl<T>;
-  const _Pagination._() : super._();
-
-  factory _Pagination.fromJson(
-          Map<String, dynamic> json, T Function(Object?) fromJsonT) =
-      _$PaginationImpl<T>.fromJson;
-
-  @override
-  int get total;
-  @override
-  List<T> get items;
-  @override
-  @JsonKey(ignore: true)
-  _$$PaginationImplCopyWith<T, _$PaginationImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

@@ -11,7 +11,7 @@ part 'settings_provider.freezed.dart';
 part 'settings_provider.g.dart';
 
 @freezed
-class AppSettings with _$AppSettings {
+abstract class AppSettings with _$AppSettings {
   const AppSettings._();
 
   const factory AppSettings({

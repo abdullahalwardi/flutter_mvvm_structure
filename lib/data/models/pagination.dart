@@ -4,7 +4,7 @@ part 'pagination.freezed.dart';
 part 'pagination.g.dart';
 
 @freezedResponseGeneric
-class Pagination<T> with _$Pagination<T> {
+abstract class Pagination<T> with _$Pagination<T> {
   const Pagination._();
 
   const factory Pagination({

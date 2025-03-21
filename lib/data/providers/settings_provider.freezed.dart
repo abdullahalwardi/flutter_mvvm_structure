@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,96 +10,76 @@ part of 'settings_provider.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-AppSettings _$AppSettingsFromJson(Map<String, dynamic> json) {
-  return _AppSettings.fromJson(json);
-}
 
 /// @nodoc
 mixin _$AppSettings {
-  ThemeMode get themeMode => throw _privateConstructorUsedError;
-  String? get localeCode => throw _privateConstructorUsedError;
+  ThemeMode get themeMode;
+  String? get localeCode;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $AppSettingsCopyWith<AppSettings> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $AppSettingsCopyWith<$Res> {
-  factory $AppSettingsCopyWith(
-          AppSettings value, $Res Function(AppSettings) then) =
-      _$AppSettingsCopyWithImpl<$Res, AppSettings>;
-  @useResult
-  $Res call({ThemeMode themeMode, String? localeCode});
-}
-
-/// @nodoc
-class _$AppSettingsCopyWithImpl<$Res, $Val extends AppSettings>
-    implements $AppSettingsCopyWith<$Res> {
-  _$AppSettingsCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of AppSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $AppSettingsCopyWith<AppSettings> get copyWith =>
+      _$AppSettingsCopyWithImpl<AppSettings>(this as AppSettings, _$identity);
+
+  /// Serializes this AppSettings to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? themeMode = null,
-    Object? localeCode = freezed,
-  }) {
-    return _then(_value.copyWith(
-      themeMode: null == themeMode
-          ? _value.themeMode
-          : themeMode // ignore: cast_nullable_to_non_nullable
-              as ThemeMode,
-      localeCode: freezed == localeCode
-          ? _value.localeCode
-          : localeCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is AppSettings &&
+            (identical(other.themeMode, themeMode) ||
+                other.themeMode == themeMode) &&
+            (identical(other.localeCode, localeCode) ||
+                other.localeCode == localeCode));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, themeMode, localeCode);
+
+  @override
+  String toString() {
+    return 'AppSettings(themeMode: $themeMode, localeCode: $localeCode)';
   }
 }
 
 /// @nodoc
-abstract class _$$AppSettingsImplCopyWith<$Res>
-    implements $AppSettingsCopyWith<$Res> {
-  factory _$$AppSettingsImplCopyWith(
-          _$AppSettingsImpl value, $Res Function(_$AppSettingsImpl) then) =
-      __$$AppSettingsImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $AppSettingsCopyWith<$Res> {
+  factory $AppSettingsCopyWith(
+          AppSettings value, $Res Function(AppSettings) _then) =
+      _$AppSettingsCopyWithImpl;
   @useResult
   $Res call({ThemeMode themeMode, String? localeCode});
 }
 
 /// @nodoc
-class __$$AppSettingsImplCopyWithImpl<$Res>
-    extends _$AppSettingsCopyWithImpl<$Res, _$AppSettingsImpl>
-    implements _$$AppSettingsImplCopyWith<$Res> {
-  __$$AppSettingsImplCopyWithImpl(
-      _$AppSettingsImpl _value, $Res Function(_$AppSettingsImpl) _then)
-      : super(_value, _then);
+class _$AppSettingsCopyWithImpl<$Res> implements $AppSettingsCopyWith<$Res> {
+  _$AppSettingsCopyWithImpl(this._self, this._then);
 
+  final AppSettings _self;
+  final $Res Function(AppSettings) _then;
+
+  /// Create a copy of AppSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? themeMode = null,
     Object? localeCode = freezed,
   }) {
-    return _then(_$AppSettingsImpl(
+    return _then(_self.copyWith(
       themeMode: null == themeMode
-          ? _value.themeMode
+          ? _self.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
       localeCode: freezed == localeCode
-          ? _value.localeCode
+          ? _self.localeCode
           : localeCode // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
@@ -107,13 +88,12 @@ class __$$AppSettingsImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$AppSettingsImpl extends _AppSettings {
-  const _$AppSettingsImpl(
+class _AppSettings extends AppSettings {
+  const _AppSettings(
       {this.themeMode = ThemeMode.system, this.localeCode = null})
       : super._();
-
-  factory _$AppSettingsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AppSettingsImplFromJson(json);
+  factory _AppSettings.fromJson(Map<String, dynamic> json) =>
+      _$AppSettingsFromJson(json);
 
   @override
   @JsonKey()
@@ -122,55 +102,79 @@ class _$AppSettingsImpl extends _AppSettings {
   @JsonKey()
   final String? localeCode;
 
+  /// Create a copy of AppSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'AppSettings(themeMode: $themeMode, localeCode: $localeCode)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$AppSettingsCopyWith<_AppSettings> get copyWith =>
+      __$AppSettingsCopyWithImpl<_AppSettings>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$AppSettingsToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AppSettingsImpl &&
+            other is _AppSettings &&
             (identical(other.themeMode, themeMode) ||
                 other.themeMode == themeMode) &&
             (identical(other.localeCode, localeCode) ||
                 other.localeCode == localeCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, themeMode, localeCode);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$AppSettingsImplCopyWith<_$AppSettingsImpl> get copyWith =>
-      __$$AppSettingsImplCopyWithImpl<_$AppSettingsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AppSettingsImplToJson(
-      this,
-    );
+  String toString() {
+    return 'AppSettings(themeMode: $themeMode, localeCode: $localeCode)';
   }
 }
 
-abstract class _AppSettings extends AppSettings {
-  const factory _AppSettings(
-      {final ThemeMode themeMode,
-      final String? localeCode}) = _$AppSettingsImpl;
-  const _AppSettings._() : super._();
-
-  factory _AppSettings.fromJson(Map<String, dynamic> json) =
-      _$AppSettingsImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$AppSettingsCopyWith<$Res>
+    implements $AppSettingsCopyWith<$Res> {
+  factory _$AppSettingsCopyWith(
+          _AppSettings value, $Res Function(_AppSettings) _then) =
+      __$AppSettingsCopyWithImpl;
   @override
-  ThemeMode get themeMode;
-  @override
-  String? get localeCode;
-  @override
-  @JsonKey(ignore: true)
-  _$$AppSettingsImplCopyWith<_$AppSettingsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({ThemeMode themeMode, String? localeCode});
 }
+
+/// @nodoc
+class __$AppSettingsCopyWithImpl<$Res> implements _$AppSettingsCopyWith<$Res> {
+  __$AppSettingsCopyWithImpl(this._self, this._then);
+
+  final _AppSettings _self;
+  final $Res Function(_AppSettings) _then;
+
+  /// Create a copy of AppSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? themeMode = null,
+    Object? localeCode = freezed,
+  }) {
+    return _then(_AppSettings(
+      themeMode: null == themeMode
+          ? _self.themeMode
+          : themeMode // ignore: cast_nullable_to_non_nullable
+              as ThemeMode,
+      localeCode: freezed == localeCode
+          ? _self.localeCode
+          : localeCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

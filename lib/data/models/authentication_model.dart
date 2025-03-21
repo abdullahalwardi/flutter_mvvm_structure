@@ -4,7 +4,7 @@ part 'authentication_model.freezed.dart';
 part 'authentication_model.g.dart';
 
 @freezed
-class AuthenticationModel with _$AuthenticationModel {
+abstract class AuthenticationModel with _$AuthenticationModel {
   const AuthenticationModel._();
 
   @jsonSerializable
