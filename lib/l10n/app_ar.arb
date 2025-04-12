@@ -13,6 +13,7 @@
   "loginSuccess": "تم تسجيل الدخول بنجاح",
   "noItemsFoundError": "لا يوجد عناصر",
   "password": "كلمة المرور",
+  "select": "اختر",
   "pickDate": "اختر التاريخ",
   "relocate": "إعادة تحديد الموقع",
   "retry": "إعادة المحاولة",
