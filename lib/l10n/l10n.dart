@@ -1,2 +1,2 @@
-export 'package:flutter_gen/gen_l10n/app_localizations.dart';
+export 'package:app/utils/kurdish_localization/kurdish_material_localization_delegate.dart';
 

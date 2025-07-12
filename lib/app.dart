@@ -1,13 +1,13 @@
+import 'package:app/l10n/app_localizations.dart';
 import 'package:app/main.dart';
 import 'package:app/router/app_router.dart';
 import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/app_theme.dart';
 import 'package:app/utils/extensions.dart';
+import 'package:app/utils/kurdish_localization/kurdish_material_localization_delegate.dart';
+import 'package:app/utils/kurdish_localization/kurdish_widget_localization_delegate.dart';
 import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_kurdish_localization/kurdish_material_localization_delegate.dart';
-import 'package:flutter_kurdish_localization/kurdish_widget_localization_delegate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
