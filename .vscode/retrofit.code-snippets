@@ -63,7 +63,7 @@
       "part \"$TM_FILENAME_BASE.g.dart\";",
       "",
       "@riverpod",
-      "${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} ${TM_FILENAME_BASE/(.+)/${1:/camelcase}/}(${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}Ref ref) => ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(ref.dio);",
+      "${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} ${TM_FILENAME_BASE/(.+)/${1:/camelcase}/}(Ref ref) => ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/}(ref.dio);",
       "",
       "@RestApi()",
       "abstract class ${TM_FILENAME_BASE/(.+)/${1:/pascalcase}/} {",
