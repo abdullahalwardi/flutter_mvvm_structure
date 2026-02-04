@@ -1,8 +1,14 @@
 include: package:flutter_lints/flutter.yaml
 
+linter:
+  rules:
+    prefer_single_quotes: true
+
 analyzer:
   exclude:
+    # for retrofit and json_serializable
     - "**/*.g.dart"
+    # for freezed
     - "**/*.freezed.dart"
 
   errors:
