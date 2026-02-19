@@ -35,7 +35,7 @@ class CustomDialog extends HookConsumerWidget {
                 FilledLoadingButton(
                   isLoading: isLoading,
                   onPressed: onAdd,
-                  child: const Text("إضافة"),
+                  child: const Text('إضافة'),
                 ),
                 const Gap(Insets.small),
                 FilledButton(
@@ -43,7 +43,7 @@ class CustomDialog extends HookConsumerWidget {
                   style: FilledButton.styleFrom(
                       backgroundColor: context.colorScheme.error,
                       foregroundColor: context.colorScheme.onError),
-                  child: const Text("الغاء"),
+                  child: const Text('الغاء'),
                 ),
               ],
             ),

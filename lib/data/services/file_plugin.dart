@@ -17,7 +17,7 @@ class FilePlugin {
     if (Platform.isAndroid) {
       final result = await getExternalStorageDirectories();
       if (result == null || result.isEmpty) {
-        throw Exception("Cannot resolve temporary directory!");
+        throw Exception('Cannot resolve temporary directory!');
       } else {
         return result.first.path;
       }
@@ -30,7 +30,7 @@ class FilePlugin {
     if (Platform.isAndroid) {
       final result = await getExternalStorageDirectories();
       if (result == null || result.isEmpty) {
-        throw Exception("Cannot resolve temporary directory!");
+        throw Exception('Cannot resolve temporary directory!');
       } else {
         return result.first;
       }

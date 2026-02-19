@@ -34,7 +34,7 @@ class PlatformDefault {
 
   static Locale locale(Locale? locale) {
     if (locale == null) {
-      return Locale(Platform.localeName.split("_").first);
+      return Locale(Platform.localeName.split('_').first);
     } else {
       return locale;
     }

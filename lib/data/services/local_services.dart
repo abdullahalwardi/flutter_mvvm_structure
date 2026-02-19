@@ -18,7 +18,7 @@ Future<void> fetchPage<T>(
   try {
     final newItems = await futureItems;
     final items = newItems.data.result;
-    final isLastPage = items.length < int.parse(pageSize ?? "25");
+    final isLastPage = items.length < int.parse(pageSize ?? '25');
 
     if (isLastPage) {
       pagingController.appendLastPage(items);
@@ -32,7 +32,7 @@ Future<void> fetchPage<T>(
 }
 
 Future<void> launchNotNullUrlString(String? url, {VoidCallback? orElse}) async {
-  if (url != null && (url.contains("https") || url.contains("http"))) {
+  if (url != null && (url.contains('https') || url.contains('http'))) {
     launchUrlString(url, mode: LaunchMode.externalApplication);
   } else {
     orElse?.call();
@@ -41,23 +41,23 @@ Future<void> launchNotNullUrlString(String? url, {VoidCallback? orElse}) async {
 
 Future<void> openCall(String phoneNumber) async {
   try {
-    await launchUrlString("tel:$phoneNumber");
+    await launchUrlString('tel:$phoneNumber');
   } catch (_) {
-    if (kDebugMode) print("error: tel:$phoneNumber");
+    if (kDebugMode) print('error: tel:$phoneNumber');
   }
 }
 
 Future<void> openMail(String mail) async {
   try {
-    await launchUrlString("mailto:$mail");
+    await launchUrlString('mailto:$mail');
   } catch (_) {
-    if (kDebugMode) print("error: mailto:$mail");
+    if (kDebugMode) print('error: mailto:$mail');
   }
 }
 
 Future<void> openSMSMessage(String phoneNumber, {String? message}) async {
   var uri = 'sms:$phoneNumber';
-  if (message != null) uri += "?body=$message";
+  if (message != null) uri += '?body=$message';
   if (await canLaunchUrlString(uri)) await launchUrlString(uri);
 }
 
@@ -136,10 +136,10 @@ int fastHash(String string) {
 }
 
 String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
-  if (phoneNumber.startsWith("0")) {
-    return phoneNumber.replaceFirst("0", countryCode);
+  if (phoneNumber.startsWith('0')) {
+    return phoneNumber.replaceFirst('0', countryCode);
   }else{
-    return "$countryCode$phoneNumber";
+    return '$countryCode$phoneNumber';
   }
 }
 

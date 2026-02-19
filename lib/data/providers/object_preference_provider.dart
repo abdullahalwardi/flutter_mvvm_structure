@@ -31,7 +31,7 @@ mixin ObjectPreferenceProvider<State> on AutoDisposeNotifier<State> {
 
       return state = value;
     } catch (e, stackTrace) {
-      log("Preference: $key", error: e, stackTrace: stackTrace);
+      log('Preference: $key', error: e, stackTrace: stackTrace);
       return state;
     }
   }
@@ -44,7 +44,7 @@ mixin ObjectPreferenceProvider<State> on AutoDisposeNotifier<State> {
       final Map<String, dynamic> map = jsonDecode(raw);
       return fromJson(map);
     } catch (e, stackTrace) {
-      log("Preference: $key", error: e, stackTrace: stackTrace);
+      log('Preference: $key', error: e, stackTrace: stackTrace);
       return fallback;
     }
   }
@@ -82,7 +82,7 @@ mixin NullableObjectPreferenceProvider<State> on AutoDisposeNotifier<State?> {
 
       return state = value;
     } catch (e, stackTrace) {
-      log("Preference: $key", error: e, stackTrace: stackTrace);
+      log('Preference: $key', error: e, stackTrace: stackTrace);
       return state;
     }
   }
@@ -96,7 +96,7 @@ mixin NullableObjectPreferenceProvider<State> on AutoDisposeNotifier<State?> {
       final Map<String, dynamic> map = jsonDecode(raw);
       return fromJson(map);
     } catch (e, stackTrace) {
-      log("Preference: $key", error: e, stackTrace: stackTrace);
+      log('Preference: $key', error: e, stackTrace: stackTrace);
       return null;
     }
   }

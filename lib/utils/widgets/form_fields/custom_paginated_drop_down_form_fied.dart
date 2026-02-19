@@ -59,7 +59,7 @@ class CustomPaginatedDropdownFormField<T> extends HookConsumerWidget {
                 builder: (context) {
                   return PaginatedBottomSheet<T>(
                     titleText:
-                        "${context.l10n.select} ${labelText ?? hintText}",
+                        '${context.l10n.select} ${labelText ?? hintText}',
                     pagingController: pagingController,
                     searchController: searchController,
                     onSearch: onSearch,

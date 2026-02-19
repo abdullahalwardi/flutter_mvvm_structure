@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '_clients.dart';
 
-part "auth_client.g.dart";
+part 'auth_client.g.dart';
 
 @riverpod
 AuthClient authClient(Ref ref) => AuthClient(ref.dio);

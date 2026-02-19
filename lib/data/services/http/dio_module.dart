@@ -21,8 +21,8 @@ Dio dio(
     ..options.sendTimeout = const Duration(seconds: 60)
     ..options.contentType = 'application/json; charset=utf-8'
     ..options.headers = {
-      "accept": "text/plain",
-      "Content-Type": "application/json"
+      'accept': 'text/plain',
+      'Content-Type': 'application/json'
     }
     ..interceptors.add(Authenticator(ref.read(authenticationProvider.notifier)))
     ..interceptors.add(
@@ -33,17 +33,17 @@ Dio dio(
         }
           switch (e.type) {
     case DioExceptionType.badCertificate:
-      Utils.showErrorSnackBar("حدث خطأ ما");
+      Utils.showErrorSnackBar('حدث خطأ ما');
       break;
     case DioExceptionType.badResponse:
       debugPrint(e.error.toString());
-              String message = "حدث خطأ ما";
+              String message = 'حدث خطأ ما';
               if (e.error is FormatException) {
                 message = e.error
                     .toString()
-                    .replaceRange(0, 54, "")
-                    .replaceAll("^", "")
-                    .replaceAll("\n", "");
+                    .replaceRange(0, 54, '')
+                    .replaceAll('^', '')
+                    .replaceAll('\n', '');
               } else if (e.response?.data is String) {
                 message = e.response?.data;
               } else if (e.response?.data['message'] != null) {
@@ -58,12 +58,12 @@ Dio dio(
     case DioExceptionType.connectionTimeout:
     case DioExceptionType.receiveTimeout:
     case DioExceptionType.sendTimeout:
-      Utils.showErrorSnackBar("حدث خطأ في الاتصال");
+      Utils.showErrorSnackBar('حدث خطأ في الاتصال');
       break;
     case DioExceptionType.unknown:
-      String message = "حدث خطأ ما";
+      String message = 'حدث خطأ ما';
       if (e.error is FormatException) {
-        message = e.error.toString().replaceRange(0, 54, "").replaceAll("^", "");
+        message = e.error.toString().replaceRange(0, 54, '').replaceAll('^', '');
       } else {
         final data = e.response?.data;
         if (data is Map<String, dynamic>) {
@@ -75,9 +75,9 @@ Dio dio(
       final parsedResponse = Response(
         requestOptions: e.requestOptions,
         data: {
-          "data": {},
-          "message": message,
-          "statusCode": 400,
+          'data': {},
+          'message': message,
+          'statusCode': 400,
         },
         statusMessage: e.message,
       );
@@ -98,9 +98,9 @@ Dio dio(
         dynamic data = response.data;
         if (response.data is List<dynamic>) {
           data = {
-            "data": response.data,
-            "message": response.statusMessage,
-            "statusCode": response.statusCode
+            'data': response.data,
+            'message': response.statusMessage,
+            'statusCode': response.statusCode
           };
         } 
         // else if (data is Map<String, dynamic> &&
@@ -113,9 +113,9 @@ Dio dio(
         // }
         else if (response.data is String) {
             data = {
-              "data": {},
-              "message": response.data,
-              "statusCode": response.statusCode
+              'data': {},
+              'message': response.data,
+              'statusCode': response.statusCode
             };
           }
         final modifiedResponse = Response(

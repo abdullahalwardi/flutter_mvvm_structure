@@ -49,5 +49,5 @@ class Settings extends _$Settings with ObjectPreferenceProvider {
       update((state) => state.copyWith(localeCode: locale?.languageCode));
   
   Future<void> toggleLocale() => update((state) => state.copyWith(
-      localeCode: state.locale?.languageCode == "en" ? "ar" : "en"));
+      localeCode: state.locale?.languageCode == 'en' ? 'ar' : 'en'));
 }

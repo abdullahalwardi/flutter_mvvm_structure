@@ -35,7 +35,7 @@ extension NullableDateTimeExtension on DateTime? {
   String formatDate() {
     var inputFormat = DateFormat('MM/dd/yyyy');
 
-    return this == null ? "" : inputFormat.format(this!);
+    return this == null ? '' : inputFormat.format(this!);
   }
 }
 
@@ -63,7 +63,7 @@ extension ValueNotifierUpdated<T> on ValueNotifier<T> {
 extension on ValidationBuilder {
   ValidationBuilder iraqiPhoneNumber(BuildContext context) {
     return add((v) {
-      return RegExp(r"^(0|964|00964|\+964)?7[0-9]{9}$").hasMatch(v!)
+      return RegExp(r'^(0|964|00964|\+964)?7[0-9]{9}$').hasMatch(v!)
           ? null
           : context.l10n.validatorPhoneNumber;
     });

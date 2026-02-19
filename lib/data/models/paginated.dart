@@ -33,7 +33,7 @@ extension PaginatedExtension on PagingController {
 }
 
 extension PaginatedResultState<T> on AsyncValue<Paginated<T>> {
-  handleState(PagingController<int, T> controller, int page) {
+  void handleState(PagingController<int, T> controller, int page) {
     whenOrNull(
       data: (data) => controller.addItems(data, page),
       error: (error, state) => controller.error = error,

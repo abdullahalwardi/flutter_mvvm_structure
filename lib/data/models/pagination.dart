@@ -1,4 +1,4 @@
-import "_models.dart";
+import '_models.dart';
 
 part 'pagination.freezed.dart';
 part 'pagination.g.dart';

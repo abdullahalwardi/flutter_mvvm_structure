@@ -21,7 +21,7 @@ class StatusChip extends StatelessWidget {
         borderRadius: BorderSize.extraSmallRadius,
       ),
       child: Text(
-        state?.getName(context) ?? "",
+        state?.getName(context) ?? '',
         style: context.textTheme.bodyMedium?.copyWith(
           color: state?.getTextColor(context),
           fontWeight: FontWeight.bold,

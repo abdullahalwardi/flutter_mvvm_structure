@@ -316,38 +316,38 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
       KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => "هەڵبژاردنی بەروار";
+  String get datePickerDateOrderString => 'هەڵبژاردنی بەروار';
 
   @override
-  String get datePickerDateTimeOrderString => "کات هەڵبژێرە";
+  String get datePickerDateTimeOrderString => 'کات هەڵبژێرە';
 
   @override
-  String? get datePickerHourSemanticsLabelOther => "کاتژمێری هەڵبژاردنی بەروار";
+  String? get datePickerHourSemanticsLabelOther => 'کاتژمێری هەڵبژاردنی بەروار';
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => "خولەکی هەڵبژاردنی بەروار";
+  String? get datePickerMinuteSemanticsLabelOther => 'خولەکی هەڵبژاردنی بەروار';
 
   @override
-  String get searchTextFieldPlaceholderLabel => "گەڕان";
+  String get searchTextFieldPlaceholderLabel => 'گەڕان';
 
   @override
-  String get tabSemanticsLabelRaw => "ماناسازی تاب";
+  String get tabSemanticsLabelRaw => 'ماناسازی تاب';
 
   @override
-  String? get timerPickerHourLabelOther => "هەڵبژێرەری کاتژمێر";
+  String? get timerPickerHourLabelOther => 'هەڵبژێرەری کاتژمێر';
 
   @override
-  String? get timerPickerMinuteLabelOther => "هەڵبژێرەری خولەک";
+  String? get timerPickerMinuteLabelOther => 'هەڵبژێرەری خولەک';
 
   @override
-  String? get timerPickerSecondLabelOther => "هەڵبژێرەری چرکە";
+  String? get timerPickerSecondLabelOther => 'هەڵبژێرەری چرکە';
 
   @override
-  String get todayLabel => "ئەمڕۆ";
+  String get todayLabel => 'ئەمڕۆ';
 
   @override
   String get noSpellCheckReplacementsLabel =>
-      "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
+      'هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە';
 
   @override
   String get lookUpButtonLabel => 'بە دوادا گەڕان';
@@ -362,35 +362,35 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get shareButtonLabel => 'هاوبەشکردن';
   
   @override
-  String get clearButtonLabel => "";
+  String get clearButtonLabel => '';
   
   @override
-  String get backButtonLabel => "گەڕانەوە";
+  String get backButtonLabel => 'گەڕانەوە';
   
   @override
-  String get cancelButtonLabel => "لابردن";
-  
-  @override
-
-  String get collapsedHint => "کورتکراوە";
+  String get cancelButtonLabel => 'لابردن';
   
   @override
 
-  String get expandedHint => "پڕکراوە";
+  String get collapsedHint => 'کورتکراوە';
   
   @override
 
-  String get expansionTileCollapsedHint => "کورتکراوە";
+  String get expandedHint => 'پڕکراوە';
   
   @override
 
-  String get expansionTileCollapsedTapHint => "بۆ دروستکردنی پڕکراوە، کرتە بکە";
+  String get expansionTileCollapsedHint => 'کورتکراوە';
   
   @override
 
-  String get expansionTileExpandedHint => "پڕکراوە";
+  String get expansionTileCollapsedTapHint => 'بۆ دروستکردنی پڕکراوە، کرتە بکە';
   
   @override
 
-  String get expansionTileExpandedTapHint => "بۆ دروستکردنی کورتکراوە، کرتە بکە";
+  String get expansionTileExpandedHint => 'پڕکراوە';
+  
+  @override
+
+  String get expansionTileExpandedTapHint => 'بۆ دروستکردنی کورتکراوە، کرتە بکە';
 }

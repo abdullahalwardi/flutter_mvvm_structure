@@ -14,7 +14,7 @@ const freezedResponseGeneric = Freezed(
 const freezedUnionResponse = Freezed(
   toJson: false,
   fromJson: true,
-  unionKey: "type",
+  unionKey: 'type',
   unionValueCase: FreezedUnionCase.pascal,
   fallbackUnion: null,
 );
@@ -27,7 +27,7 @@ const freezedRequest = Freezed(
 const freezedUnionRequest = Freezed(
   toJson: true,
   fromJson: false,
-  unionKey: "type",
+  unionKey: 'type',
   unionValueCase: FreezedUnionCase.pascal,
   fallbackUnion: null,
 );

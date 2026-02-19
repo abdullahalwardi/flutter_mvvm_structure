@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class Utils {
   static final messengerKey = GlobalKey<ScaffoldMessengerState>();
-  static showErrorSnackBar(String? text) {
+  static void showErrorSnackBar(String? text) {
     if (text == null) return;
     SnackBar snackBar = SnackBar(
       content: Text(text),
@@ -17,7 +17,7 @@ class Utils {
       ..showSnackBar(snackBar);
   }
 
-  static showSuccessSnackBar(String? text) {
+  static void showSuccessSnackBar(String? text) {
     if (text == null) return;
     SnackBar snackBar = SnackBar(
       content: Text(text),
@@ -28,7 +28,7 @@ class Utils {
       ..showSnackBar(snackBar);
   }
 
-  static showNotificatonSnackBar(String? title) {
+  static void showNotificatonSnackBar(String? title) {
     if (title == null) return;
     SnackBar snackBar = SnackBar(
       content: Text(title),

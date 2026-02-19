@@ -4,8 +4,8 @@ class NullableUriConvertor implements JsonConverter<Uri?, String?> {
   const NullableUriConvertor();
 
   static const List<String> nullData = [
-    "#",
-    "https://tashgheel-api.lab-logic.com/CoverPhoto/"
+    '#',
+    'https://tashgheel-api.lab-logic.com/CoverPhoto/'
   ];
 
   @override
@@ -17,6 +17,6 @@ class NullableUriConvertor implements JsonConverter<Uri?, String?> {
 
   @override
   String? toJson(Uri? object) {
-    return object?.toString() ?? "#";
+    return object?.toString() ?? '#';
   }
 }

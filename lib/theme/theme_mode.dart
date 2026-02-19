@@ -15,7 +15,7 @@ extension ThemeModeL10n on ThemeMode {
       case ThemeMode.light:
         return context.l10n.lightMode;
       default:
-        return "";
+        return '';
     }
   }
 }

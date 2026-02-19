@@ -18,7 +18,7 @@ class PhoneNumber {
       'PhoneNumber(countryISOCode: $countryISOCode, countryCode: $countryCode, number: $number)';
 }
 
-final RegExp _countryCodesRegex = RegExp("""\\+(?:
+final RegExp _countryCodesRegex = RegExp('''\\+(?:
   998|996|995|994|993|992|977|976|975|974|973|972|971|970|968|967|966|965|964|
   963|962|961|960|886|880|856|855|853|852|850|692|691|690|689|688|687|686|685|
   683|682|681|680|679|678|677|676|675|674|673|672|670|599|598|597|595|593|592|
@@ -32,21 +32,21 @@ final RegExp _countryCodesRegex = RegExp("""\\+(?:
   44|43|41|40|39|36|34|33|32|31|30|27|20|7|1\\D?939|1\\D?876|1\\D?869|1\\D?868|
   1\\D?849|1\\D?829|1\\D?809|1\\D?787|1\\D?784|1\\D?767|1\\D?758|1\\D?721|
   1\\D?684|1\\D?671|1\\D?670|1\\D?664|1\\D?649|1\\D?473|1\\D?441|1\\D?345|
-  1\\D?340|1\\D?284|1\\D?268|1\\D?264|1\\D?246|1\\D?242|1)\\D?""");
+  1\\D?340|1\\D?284|1\\D?268|1\\D?264|1\\D?246|1\\D?242|1)\\D?''');
 
 final RegExp _fullPhoneNumber = RegExp(
-  r"^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$",
+  r'^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$',
 );
 
-const String initialCountryCode = "IQ";
+const String initialCountryCode = 'IQ';
 
 final PhoneNumber iraqiPhoneNumber = PhoneNumber(
-  countryISOCode: "IQ",
-  countryCode: "+964",
-  number: "7707868927",
+  countryISOCode: 'IQ',
+  countryCode: '+964',
+  number: '7707868927',
 );
 
-const String iraqiPhoneNumberStarter = "07";
+const String iraqiPhoneNumberStarter = '07';
 
 extension PhoneNumberExtension on PhoneNumber {
   PhoneNumber copyWith({
@@ -66,7 +66,7 @@ PhoneNumber? phoneNumberFromString(String phoneNumber) {
   try {
     if (_fullPhoneNumber.hasMatch(phoneNumber)) return null;
 
-    String phoneNumberPart = phoneNumber.replaceAll(_countryCodesRegex, "");
+    String phoneNumberPart = phoneNumber.replaceAll(_countryCodesRegex, '');
     String countryCodePart = phoneNumber.split(phoneNumberPart).first;
 
     if (countryCodePart.isEmpty || phoneNumber.isEmpty) return null;

@@ -26,7 +26,7 @@ class NullablePhoneNumberConvertor
 
     if (json.startsWith(iraqiPhoneNumberStarter)) {
       return iraqiPhoneNumber.copyWith(
-        number: json.replaceRange(0, 1, ""),
+        number: json.replaceRange(0, 1, ''),
       );
     }
 

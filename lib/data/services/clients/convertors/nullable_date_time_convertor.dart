@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 class NullableDateTimeConvertor implements JsonConverter<DateTime?, String?> {
   const NullableDateTimeConvertor();
 
-  static const String nullData = "0001-01-01T00:00:00";
+  static const String nullData = '0001-01-01T00:00:00';
 
   @override
   DateTime? fromJson(String? json) {

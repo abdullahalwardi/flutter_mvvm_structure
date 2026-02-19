@@ -344,178 +344,178 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get lastPageTooltip => 'دوایین لاپه‌ڕه‌';
 
   @override
-  String get keyboardKeyAlt => "Alt";
+  String get keyboardKeyAlt => 'Alt';
 
   @override
-  String get keyboardKeyAltGraph => "Alt Graph";
+  String get keyboardKeyAltGraph => 'Alt Graph';
 
   @override
-  String get keyboardKeyBackspace => "Backspace";
+  String get keyboardKeyBackspace => 'Backspace';
 
   @override
-  String get keyboardKeyCapsLock => "Caps Lock";
+  String get keyboardKeyCapsLock => 'Caps Lock';
 
   @override
-  String get keyboardKeyChannelDown => "Channel Down";
+  String get keyboardKeyChannelDown => 'Channel Down';
 
   @override
-  String get keyboardKeyChannelUp => "Channel Up";
+  String get keyboardKeyChannelUp => 'Channel Up';
 
   @override
-  String get keyboardKeyControl => "Control";
+  String get keyboardKeyControl => 'Control';
 
   @override
-  String get keyboardKeyDelete => "Delete";
+  String get keyboardKeyDelete => 'Delete';
 
-  String get keyboardKeyEisu => "Eisu";
-
-  @override
-  String get keyboardKeyEject => "Eject";
+  String get keyboardKeyEisu => 'Eisu';
 
   @override
-  String get keyboardKeyEnd => "End";
+  String get keyboardKeyEject => 'Eject';
 
   @override
-  String get keyboardKeyEscape => "Escape";
+  String get keyboardKeyEnd => 'End';
 
   @override
-  String get keyboardKeyFn => "Fn";
-
-  String get keyboardKeyHangulMode => "Hangul Mode";
-
-  String get keyboardKeyHanjaMode => "Hanja Mode";
-
-  String get keyboardKeyHankaku => "Hankaku";
-
-  String get keyboardKeyHiragana => "Hiragana";
-
-  String get keyboardKeyHiraganaKatakana => "Hiragana/Katakana";
+  String get keyboardKeyEscape => 'Escape';
 
   @override
-  String get keyboardKeyHome => "Home";
+  String get keyboardKeyFn => 'Fn';
+
+  String get keyboardKeyHangulMode => 'Hangul Mode';
+
+  String get keyboardKeyHanjaMode => 'Hanja Mode';
+
+  String get keyboardKeyHankaku => 'Hankaku';
+
+  String get keyboardKeyHiragana => 'Hiragana';
+
+  String get keyboardKeyHiraganaKatakana => 'Hiragana/Katakana';
 
   @override
-  String get keyboardKeyInsert => "Insert";
-
-  String get keyboardKeyKanaMode => "Kana Mode";
-
-  String get keyboardKeyKanjiMode => "Kanji Mode";
-
-  String get keyboardKeyKatakana => "Katakana";
+  String get keyboardKeyHome => 'Home';
 
   @override
-  String get keyboardKeyMeta => "Meta";
+  String get keyboardKeyInsert => 'Insert';
+
+  String get keyboardKeyKanaMode => 'Kana Mode';
+
+  String get keyboardKeyKanjiMode => 'Kanji Mode';
+
+  String get keyboardKeyKatakana => 'Katakana';
 
   @override
-  String get keyboardKeyMetaMacOs => "Meta (Mac OS)";
+  String get keyboardKeyMeta => 'Meta';
 
   @override
-  String get keyboardKeyMetaWindows => "Meta (Windows)";
+  String get keyboardKeyMetaMacOs => 'Meta (Mac OS)';
 
   @override
-  String get keyboardKeyNumLock => "Num Lock";
+  String get keyboardKeyMetaWindows => 'Meta (Windows)';
 
   @override
-  String get keyboardKeyNumpad0 => "Numpad 0";
+  String get keyboardKeyNumLock => 'Num Lock';
 
   @override
-  String get keyboardKeyNumpad1 => "Numpad 1";
+  String get keyboardKeyNumpad0 => 'Numpad 0';
 
   @override
-  String get keyboardKeyNumpad2 => "Numpad 2";
+  String get keyboardKeyNumpad1 => 'Numpad 1';
 
   @override
-  String get keyboardKeyNumpad3 => "Numpad 3";
+  String get keyboardKeyNumpad2 => 'Numpad 2';
 
   @override
-  String get keyboardKeyNumpad4 => "Numpad 4";
+  String get keyboardKeyNumpad3 => 'Numpad 3';
 
   @override
-  String get keyboardKeyNumpad5 => "Numpad 5";
+  String get keyboardKeyNumpad4 => 'Numpad 4';
 
   @override
-  String get keyboardKeyNumpad6 => "Numpad 6";
+  String get keyboardKeyNumpad5 => 'Numpad 5';
 
   @override
-  String get keyboardKeyNumpad7 => "Numpad 7";
+  String get keyboardKeyNumpad6 => 'Numpad 6';
 
   @override
-  String get keyboardKeyNumpad8 => "Numpad 8";
+  String get keyboardKeyNumpad7 => 'Numpad 7';
 
   @override
-  String get keyboardKeyNumpad9 => "Numpad 9";
+  String get keyboardKeyNumpad8 => 'Numpad 8';
 
   @override
-  String get keyboardKeyNumpadAdd => "Numpad Add";
+  String get keyboardKeyNumpad9 => 'Numpad 9';
 
   @override
-  String get keyboardKeyNumpadComma => "Numpad Comma";
+  String get keyboardKeyNumpadAdd => 'Numpad Add';
 
   @override
-  String get keyboardKeyNumpadDecimal => "Numpad Decimal";
+  String get keyboardKeyNumpadComma => 'Numpad Comma';
 
   @override
-  String get keyboardKeyNumpadDivide => "Numpad Divide";
+  String get keyboardKeyNumpadDecimal => 'Numpad Decimal';
 
   @override
-  String get keyboardKeyNumpadEnter => "Numpad Enter";
+  String get keyboardKeyNumpadDivide => 'Numpad Divide';
 
   @override
-  String get keyboardKeyNumpadEqual => "Numpad Equal";
+  String get keyboardKeyNumpadEnter => 'Numpad Enter';
 
   @override
-  String get keyboardKeyNumpadMultiply => "Numpad Multiply";
+  String get keyboardKeyNumpadEqual => 'Numpad Equal';
 
   @override
-  String get keyboardKeyNumpadParenLeft => "Numpad Paren Left";
+  String get keyboardKeyNumpadMultiply => 'Numpad Multiply';
 
   @override
-  String get keyboardKeyNumpadParenRight => "Numpad Paren Right";
+  String get keyboardKeyNumpadParenLeft => 'Numpad Paren Left';
 
   @override
-  String get keyboardKeyNumpadSubtract => "Numpad Subtract";
+  String get keyboardKeyNumpadParenRight => 'Numpad Paren Right';
 
   @override
-  String get keyboardKeyPageDown => "Page Down";
+  String get keyboardKeyNumpadSubtract => 'Numpad Subtract';
 
   @override
-  String get keyboardKeyPageUp => "Page Up";
+  String get keyboardKeyPageDown => 'Page Down';
 
   @override
-  String get keyboardKeyPower => "Power";
+  String get keyboardKeyPageUp => 'Page Up';
 
   @override
-  String get keyboardKeyPowerOff => "Power Off";
+  String get keyboardKeyPower => 'Power';
 
   @override
-  String get keyboardKeyPrintScreen => "Print Screen";
-
-  String get keyboardKeyRomaji => "Romaji";
+  String get keyboardKeyPowerOff => 'Power Off';
 
   @override
-  String get keyboardKeyScrollLock => "Scroll Lock";
+  String get keyboardKeyPrintScreen => 'Print Screen';
+
+  String get keyboardKeyRomaji => 'Romaji';
 
   @override
-  String get keyboardKeySelect => "Select";
+  String get keyboardKeyScrollLock => 'Scroll Lock';
 
   @override
-  String get keyboardKeySpace => "Space";
-
-  String get keyboardKeyZenkaku => "Zenkaku";
-
-  String get keyboardKeyZenkakuHankaku => "Zenkaku/Hankaku";
+  String get keyboardKeySelect => 'Select';
 
   @override
-  String get menuBarMenuLabel => "مینیوی";
+  String get keyboardKeySpace => 'Space';
+
+  String get keyboardKeyZenkaku => 'Zenkaku';
+
+  String get keyboardKeyZenkakuHankaku => 'Zenkaku/Hankaku';
+
+  @override
+  String get menuBarMenuLabel => 'مینیوی';
 
   @override
   String get bottomSheetLabel => 'لاپەڕەی خوارەوە';
 
   @override
-  String get currentDateLabel => "بەرواری ئێستا";
+  String get currentDateLabel => 'بەرواری ئێستا';
 
   @override
-  String get keyboardKeyShift => "گۆڕین";
+  String get keyboardKeyShift => 'گۆڕین';
 
   @override
   String get scrimLabel => 'بەلاوە نان';
@@ -557,10 +557,10 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get shareButtonLabel => 'هاوبەشکردن';
   
   @override
-  String get clearButtonTooltip => "";
+  String get clearButtonTooltip => '';
   
   @override
-  String get selectedDateLabel => "";
+  String get selectedDateLabel => '';
 }
 
 const kuDateSymbols = {

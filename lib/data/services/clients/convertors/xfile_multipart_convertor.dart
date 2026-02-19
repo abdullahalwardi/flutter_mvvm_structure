@@ -10,7 +10,7 @@ class XFileMultipartConvertor implements JsonConverter<XFile, MultipartFile> {
   // ignored
   @override
   XFile fromJson(MultipartFile json) {
-    return XFile(json.filename ?? "");
+    return XFile(json.filename ?? '');
   }
 
   @override

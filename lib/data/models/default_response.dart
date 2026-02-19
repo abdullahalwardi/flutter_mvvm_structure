@@ -42,7 +42,7 @@ class DefaultResponse<T> {
 
 @JsonEnum(alwaysCreate: true)
 enum Role {
-  @JsonValue("Supervisor")
+  @JsonValue('Supervisor')
   supervisor,
   unknown;
 

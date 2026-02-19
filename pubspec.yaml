@@ -68,6 +68,7 @@ dependencies:
 
   path_provider: 2.1.5
   
+  vector_graphics: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -85,7 +85,7 @@ class PaginatedBottomSheet<T> extends HookConsumerWidget {
                           controller: pagingController,
                           itemBuilder: (context, item, index) {
                             return ListTile(
-                              title: Text(item?.name ?? ""),
+                              title: Text(item?.name ?? ''),
                               subtitle: subtitleBuilder?.call(item as T),
                               leading: leadingBuilder?.call(item as T),
                               onTap: () => onSelect(item as T),
