@@ -67,4 +67,7 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   
   @override
   String get shareButtonLabel => throw UnimplementedError();
+  
+  @override
+  String get radioButtonUnselectedLabel => throw UnimplementedError();
 }
