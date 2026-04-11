@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+No scattered route definitions
+No magic strings in UI
+
+## Naming
+
+- `RoutesDocument` (and path constants) should describe **what the screen is**, not one parent journey only (e.g. prefer `otpVerification` over `loginOtp`).
+- For reusable screens, pass **typed route arguments** (`extra`) instead of adding a duplicate route per flow.

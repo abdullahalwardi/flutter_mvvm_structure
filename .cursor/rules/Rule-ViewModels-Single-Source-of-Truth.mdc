@@ -1,0 +1,7 @@
+---
+alwaysApply: true
+---
+
+All business logic must live in Riverpod providers under `lib/data/providers/` (codegen)
+No logic in widgets
+Do not add parallel “viewmodels” folders under `lib/src/<feature>/`

@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+
+Feature UI lives under `lib/src/<feature>/` with a **flat** layout:
+
+- `lib/src/<feature>/<feature>_page.dart` (e.g. `login_page.dart` — entry route widget, `*Page` class)
+- `lib/src/<feature>/components/` for feature-only reusable UI building blocks (not `widgets/`)
+
+Pick **one feature folder per user-facing surface**. Do not fold unrelated steps into `login/` (e.g. shared OTP belongs in `otp_verification/`; post-verify profile setup in `create_account/`). See `Rule-Auth-Flow-Feature-Folders.mdc`.
+
+Do **not** add `presentation/`, a `screens/` subfolder, or `viewmodels/` under `lib/src/<feature>/`.
+
+Page-level and domain integration logic use **Riverpod codegen providers** in `lib/data/providers/` (same layer as “ViewModel”; naming `*_provider.dart`). UI imports those providers from `package:someriq/data/providers/...`.

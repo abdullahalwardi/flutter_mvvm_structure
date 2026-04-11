@@ -306,3 +306,707 @@ at:
 #7      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173)
 <asynchronous suspension>
 
+[custom_lint] 2026-04-11T20:13:09.162124 Error: Couldn't resolve the package 'custom_lint_builder' in 'package:custom_lint_builder/src/channel.dart'.
+[custom_lint] 2026-04-11T20:13:09.162124 lib/custom_lint_client.dart:3:8: Error: Not found: 'package:custom_lint_builder/src/channel.dart'
+[custom_lint] 2026-04-11T20:13:09.162124 import 'package:custom_lint_builder/src/channel.dart';
+[custom_lint] 2026-04-11T20:13:09.162124        ^
+[custom_lint] 2026-04-11T20:13:09.162124 lib/custom_lint_client.dart:4:8: Error: Error when reading '/Users/abdullahalwardi/.pub-cache/hosted/pub.dev/riverpod_lint-3.1.3/lib/riverpod_lint.dart': No such file or directory
+[custom_lint] 2026-04-11T20:13:09.162124 import 'package:riverpod_lint/riverpod_lint.dart' as riverpod_lint;
+[custom_lint] 2026-04-11T20:13:09.162124        ^
+[custom_lint] 2026-04-11T20:13:09.162124 lib/custom_lint_client.dart:16:37: Error: Undefined name 'createPlugin'.
+[custom_lint] 2026-04-11T20:13:09.162124     {'riverpod_lint': riverpod_lint.createPlugin,
+[custom_lint] 2026-04-11T20:13:09.162124                                     ^^^^^^^^^^^^
+[custom_lint] 2026-04-11T20:13:09.162124 lib/custom_lint_client.dart:11:3: Error: Method not found: 'runSocket'.
+[custom_lint] 2026-04-11T20:13:09.162124   runSocket(
+[custom_lint] 2026-04-11T20:13:09.162124   ^^^^^^^^^
+[custom_lint] 2026-04-11T20:13:09.162124
+[custom_lint] 2026-04-11T20:13:09.162124
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:223)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:637)
+<asynchronous suspension>
+
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setPriorityFiles failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.setSubscriptions failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Failed to read pubspec.yaml at /Users/abdullahalwardi/Documents/GitHub/flutter_mvvm_structure:
+ParsedYamlException: line 41, column 13: Unsupported value for "retrofit". Could not parse version "~4.7.0". Unknown text at "~4.7.0".
+   ╷
+41 │   retrofit: ~4.7.0
+   │             ^^^^^^
+   ╵
+#0      checkedYamlDecode (package:checked_yaml/checked_yaml.dart:47)
+#1      new Pubspec.parse (package:pubspec_parse/src/pubspec.dart:185)
+#2      parsePubspec (package:custom_lint_core/src/package_utils.dart:89)
+<asynchronous suspension>
+#3      CustomLintProject.parse (package:custom_lint/src/workspace.dart:920)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546)
+<asynchronous suspension>
+#5      CustomLintWorkspace.fromContextRoots (package:custom_lint/src/workspace.dart:515)
+<asynchronous suspension>
+#6      SocketCustomLintServerToClientChannel.create (package:custom_lint/src/v2/server_to_client_channel.dart:54)
+<asynchronous suspension>
+#7      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:362)
+<asynchronous suspension>
+#8      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:343)
+<asynchronous suspension>
+#9      PendingOperation.run (package:custom_lint/src/async_operation.dart:22)
+<asynchronous suspension>
+#10     CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:175)
+<asynchronous suspension>
+
+at:
+#0      CustomLintProject.parse.<anonymous closure> (package:custom_lint/src/workspace.dart:923)
+#1      _rootRunBinary (dart:async/zone_root.dart:70)
+#2      _CustomZone.runBinary (dart:async/zone.dart:740)
+#3      _FutureListener.handleError (dart:async/future_impl.dart:237)
+#4      Future._propagateToListeners.handleError (dart:async/future_impl.dart:960)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:981)
+#6      Future._completeErrorObject (dart:async/future_impl.dart:738)
+#7      Future._completeError (dart:async/future_impl.dart:742)
+<asynchronous suspension>
+

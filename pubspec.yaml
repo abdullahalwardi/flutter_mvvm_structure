@@ -38,7 +38,7 @@ dependencies:
   # Models
   freezed_annotation: ^3.0.0
   json_annotation: ^4.7.0
-  retrofit: '>=4.0.0 <5.0.0'
+  retrofit: '>=4.7.0 <4.8.0'
 
   # Routing
   go_router: ^16.0.0

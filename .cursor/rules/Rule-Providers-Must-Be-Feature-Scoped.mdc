@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+
+Riverpod providers (codegen) live in `lib/data/providers/`. Use **one file per Swagger controller domain**: `<controller_snake>_provider.dart` (e.g. `authentication_provider.dart`). Prefer several `@riverpod` classes in that file over many small UI-specific provider files.
+
+Avoid **truly global** providers unless they are app-wide shared state (auth session, settings, router, environment).
+
+Do **not** place providers under `lib/src/<feature>/viewmodels/`; feature folders are for UI (`*_page.dart`, `components/`) only.

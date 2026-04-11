@@ -1,0 +1,17 @@
+---
+description: 
+alwaysApply: true
+---
+
+Orchestrates:
+
+`lib/data/services/clients/` (Retrofit API clients, one per Swagger controller name)
+
+Optional: datasources for local/persistence
+
+Handles:
+
+mapping
+error normalization
+
+Repositories are the only layer that should call Retrofit clients directly.

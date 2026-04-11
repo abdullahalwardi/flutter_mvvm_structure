@@ -52,32 +52,19 @@ flutter_mvvm_structure/
         ├── app.dart            (App configuration)
         ├── common_lib.dart     (Common exports)
         │
-        ├── 📊 State Management (Riverpod)
+        ├── 📊 Data & state (Riverpod providers live here)
         ├── data/
         │   ├── datasources/    (Local & Remote data sources)
         │   ├── models/         (Data models)
-        │   ├── repositories/   (Repository pattern)
-        │   └── services/       (API & Services)
+        │   ├── providers/      (Riverpod codegen — domain-aligned with controllers)
+        │   ├── repositories/   (Mapping + orchestration — call Retrofit clients)
+        │   └── services/       (Dio, interceptors, clients/ Retrofit per Swagger controller)
         │
-        ├── 🎯 Features (MVVM)
+        ├── 🎯 Features (UI + feature components; flat layout)
         └── src/
-            ├── comments/       (Feature module)
-            │   ├── models/     (Feature-specific models)
-            │   ├── screens/    (Views)
-            │   ├── viewmodels/ (ViewModels)
-            │   └── widgets/    (Reusable widgets)
-            │
-            ├── home/           (Feature module)
-            │   ├── models/
-            │   ├── screens/
-            │   ├── viewmodels/
-            │   └── widgets/
-            │
-            ├── location/       (Feature module)
-            │   ├── models/
-            │   ├── screens/
-            │   ├── viewmodels/
-            │   └── widgets/
+            ├── login/            (Example feature)
+            │   ├── login_page.dart
+            │   └── components/   (Feature-only UI building blocks)
             │
             └── entry_point.dart (App entry point logic)
         │
@@ -105,26 +92,19 @@ flutter_mvvm_structure/
 ┌─────────────────────────────────────────────────────────┐
 │                    UI Layer (Presentation)               │
 │  ┌───────────────────────────────────────────────────┐  │
-│  │  Screens (Views)                                  │  │
-│  │  - comments/screens/                              │  │
-│  │  - home/screens/                                  │  │
-│  │  - location/screens/                              │  │
-│  └───────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  Widgets                                          │  │
-│  │  - comments/widgets/                              │  │
-│  │  - home/widgets/                                  │  │
-│  │  - location/widgets/                              │  │
+│  │  Feature root + components (no presentation/screens) │  │
+│  │  - src/<feature>/<feature>_page.dart              │  │
+│  │  - src/<feature>/components/                      │  │
+│  │  Examples: login (phone entry), otp_verification   │  │
+│  │  (shared OTP), create_account (profile setup) —    │  │
+│  │  not every auth step under `login/`.               │  │
 │  └───────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────┘
                             ↓
 ┌─────────────────────────────────────────────────────────┐
-│              ViewModel Layer (Business Logic)            │
+│         Provider layer (business / page state)         │
 │  ┌───────────────────────────────────────────────────┐  │
-│  │  Riverpod Providers & State Management             │  │
-│  │  - comments/viewmodels/                           │  │
-│  │  - home/viewmodels/                               │  │
-│  │  - location/viewmodels/                           │  │
+│  │  Riverpod codegen in data/providers/               │  │
 │  └───────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────┘
                             ↓
@@ -136,7 +116,7 @@ flutter_mvvm_structure/
 │  └───────────────────────────────────────────────────┘  │
 │  ┌───────────────────────────────────────────────────┐  │
 │  │  Services                                         │  │
-│  │  - data/services/ (API, local services)           │  │
+│  │  - data/services/ (Dio http/, clients/ Retrofit) │  │
 │  └───────────────────────────────────────────────────┘  │
 │  ┌───────────────────────────────────────────────────┐  │
 │  │  Models                                           │  │
@@ -187,15 +167,16 @@ flutter_mvvm_structure/
 
 ## Feature Module Structure
 
-Each feature (e.g., `comments`, `home`, `location`) follows this structure:
+Each feature under `lib/src/<feature>/` uses a **flat** layout (no `presentation/`, `screens/`, or `viewmodels/`):
 
 ```
 feature/
-├── models/           (Feature-specific models)
-├── screens/          (Feature views)
-├── viewmodels/       (Riverpod providers & state)
-└── widgets/          (Reusable feature components)
+├── <feature>_page.dart     (entry route — widget class *Page)
+├── components/             (Reusable feature-local UI)
+└── models/                 (optional — only if UI needs a dedicated type)
 ```
+
+Riverpod providers (state, async, repository calls) live in **`lib/data/providers/`**, not under `src/`.
 
 ## Navigation Flow
 
@@ -205,5 +186,5 @@ main.dart → app.dart → router/ (Go Router) → src/entry_point.dart → Feat
 
 ---
 
-**Architecture Pattern**: MVVM with Riverpod State Management
+**Architecture Pattern**: Layered UI + Riverpod providers (`data/providers`) + repositories/services
 **Code Generation**: Freezed, JSON serialization, Go Router, Riverpod Providers

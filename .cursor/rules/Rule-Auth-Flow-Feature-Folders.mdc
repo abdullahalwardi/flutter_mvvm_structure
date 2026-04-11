@@ -1,0 +1,19 @@
+---
+alwaysApply: true
+---
+
+## Auth and multi-step flows (feature folders)
+
+- **`lib/src/login/`** is for **login entry only** (e.g. phone/username screen). Do **not** park shared steps here.
+- **OTP verification** is a **separate feature**: `lib/src/otp_verification/` (`otp_verification_page.dart`, `components/`). Reused by login, registration, forgot password, etc.
+- **Create account / profile setup** is its own feature: `lib/src/create_account/` (not under `login/`).
+
+## Routing
+
+- Use a **neutral OTP route** (e.g. `RoutesDocument.otpVerification` → `/otp`), **not** names like `loginOtp` or paths like `/login/otp`.
+- Pass a typed **`GoRouterState.extra`** (e.g. `OtpVerificationRouteArgs` with `OtpVerificationPurpose` and `maskedDestination`) so the same page can branch copy, back targets, and post-verify navigation.
+- **Create account** route should not be nested under `/login/` unless the product explicitly requires it (prefer `/create-account` + `RoutesDocument.createAccount`).
+
+## Theme
+
+- OTP UI tokens must **not** be named `loginOtp…`; use flow-agnostic names such as `otpVerification…` in `app_theme.dart`.
