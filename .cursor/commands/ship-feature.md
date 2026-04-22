@@ -1,132 +1,110 @@
 # ship-feature
 
-Description:
-Build a complete feature from API to UI, optionally following Figma design, while maintaining strict architecture and adapting mismatches between UI flow and API structure
+Build a complete feature end-to-end: API integration → providers → UI → localization → tests.
 
-Instructions:
+**Skills:** `.cursor/skills/create-feature-module/SKILL.md`, `.cursor/skills/integrate-api-feature/SKILL.md`, `.cursor/skills/generate-tests/SKILL.md`  
+**Rule files:** `.cursor/rules/architecture-layering.mdc`, `.cursor/rules/ui-feature-layout.mdc`, `.cursor/rules/ui-polish.mdc`, `.cursor/rules/routing.mdc`, `.cursor/rules/code-hygiene.mdc`
 
-0. INPUT PARSING
-Accept inputs in one of the following forms:
-`swagger:` (http://149.28.26.212:7711/swagger/index.html )
-`figma:` (https://www.figma.com/design/AdNCnnTdxH33kvCAsAPUcu/World-Merchant-App?node-id=8-14385&p=f&t=95tu5pfxYJZZsNsN-0 )
-`notes:` (optional context)
-From Swagger:
-Extract endpoints, request/response schemas
-Identify required fields and constraints
-From Figma:
-Extract screens, flow sequence, user interactions
-Identify UI states (loading, error, empty, success)
-Build an internal mapping:
-UI actions -> API calls
-UI states -> provider state (lib/data/providers)
-If mismatch detected:
-Mark for reconciliation in provider (data/providers) or Repository layer
+## 0. Input parsing
 
-INPUT UNDERSTANDING
 Accept:
-feature name
-API endpoint(s)
-optional Figma design reference
-Identify UI flow from Figma if provided
-Identify API structure and constraints
-FEATURE SCAFFOLDING
-Use feature-builder to create /lib/src/<feature>/ (flat: <feature>_page.dart + components/)
-Add or extend `/lib/data/providers/<swagger_controller>_provider.dart` (domain file; multiple notifiers OK—avoid per-page provider files)
-Optional: models/ under the feature only if UI needs a dedicated type
-DATA LAYER IMPLEMENTATION
-Use data-layer-engineer to:
-add Retrofit client methods in lib/data/services/clients/<controller>_client.dart
-define request/response models in data/models/
-implement lib/data/repositories/<controller>_repository.dart
-Normalize API responses and errors
-UI ↔ API RECONCILIATION (CRITICAL)
+- `swagger:` — endpoint URL or controller name
+- `figma:` — Figma file/node URL
+- `notes:` — optional context
+
+From Swagger: extract endpoints, request/response schemas, required fields.  
+From Figma: extract screens, flow sequence, UI states (loading, error, empty, success).
+
+Build an internal mapping: UI actions → API calls → provider state.  
+If mismatch detected between Figma flow and API structure: mark for reconciliation in the provider or repository layer (never change UI to match API — always adapt in data layer).
+
+## 1. Feature scaffolding
+
+Use **feature-builder** to create `lib/src/<feature>/` (flat: `<feature>_page.dart` + `components/`).
+
+**Auth pages:** must go inside the existing `lib/src/auth/` folder — do not create `lib/src/login/`, `lib/src/otp_verification/`, or `lib/src/create_account/`.
+
+Add or extend `lib/data/providers/<domain>_provider.dart` (domain = Swagger controller snake_case).
+
+## 2. Data layer
+
+Use **data-layer-engineer** to:
+1. Add/extend Retrofit client in `lib/data/services/clients/<domain>_client.dart`.
+2. Add/update models in `lib/data/models/` (Freezed).
+3. Update provider in `lib/data/providers/<domain>_provider.dart`:
+   - **Default:** call client directly.
+   - **When domain has a repository** (posts, user, attachment, notifications): call repository.
+4. If a repository is involved, update `lib/data/repositories/<domain>_repository.dart` with mapping and error normalisation.
+
+## 3. UI ↔ API reconciliation (critical)
+
 If Figma flow ≠ API structure:
-DO NOT change UI to match API
-Adapt in lib/data/providers or Repository layer
-Transform API models → UI models
-Combine/split API calls if needed to match UX
-Ensure UI receives clean, UI-ready state
-PROVIDER LOGIC
-Implement business logic in lib/data/providers (Riverpod codegen)
-Handle:
-loading
-success
-error
-Expose immutable state via Riverpod
-6. UI IMPLEMENTATION (STRICT FIGMA MODE)
+- Do NOT change UI to match API.
+- Adapt in `lib/data/providers/` or repository layer.
+- Transform API models → UI-ready state.
+- Combine/split API calls in the provider if needed to match UX flow.
 
-* Recreate Figma layout structure exactly
-* Match spacing, alignment, and hierarchy precisely
-* Use theme tokens for colors, typography, spacing
-* Break UI into reusable widgets based on Figma components
-* Do not approximate or simplify layouts
-* Implement all UI states shown in Figma (loading, error, empty, success)
-* If Figma conflicts with existing components, adapt components—not the design
+## 4. Provider logic
 
-6.1 LOCALIZATION ENFORCEMENT
+Implement in `lib/data/providers/` (Riverpod codegen):
+- Handle: `AsyncLoading`, `AsyncData`, `AsyncError`.
+- Expose immutable state to UI.
 
-* Replace all UI text with localization keys
-* Add new keys to `l10n/` if missing
-* Use generated localization accessors
-* Ensure no hardcoded strings remain in UI
-* Keep key names descriptive and consistent
+## 5. UI implementation
 
-6.2 THEME ENFORCEMENT (STRICT)
+### Layout (Figma mode)
+- Match Figma layout structure, spacing, hierarchy exactly.
+- Use `AppTheme` tokens from `lib/theme/app_theme.dart`.
+- Break UI into components under `lib/src/<feature>/components/`.
+- Implement all UI states: loading (skeleton from `lib/utils/widgets/skeletons/` or `lib/utils/widgets/place_holders/`), error, empty, success.
+- No `CircularProgressIndicator` for full-screen / section loads.
 
-* Always use AppTheme tokens
-* If design value not found:
+### Localization
+- All user-facing text uses `context.l10n.*` keys.
+- Add missing keys to `lib/l10n/app_en.arb`, `app_ar.arb`, `app_ku.arb`.
+- No hardcoded strings.
 
-  1. Map to closest existing token
-  2. Else extend AppTheme with new semantic token
-  3. Hardcode only as last resort with TODO comment
-* Do not create inline TextStyle or Color unless explicitly justified
+### Theme
+- All colors and text styles from `AppTheme`.
+- Extend `lib/theme/app_theme.dart` with new semantic tokens if needed.
+- Hardcode only as absolute last resort with `// TODO: move to AppTheme`.
 
-6.3 DATA DISPLAY RULES
+### Data display rules
+- No raw IDs in UI — use human-readable fields.
+- Monetary values: use `splitMoney(...)`.
+- Directionality: app locale only; never infer from text.
+- Enums: define in `lib/data/models/enums.dart`.
+- Icons: check `assets/svg/` before `Icons.*`.
 
-* Do not display raw IDs in UI
-* Replace IDs with user-friendly values via provider (data/providers) or Repository
-* Ensure all displayed data is UI-ready
+## 6. Routing
 
-6.4 ENUM MANAGEMENT
+- Add route constant to `RoutesDocument` in `lib/router/app_router.dart`.
+- Name describes the screen (e.g. `wallet`, `deleteAccount`, `getVerifiedDocumentType`).
+- Use existing constants when available — do not duplicate.
+- For reusable screens, use typed `GoRouterState.extra`.
 
-* Define all enums in `data/models/enums.dart`
-* Reuse existing enums when possible
-* Do not create feature-level enums
+## 7. Integration
 
-6.5 MONEY FORMATTING
+Connect UI → providers → data layer. Ensure no layer violations.
 
-* Format all monetary values using `splitMoney` from local services
-* Do not display raw numbers for currency
-* Ensure UI receives formatted values only
+## 8. Validation
 
-6.6 DIRECTIONALITY (RTL/LTR)
+Use **architecture-guardian** to verify:
+- No skipped layers.
+- No API models in UI.
+- No direct client or datasource calls from UI.
+- Provider calls client directly (default) or repository (when applicable).
 
-* Set UI direction based on current locale only
-* Do not infer direction from text language
-* Ensure Arabic = RTL, English = LTR
-* Do not override Directionality at widget level unless explicitly required
-* Mixed-language content must respect parent layout direction
+## 9. Cleanup
 
-INTEGRATION
-Connect UI → providers (data) → Repository
-Ensure no layer violations
-VALIDATION
-Use architecture-guardian to verify:
-no skipped layers
-no API models in UI
-no direct client or repository calls from UI; providers do not call clients directly
-CLEANUP
-Use refactor-agent to:
-remove duplication
-align naming
-ensure consistency
+Use **refactor-agent** to remove duplication, align naming, ensure consistency.
 
-RULES:
+## 10. Tests
 
-UI/UX (Figma) has priority over API structure
-Architecture must NEVER be violated
-All mismatches must be solved in lib/data/providers or Repository
-Do NOT introduce new patterns or layers
+Run `/call-skill generate-tests feature=<feature_name>` to scaffold:
+- `test/<feature>_provider_test.dart`
+- `test/<feature>_page_test.dart`
 
-# After UI + providers + Repository generation
-/call-skill generate-tests feature=<feature_name>
+---
+
+**Priority rule:** UI/UX (Figma) has priority over API structure. All mismatches resolved in `lib/data/providers/` or repository. Architecture must never be violated.

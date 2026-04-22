@@ -1,8 +1,0 @@
----
-description: 
-alwaysApply: true
----
-
-Retrofit **client** classes in `lib/data/services/clients/<controller>_client.dart` are stateless: no business logic, only typed HTTP endpoints.
-
-The same `lib/data/services/` tree holds Dio (`http/`), interceptors, and shared Retrofit glue (`clients/callback.dart`, `clients/convertors/`, `_clients.dart`). **Do not** add a parallel `lib/data/clients/` folder—keep all Retrofit API surface definitions under `lib/data/services/clients/`.

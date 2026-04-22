@@ -1,0 +1,61 @@
+---
+description: Cross-cutting code quality, naming, isolation, and generation rules for the entire project.
+alwaysApply: true
+---
+
+## Extend before creating
+Reuse and extend existing repositories, clients, and providers before creating new files. Search the codebase first.
+
+## Follow existing patterns exactly
+When adding to a domain, mirror the naming, imports, and structure of the closest existing file in that layer. Do not introduce new naming conventions mid-project.
+
+## No parallel implementations
+Never duplicate logic across multiple files or layers. One canonical location per responsibility.
+
+## Feature isolation
+Features under `lib/src/` must not import from each other. If logic is needed across features, move it to `lib/data/` or `lib/utils/`.
+
+## Use code generation — never hand-write generated shapes
+- Models: use **Freezed** (`@freezed` + `part '*.freezed.dart'`, `part '*.g.dart'`).
+- API clients: use **Retrofit** (`@RestApi`, `part '*.g.dart'`).
+- Providers: use **Riverpod annotations** (`@riverpod`, `part '*.g.dart'`).
+
+Never manually implement what code generation produces. Always run `dart run build_runner build --delete-conflicting-outputs` after annotation changes.
+
+## Naming must reflect layer
+
+| Layer | Suffix / convention |
+|---|---|
+| Entry route widget | `*Page` class, `*_page.dart` file |
+| Retrofit client class | `*Client`, file `*_client.dart` |
+| Repository class | `*Repository`, file `*_repository.dart` |
+| Provider file | `*_provider.dart` |
+| Freezed model | `*Model`, file `*_model.dart` |
+
+Avoid ambiguous names like `Manager`, `Handler`, `Helper`, `Controller` where a layer-specific name applies.
+
+## No `print` statements
+Use the centralized logger (`lib/logger/`) at boundaries. Use `debugPrint()` only for temporary local debugging that will be removed before committing.
+
+## Log at boundaries
+Log at:
+- API call entry and response/error (client or repository layer).
+- Navigation events (router layer).
+- Unhandled errors and exception catches.
+
+Do not log inside widgets or provider state reads.
+
+## Enums
+All shared enums must be defined in `lib/data/models/enums.dart`. Do not create enums inside feature folders, viewmodels, or services. Reuse existing enums before adding new ones.
+
+## Money formatting
+All monetary values must be formatted using `splitMoney(...)` from the local services layer. Never display raw numeric values for currency in the UI.
+
+## No internal IDs in UI
+Never display database or API IDs in widgets or labels. Use human-readable fields (name, title, code). If no display field exists, map to a UI-friendly value in the provider or repository.
+
+## Directionality
+UI direction is determined by the active app locale only (`MaterialApp` / `locale`). Never infer direction from text content. Do not wrap widgets with `Directionality` based on string language. Arabic = RTL, English = LTR.
+
+## SVG icons first
+Always check `assets/svg/` for a matching SVG asset before falling back to Flutter's `Icons` library.

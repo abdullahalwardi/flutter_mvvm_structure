@@ -1,14 +1,18 @@
 # add-api
 
-Description:
-Integrate a new API endpoint into an existing feature
+Integrate a new API endpoint into an existing feature.
 
-Instructions:
+**Skill:** `.cursor/skills/integrate-api-feature/SKILL.md`
 
-Use data-layer-engineer to add methods on lib/data/services/clients/<controller>_client.dart
-Create/update models in data/models/
-Update lib/data/repositories/<controller>_repository.dart with mapping logic
-Update lib/data/providers/<controller>_provider.dart to consume repository
-Expose clean state to UI
-Ensure UI does not directly depend on API models
-Validate with architecture-guardian
+## Steps
+
+1. Add or extend the Retrofit client method in `lib/data/services/clients/<domain>_client.dart`.
+2. Add/update API models in `lib/data/models/` (Freezed).
+3. Update `lib/data/providers/<domain>_provider.dart`:
+   - Default: call the client directly.
+   - If domain has a repository (posts, user, attachment, notifications): call the repository instead.
+4. If a repository is involved, update `lib/data/repositories/<domain>_repository.dart` with mapping and error normalisation.
+5. Map API models to UI-facing state — never expose raw API DTOs to widgets.
+6. Run code generation: `dart run build_runner build --delete-conflicting-outputs`.
+7. Update UI in `lib/src/<feature>/` to consume the new provider state.
+8. Use architecture-guardian to validate no layer violations.

@@ -1,0 +1,53 @@
+---
+description: Auth feature layout — documents the real lib/src/auth/ structure and its providers/routes.
+alwaysApply: false
+globs:
+  - "lib/src/auth/**/*.dart"
+  - "lib/data/providers/auth_provider.dart"
+  - "lib/data/providers/authentication_provider.dart"
+---
+
+## Real auth folder layout
+
+The auth feature is a single flat folder — do **not** split it into `lib/src/login/`, `lib/src/otp_verification/`, or `lib/src/create_account/`.
+
+```
+lib/src/auth/
+  signin_page.dart
+  signup_page.dart
+  verify_page.dart
+  forget_password_page.dart
+  reset_password_page.dart
+  use_forget_password_page.dart
+  change_email_page.dart
+  change_phone_page.dart
+```
+
+No `components/` subfolder currently exists for auth. Add one if shared auth UI pieces emerge.
+
+## Providers
+
+Auth state is split across two provider files:
+
+| File | Responsibility |
+|---|---|
+| `lib/data/providers/authentication_provider.dart` | Persisted session (`AuthenticationModel`), `isSignedIn()`, `logout()` |
+| `lib/data/providers/auth_provider.dart` | Auth actions — login, register, verify, forgetPassword, changeEmail, changePhone etc. Calls `authClientProvider` directly (no repository in the auth domain). |
+
+## Routes
+
+Use `RoutesDocument` constants from `lib/router/app_router.dart`:
+
+| Screen | Constant |
+|---|---|
+| Sign in | `RoutesDocument.signin` |
+| Sign up | `RoutesDocument.signup` |
+| OTP / verify | `RoutesDocument.verify` |
+| Forget password | `RoutesDocument.forgetPassword` |
+| Reset password | `RoutesDocument.resetPassword` |
+| Use forget password | `RoutesDocument.useForgetPassword` |
+| Change email | `RoutesDocument.changeEmail` |
+| Change phone | `RoutesDocument.changePhone` |
+
+## Theme tokens for auth UI
+Do not name auth-specific tokens `loginOtp…` or `signIn…`. Use flow-agnostic names (e.g. `authInputStyle`, `verifySubtitleColor`) in `lib/theme/app_theme.dart`.

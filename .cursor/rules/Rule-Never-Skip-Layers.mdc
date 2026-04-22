@@ -1,9 +1,0 @@
----
-alwaysApply: true
----
-
-UI must NOT call repository directly
-Provider (lib/data/providers) must NOT call datasource directly
-Repository must be the only layer talking to `lib/data/services/clients/` (Retrofit)
-
-If violated → architecture breaks immediately

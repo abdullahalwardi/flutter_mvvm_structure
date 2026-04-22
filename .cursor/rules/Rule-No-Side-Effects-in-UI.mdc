@@ -1,5 +1,0 @@
----
-alwaysApply: true
----
-
-API calls, state mutations → only in lib/data/providers (Riverpod notifiers)

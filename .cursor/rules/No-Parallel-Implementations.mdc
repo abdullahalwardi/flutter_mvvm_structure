@@ -1,5 +1,0 @@
----
-alwaysApply: true
----
-
-Never duplicate logic in multiple places

@@ -8,8 +8,10 @@ description: Refactors UI to replace hardcoded styles with AppTheme tokens and e
 ## Goal
 Scan a feature's UI files for hardcoded `TextStyle` and `Color` literals, replace them with `AppTheme` tokens, and extend `app_theme.dart` with new semantic tokens when no close match exists.
 
-## Mandatory Architecture Rules
-- All colors and text styles in UI must come from `AppTheme` tokens.
+## Mandatory architecture rules
+Rule files: `.cursor/rules/ui-polish.mdc`, `.cursor/rules/code-hygiene.mdc`
+
+- All colors and text styles in UI must come from `AppTheme` tokens in `lib/theme/app_theme.dart`.
 - Do not create inline `TextStyle(...)` or `Color(0x...)` in widget files.
 - Do not modify repository, service, or datasource files — this skill is UI-layer only.
 - Naming of new tokens must be semantic (describe intent, not value): prefer `AppTheme.subtitleSecondary` over `AppTheme.grey500`.

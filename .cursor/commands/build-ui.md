@@ -1,36 +1,48 @@
 # build-ui
 
-Generate UI from design **without** Swagger/API integration: layout, `AppTheme`, localization, and dumb widgets.
+Generate UI from a design without Swagger/API integration: layout, `AppTheme`, localization, and dumb widgets.
 
-## Output layout (this repo)
+**Rule files:** `.cursor/rules/ui-feature-layout.mdc`, `.cursor/rules/ui-polish.mdc`, `.cursor/rules/routing.mdc`, `.cursor/rules/auth-feature.mdc`
 
-- **Do not** use `lib/src/**/presentation/screens/` or `presentation/widgets/`.
-- Put each **user-facing flow** in its own feature folder (flat layout):
+## Output layout
 
+- Do **not** use `presentation/screens/`, `presentation/widgets/`, or `viewmodels/` subfolders.
+- Each user-facing flow gets its own flat feature folder:
   - `lib/src/<feature>/<feature>_page.dart`
-  - `lib/src/<feature>/components/` for feature-local building blocks
+  - `lib/src/<feature>/components/` — feature-local building blocks
 
-- **Auth-related:** do not place shared OTP or create-account screens under `lib/src/login/`. Use `lib/src/otp_verification/` and `lib/src/create_account/` (see `Rule-Auth-Flow-Feature-Folders.mdc`).
+**Auth pages:** use the existing flat `lib/src/auth/` folder. Do **not** create `lib/src/login/`, `lib/src/otp_verification/`, or `lib/src/create_account/`.
 
-## State (no API)
+Real auth pages: `signin_page.dart`, `signup_page.dart`, `verify_page.dart`, `forget_password_page.dart`, `reset_password_page.dart`, `use_forget_password_page.dart`, `change_email_page.dart`, `change_phone_page.dart`.
 
-- Use Riverpod codegen in `lib/data/providers/` (same domain file, e.g. `authentication_provider.dart`), not a parallel `viewmodels/` folder.
-- Mock phases only; **TODO** for repository/API.
+## State (no API yet)
+
+- Use Riverpod codegen in `lib/data/providers/<domain>_provider.dart` — not a `viewmodels/` folder.
+- Add TODO comments for repository/API wiring.
 
 ## Routing
 
 - Add routes in `lib/router/app_router.dart` via `RoutesDocument`.
-- Names must reflect the **screen** (e.g. `otpVerification`, `createAccount`), not a single parent flow (`loginOtp`).
-- Reusable flows: typed `GoRouterState.extra` (see `lib/router/otp_verification_route_args.dart`).
+- Route names must describe **the screen** — not a specific parent flow.
+- Existing route names (use, don't duplicate): `signin`, `signup`, `verify`, `forgetPassword`, `resetPassword`, `useForgetPassword`, `changeEmail`, `changePhone`, `home`, `account`, `posts`, `search`, `notifications`, `inbox`, `cart`, `wallet`, etc.
+- For reusable flows, pass typed `GoRouterState.extra`.
 
 ## Theme and l10n
 
-- Only `AppTheme` tokens; extend `app_theme.dart` when needed.
-- All strings via `context.l10n.*` and ARB updates.
-- Layout direction follows **app locale** only.
+- Only `AppTheme` tokens from `lib/theme/app_theme.dart` — extend the file with new semantic tokens when needed.
+- All user-facing strings via `context.l10n.*`; add missing keys to `lib/l10n/app_en.arb`, `app_ar.arb`, `app_ku.arb`.
+- Layout direction follows **app locale only** — no per-widget `Directionality` based on text.
+
+## Loading placeholders
+
+- Full-screen / section loading: use skeletons from `lib/utils/widgets/skeletons/` or named placeholders from `lib/utils/widgets/place_holders/`.
+- Not `CircularProgressIndicator` for full-screen loads.
 
 ## Quality bar
 
-- No hardcoded colors/`TextStyle` in UI.
+- No hardcoded `TextStyle`, `Color`, or route strings in UI.
 - No API/repository calls from widgets.
-- Enums in `lib/data/models/enums.dart` when shared.
+- Enums in `lib/data/models/enums.dart`.
+- Monetary values formatted with `splitMoney(...)`.
+- No raw IDs displayed in UI.
+- Check `assets/svg/` before using Flutter's `Icons` library.

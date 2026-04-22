@@ -23,8 +23,8 @@ Instructions:
 
 * If user is guest and tries to access protected screen:
 
-  * redirect to login screen
-  * or show auth-required UI
+  * redirect to `RoutesDocument.signin` (never hardcode `/signin` string in UI)
+  * or show auth-required UI (see `lib/utils/widgets/dialogs/signin_warning_dialog.dart` for an existing example)
 
 4. UI BEHAVIOR
 
@@ -63,8 +63,8 @@ Instructions:
 * Do not mix auth logic inside UI widgets
 * Keep it in:
 
-  * Providers (data/providers)
-  * Middleware / guards
+  * Providers (`lib/data/providers/`) — notifier guards using `ref.read(authenticationProvider)`
+  * GoRouter redirect callbacks in `lib/router/app_router.dart`
 
 10. TESTING
 

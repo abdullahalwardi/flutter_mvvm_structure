@@ -8,15 +8,17 @@ description: Extract reusable presentational UI from existing feature pages into
 ## Goal
 Refactor repeated UI patterns from an existing feature **page** into reusable widgets inside that feature's **`components/`** folder, while keeping business logic out of UI.
 
-## Mandatory Architecture Rules
-- Keep layered flow intact: `UI -> Provider -> Repository -> Client (lib/data/services/clients) -> HTTP`.
-- Extracted components must be presentational only.
+## Mandatory architecture rules
+Rule file: `.cursor/rules/ui-feature-layout.mdc`
+
+- Keep layered flow intact: `UI -> Provider -> (Repository?) -> Client`.
+- Extracted components must be **presentational only**.
 - Do not add business logic in feature components.
-- Do not call repositories/clients/datasources from feature components.
+- Do not call clients, repositories, or datasources from feature components.
 - Pass all required data and callbacks via constructor parameters.
-- Do not introduce state unless it is strictly UI-related (for example, local visual toggles/animations).
-- Keep styles and spacing consistent with existing theme usage in the feature.
-- Reuse existing shared widgets under `lib/utils/widgets/` before creating feature-local components.
+- Do not introduce state unless it is strictly UI-related (e.g. local visual toggles/animations).
+- Keep styles and spacing consistent with `lib/theme/app_theme.dart` tokens.
+- **Reuse existing shared widgets under `lib/utils/widgets/`** before creating feature-local components.
 
 ## Implementation Workflow
 1. Inspect the target page and identify repeated UI blocks or repeated visual patterns.
@@ -41,7 +43,8 @@ Refactor repeated UI patterns from an existing feature **page** into reusable wi
 
 ## Naming
 - Feature-local files live under `components/` (not `widgets/` at feature level).
-- Use names that describe presentation intent (for example, `LoginPhoneSection`, `OrderSummaryCard`).
+- Real examples: `lib/src/posts/components/`, `lib/src/account/components/`, `lib/src/settings/components/`.
+- Use names that describe presentation intent (e.g. `PostCoverPreviewCard`, `ProfileInfoCard`).
 
 ## Completion Checklist
 - [ ] Duplicated UI identified and consolidated

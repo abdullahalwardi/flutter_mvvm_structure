@@ -1,9 +1,0 @@
----
-description: 
-alwaysApply: true
----
-
-UI must only consume feature models
-Mapping must happen in:
-repository OR
-provider in lib/data/providers (prefer repository)

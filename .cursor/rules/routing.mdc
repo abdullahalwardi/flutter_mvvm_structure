@@ -1,0 +1,57 @@
+---
+description: Routing rules — all navigation must go through GoRouter and RoutesDocument.
+alwaysApply: false
+globs:
+  - "lib/router/**/*.dart"
+  - "lib/src/**/*.dart"
+---
+
+## All routes live in one place
+Route path constants are defined in the `RoutesDocument` class at the bottom of `lib/router/app_router.dart`. Route configuration (the `GoRouter` instance) is also in that file. Do not scatter route definitions or path strings anywhere else.
+
+## No magic strings in UI
+Never write a raw path string like `'/signin'` inside a widget or provider. Always reference `RoutesDocument.<name>`.
+
+## How to navigate
+- **From a provider/notifier:** `ref.read(routerProvider).go(RoutesDocument.signin)` — see `authentication_provider.dart` for the canonical example.
+- **From a widget (rare):** `GoRouter.of(context).go(RoutesDocument.home)` or `context.go(RoutesDocument.home)`.
+
+## RoutesDocument naming conventions
+Names must describe **what the screen is**, not which flow it belongs to.
+
+Current real names (do not create duplicates):
+
+| Constant | Path |
+|---|---|
+| `getStarted` | `/get-started` |
+| `splash` | `/splash` |
+| `signin` | `/signin` |
+| `signup` | `/signup` |
+| `verify` | `/verify` |
+| `forgetPassword` | `/forget-password` |
+| `resetPassword` | `/reset-password` |
+| `useForgetPassword` | `/use-forget-password` |
+| `changeEmail` | `/change-email` |
+| `changePhone` | `/change-phone` |
+| `home` | `/` |
+| `account` | `/account` |
+| `settings` | `/settings` |
+| `updatePersonalInformation` | `/update-personal-information` |
+| `posts` | `/posts` |
+| `addPost` | `/add-post` |
+| `search` | `/search` |
+| `notifications` | `/notifications` |
+| `inbox` | `/inbox` |
+| `cart` | `/cart` |
+| `orders` | `/orders` |
+| `wallet` | `/wallet` |
+| `followers` | `/followers` |
+| `followings` | `/followings` |
+| `savedAddresses` | `/savedAddresses` |
+
+For screens reused across multiple flows, pass a **typed `GoRouterState.extra`** (e.g. a purpose enum + destination argument) instead of adding a duplicate route per flow.
+
+## Naming new routes
+- Use `camelCase` for the constant name.
+- Describe the screen, not the parent journey (prefer `otpVerification` over `loginOtp` if that screen is ever added).
+- Add the constant to `RoutesDocument` and the route entry to the `GoRouter` in `app_router.dart`. Do not add routes anywhere else.

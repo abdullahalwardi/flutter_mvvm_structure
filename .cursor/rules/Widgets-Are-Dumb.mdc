@@ -1,7 +1,0 @@
----
-alwaysApply: true
----
-
-Only presentation
-No API calls
-No heavy logic

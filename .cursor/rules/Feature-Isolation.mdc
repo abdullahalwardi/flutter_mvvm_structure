@@ -1,6 +1,0 @@
----
-alwaysApply: true
----
-
-Features must not depend on each other
-If sharing needed → move to data/ or utils/

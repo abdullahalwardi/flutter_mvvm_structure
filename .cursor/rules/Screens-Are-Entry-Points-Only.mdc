@@ -1,5 +1,0 @@
----
-alwaysApply: true
----
-
-Business logic must start in lib/data/providers (notifier methods), not inside navigation callbacks

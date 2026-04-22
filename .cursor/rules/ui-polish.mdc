@@ -1,0 +1,51 @@
+---
+description: Situational UI polish rules — loading placeholders and bidirectional layout. Applies when editing UI or shared widget files.
+alwaysApply: false
+globs:
+  - "lib/src/**/*.dart"
+  - "lib/utils/widgets/**/*.dart"
+---
+
+## Loading placeholders
+
+### Full-screen / section loading (first paint)
+Use skeleton widgets from the project's two placeholder locations:
+
+- **Skeletons/shimmer:** `lib/utils/widgets/skeletons/` — contains `shimmer.dart`, `skeleton.dart`, `widgets.dart` (pre-built bones), `stylings.dart`, `theme.dart`.
+- **Named placeholders:** `lib/utils/widgets/place_holders/` — contains ready-made feature-shaped placeholders:
+  - `post_card_place_holder.dart`
+  - `posts_place_holder.dart`
+  - `followers_list_place_holder.dart`
+  - `follower_place_holder.dart`
+  - `profile_info_card_place_holder.dart`
+  - `profile_count_view_card_place_holder.dart`
+  - `reel_player_place_holder.dart`
+  - `list_view_place_holder.dart`
+  - `custom_list_tile_place_holder.dart`
+
+Prefer reusing an existing named placeholder before building a new skeleton. When creating a new one, put it in `lib/utils/widgets/place_holders/` (shared) or `lib/src/<feature>/components/` (feature-specific). Mirror the real content layout — cards, list rows, primary actions — so the transition is smooth.
+
+Do **not** use a centred `CircularProgressIndicator` for full-screen or section loads.
+
+### Inline / button loading (small targets)
+A compact spinner inside a button or OTP row is fine. These are not "page loads."
+
+### Theme consistency
+Use `colorScheme.surfaceContainerHighest` (or the closest project token from `lib/theme/app_theme.dart`) for skeleton bone colors so placeholders respect dark/light mode.
+
+---
+
+## Bidirectional row layout (RTL / LTR)
+
+- Follow `Directionality.of(context)` derived from the app locale. Do not set `textDirection` on a subtree based on string content.
+- **Title or action cluster beside a badge:** in the LTR remaining space, align with `AlignmentDirectional.centerStart` so the cluster sits at the leading edge. Avoid `AlignmentDirectional.centerEnd` for that cluster in LTR — it pushes content to the trailing edge and mirrors RTL.
+- **Badge vs expanded block:** if the badge must sit on the opposite physical side in RTL vs LTR, reorder `Row` children (e.g. `[badge, Expanded(...)]` for LTR, `[Expanded(...), badge]` for RTL) instead of using non-directional `left`/`right` alignment.
+- **Two action buttons:** keep primary placement consistent with locale (LTR: `[secondary, primary]`; mirror for RTL when the design requires it).
+
+---
+
+## Theme and styling
+- All colors and text styles must come from `lib/theme/app_theme.dart` tokens.
+- Do not hardcode `TextStyle(...)`, `Color(0x...)`, or `Colors.*` literals in widget files.
+- When a design value has no matching token: (1) map to the closest existing token, or (2) add a new semantic token to `app_theme.dart` (e.g. `cardBorderColor`, `sectionTitleStyle`), or (3) as a last resort hardcode with `// TODO: move to AppTheme`.
+- Token names are semantic, not value-based: `successBackground` not `greenLight1`; `sectionTitleStyle` not `font14Bold`.

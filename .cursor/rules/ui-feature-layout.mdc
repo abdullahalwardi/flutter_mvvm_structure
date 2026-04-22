@@ -1,0 +1,53 @@
+---
+description: Feature folder structure and widget behaviour rules for lib/src/.
+alwaysApply: false
+globs:
+  - "lib/src/**/*.dart"
+---
+
+## Feature folder structure
+
+Each user-facing surface gets its own folder under `lib/src/<feature>/` with a **flat** layout:
+
+```
+lib/src/<feature>/
+  <feature>_page.dart      # entry route widget — class *Page
+  components/              # feature-local UI building blocks only
+  models/                  # optional — only if UI needs a dedicated mapped shape
+```
+
+Real examples in this project:
+- `lib/src/auth/signin_page.dart` — entry page, widget `SigninPage`
+- `lib/src/posts/components/` — post-specific UI pieces
+- `lib/src/account/components/` — account-specific UI pieces
+
+### Forbidden under `lib/src/<feature>/`
+- `presentation/` subfolder
+- `screens/` subfolder
+- `viewmodels/` subfolder
+- `widgets/` folder at the feature level — use `components/` instead
+- Provider files — providers live in `lib/data/providers/` only
+
+### Shared widgets
+Reusable widgets that span features belong in `lib/utils/widgets/`, not inside any feature folder.
+
+## Widget behaviour
+
+### Pages (`*_page.dart`)
+- Are **entry points only** — they wire the UI to Riverpod state.
+- Read state with `ref.watch`; trigger actions with `ref.read(...notifier)`.
+- Contain no business logic, no API calls, no state mutation.
+- Do not call repositories or Retrofit clients.
+
+### Components (`components/`)
+- Are **dumb and presentational** — receive data via constructor, emit events via callbacks.
+- No `ref`, no provider reads unless genuinely needed for very local UI state.
+- No API calls, no side effects.
+
+## State (ViewModel layer)
+All business logic and async orchestration live in Riverpod codegen providers under `lib/data/providers/`. Do not add a `viewmodels/` folder under any feature.
+
+## Naming
+- File: `snake_case`, suffix `_page.dart` for route entry widgets.
+- Widget class: `PascalCase`, suffix `Page` (e.g. `SigninPage`, `PostsPage`).
+- Components: descriptive names reflecting their visual role, not their parent page.
