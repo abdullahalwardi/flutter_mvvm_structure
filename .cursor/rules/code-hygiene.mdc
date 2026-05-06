@@ -59,3 +59,6 @@ UI direction is determined by the active app locale only (`MaterialApp` / `local
 
 ## SVG icons first
 Always check `assets/svg/` for a matching SVG asset before falling back to Flutter's `Icons` library.
+
+## TextEditingController updates
+Never assign `controller.text = ...` directly when the value comes from external state (sliders, providers, listeners, timers, async results). Always use the `setTextSafely(...)` extension from `lib/utils/extensions.dart`. Direct `.text =` leaves stale selection offsets and crashes on Android with `IndexOutOfBoundsException: invalid selection start` when the new text is shorter than the cached cursor position. The only acceptable raw `.text =` usage is initialization inside `useTextEditingController(text: ...)` or one-shot user-driven mutations where the field is unfocused and known empty.

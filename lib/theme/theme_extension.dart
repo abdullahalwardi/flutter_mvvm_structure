@@ -3,15 +3,26 @@ import 'package:flutter/material.dart';
 class ThemeX {
   const ThemeX._();
 
-  static ThemeMode getOppositeThemeMode(ThemeMode value, BuildContext context) {
+  static ThemeMode getOppositeThemeModeForBrightness(
+    ThemeMode value,
+    Brightness platformBrightness,
+  ) {
     switch (value) {
       case ThemeMode.system:
-        final brightness = MediaQuery.platformBrightnessOf(context);
-        return brightness == Brightness.dark ? ThemeMode.light : ThemeMode.dark;
+        return platformBrightness == Brightness.dark
+            ? ThemeMode.light
+            : ThemeMode.dark;
       case ThemeMode.light:
         return ThemeMode.dark;
       case ThemeMode.dark:
         return ThemeMode.light;
     }
+  }
+
+  static ThemeMode getOppositeThemeMode(ThemeMode value, BuildContext context) {
+    return getOppositeThemeModeForBrightness(
+      value,
+      MediaQuery.platformBrightnessOf(context),
+    );
   }
 }

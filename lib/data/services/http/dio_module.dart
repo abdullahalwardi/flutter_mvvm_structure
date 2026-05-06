@@ -3,11 +3,10 @@ import 'dart:convert';
 import 'package:app/data/providers/authentication_provider.dart';
 import 'package:app/data/services/clients/_clients.dart';
 import 'package:app/data/services/interceptors/authenticator.dart';
+import 'package:app/logger/logger.dart';
 import 'package:app/utils/constants/api_document.dart';
-import 'package:app/utils/snackbar.dart';
 import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 part 'dio_module.g.dart';
 
@@ -33,23 +32,28 @@ Dio dio(
         }
           switch (e.type) {
     case DioExceptionType.badCertificate:
-      Utils.showErrorSnackBar('حدث خطأ ما');
+      logger.e('Dio badCertificate');
       break;
     case DioExceptionType.badResponse:
       debugPrint(e.error.toString());
+              final Object errObj = e.error ?? '';
               String message = 'حدث خطأ ما';
-              if (e.error is FormatException) {
-                message = e.error
+              if (errObj is FormatException) {
+                message = errObj
                     .toString()
                     .replaceRange(0, 54, '')
                     .replaceAll('^', '')
                     .replaceAll('\n', '');
               } else if (e.response?.data is String) {
-                message = e.response?.data;
-              } else if (e.response?.data['message'] != null) {
-                message = e.response?.data['message'];
+                message = e.response!.data as String;
+              } else if (e.response?.data is Map<String, dynamic> &&
+                  (e.response!.data as Map<String, dynamic>)['message'] !=
+                      null) {
+                message =
+                    '${(e.response!.data as Map<String, dynamic>)['message']}';
               }
-              Utils.showErrorSnackBar(message);
+              logger.e('Dio badResponse', error: message,
+                  stackTrace: StackTrace.current);
       break;
     case DioExceptionType.cancel:
       debugPrint(e.message);
@@ -58,7 +62,8 @@ Dio dio(
     case DioExceptionType.connectionTimeout:
     case DioExceptionType.receiveTimeout:
     case DioExceptionType.sendTimeout:
-      Utils.showErrorSnackBar('حدث خطأ في الاتصال');
+      logger.e('Dio connection/timeout error', error: e.message?.toString(),
+          stackTrace: StackTrace.current);
       break;
     case DioExceptionType.unknown:
       String message = 'حدث خطأ ما';
@@ -81,7 +86,8 @@ Dio dio(
         },
         statusMessage: e.message,
       );
-      Utils.showErrorSnackBar(message);
+      logger.e('Dio unknown error', error: message,
+          stackTrace: StackTrace.current);
       handler.reject(
         DioException(
           requestOptions: e.requestOptions,

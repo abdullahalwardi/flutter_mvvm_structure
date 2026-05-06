@@ -7,10 +7,11 @@ part of 'settings_provider.dart';
 // **************************************************************************
 
 _AppSettings _$AppSettingsFromJson(Map<String, dynamic> json) => _AppSettings(
-      themeMode: $enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']) ??
-          ThemeMode.system,
-      localeCode: json['localeCode'] as String? ?? null,
-    );
+  themeMode:
+      $enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']) ??
+      ThemeMode.system,
+  localeCode: json['localeCode'] as String? ?? null,
+);
 
 Map<String, dynamic> _$AppSettingsToJson(_AppSettings instance) =>
     <String, dynamic>{
@@ -28,20 +29,56 @@ const _$ThemeModeEnumMap = {
 // RiverpodGenerator
 // **************************************************************************
 
-String _$settingsHash() => r'8981430d46abba56a8bfbc9abec95d79c81e557f';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [Settings].
 @ProviderFor(Settings)
-final settingsProvider =
-    AutoDisposeNotifierProvider<Settings, AppSettings>.internal(
-  Settings.new,
-  name: r'settingsProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$settingsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final settingsProvider = SettingsProvider._();
 
-typedef _$Settings = AutoDisposeNotifier<AppSettings>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class SettingsProvider extends $NotifierProvider<Settings, AppSettings> {
+  SettingsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'settingsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$settingsHash();
+
+  @$internal
+  @override
+  Settings create() => Settings();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AppSettings value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AppSettings>(value),
+    );
+  }
+}
+
+String _$settingsHash() => r'd4eb0dff336b6f47f7cee5c5a926598c4223efb4';
+
+abstract class _$Settings extends $Notifier<AppSettings> {
+  AppSettings build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AppSettings, AppSettings>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AppSettings, AppSettings>,
+              AppSettings,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

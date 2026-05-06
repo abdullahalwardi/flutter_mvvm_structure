@@ -13,8 +13,8 @@ _AuthenticationModel _$AuthenticationModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AuthenticationModelToJson(
-        _AuthenticationModel instance) =>
-    <String, dynamic>{
-      'token': instance.token,
-      'refreshToken': instance.refreshToken,
-    };
+  _AuthenticationModel instance,
+) => <String, dynamic>{
+  'token': instance.token,
+  'refreshToken': instance.refreshToken,
+};

@@ -14,13 +14,17 @@ class PaginatedResponse<T> implements Paginated<T> {
     required this.statusCode,
   });
 
-
-  @override
+  /// API payload list (JSON key `result`).
   final List<T> result;
   final int count;
   final String message;
   final int statusCode;
 
+  @override
+  List<T> get items => result;
+
+  @override
+  int get totalCount => count;
 
   factory PaginatedResponse.fromJson(
           Map<String, dynamic> json, FromJsonT<T> fromJsonT) =>
@@ -39,8 +43,5 @@ class PaginatedResponse<T> implements Paginated<T> {
       statusCode: statusCode ?? this.statusCode,
     );
   }
-  
-  @override
-  int get total => count;
-
 }
+

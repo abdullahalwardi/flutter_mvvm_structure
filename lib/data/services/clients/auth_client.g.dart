@@ -2,11 +2,13 @@
 
 part of 'auth_client.dart';
 
+// dart format off
+
 // **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter,avoid_unused_constructor_parameters,unreachable_from_main
 
 class _AuthClient implements AuthClient {
   _AuthClient(this._dio, {this.baseUrl, this.errorLogger});
@@ -38,7 +40,7 @@ class _AuthClient implements AuthClient {
     try {
       _value = AuthenticationModel.fromJson(_result.data!);
     } on Object catch (e, s) {
-      errorLogger?.logError(e, s, _options);
+      errorLogger?.logError(e, s, _options, response: _result);
       rethrow;
     }
     final httpResponse = HttpResponse(_value, _result);
@@ -73,25 +75,52 @@ class _AuthClient implements AuthClient {
   }
 }
 
+// dart format on
+
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$authClientHash() => r'1daaf336715f59636dea9668787b3bcfc922a1cb';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [authClient].
 @ProviderFor(authClient)
-final authClientProvider = AutoDisposeProvider<AuthClient>.internal(
-  authClient,
-  name: r'authClientProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$authClientHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final authClientProvider = AuthClientProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef AuthClientRef = AutoDisposeProviderRef<AuthClient>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AuthClientProvider
+    extends $FunctionalProvider<AuthClient, AuthClient, AuthClient>
+    with $Provider<AuthClient> {
+  AuthClientProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'authClientProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$authClientHash();
+
+  @$internal
+  @override
+  $ProviderElement<AuthClient> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  AuthClient create(Ref ref) {
+    return authClient(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AuthClient value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AuthClient>(value),
+    );
+  }
+}
+
+String _$authClientHash() => r'1daaf336715f59636dea9668787b3bcfc922a1cb';

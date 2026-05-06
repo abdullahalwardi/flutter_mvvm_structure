@@ -12,7 +12,7 @@ class HomePage extends StatefulHookConsumerWidget {
 
 class _HomePageState extends ConsumerState<HomePage> {
   void _switchThemeMode() {
-    ref.read(settingsProvider.notifier).toggleThemeMode(context);
+    ref.read(settingsProvider.notifier).toggleThemeMode();
   }
 
   @override
@@ -33,7 +33,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               onPressed: () => Future.sync(() => ref
                   .read(settingsProvider.notifier)
                   .setLocale(settings.locale?.languageCode == 'en'
-                      ? const Locale('es')
+                      ? const Locale('ar')
                       : const Locale('en'))),
               icon: const Icon(Icons.language),
               label: Text(context.l10n.localeName),

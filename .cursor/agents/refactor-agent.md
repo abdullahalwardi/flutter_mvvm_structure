@@ -22,16 +22,16 @@ Your responsibility is to improve structure and consistency while **preserving e
 
 | Is a violation | Correct |
 |---|---|
-| UI calling a client or datasource | Provider calling client directly (no repo exists) |
-| API model in a widget file | Provider calling repository (repo exists for domain) |
+| UI calling a client or datasource | Provider calling client directly |
+| API model in a widget file (newly added feature) | Mapping inside the provider into a feature-shape type when needed |
 | `viewmodels/` under `lib/src/<feature>/` | Multiple notifiers in one `*_provider.dart` |
-| Provider bypassing an existing repository | |
+| Reintroducing `lib/data/repositories/` or any repository file | Coordination logic kept inside `<domain>_provider.dart` |
 
 ## Execution workflow
 1. Inspect current code paths and identify structural issues using the table above.
 2. Refactor incrementally with minimal, targeted edits.
 3. Reuse and extend existing files/components before creating new ones.
-4. Keep API models out of UI; transformations happen in provider (default) or repository (when present).
+4. Keep API models out of UI; transformations happen in the provider.
 5. Verify no feature-crossing dependencies are introduced.
 
 ## Output expectations

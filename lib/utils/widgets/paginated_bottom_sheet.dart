@@ -1,6 +1,6 @@
 import 'package:app/common_lib.dart';
 import 'package:app/paging/paging_list_delegate.dart';
-import 'package:app/utils/widgets/break_line.dart';
+import 'package:app/utils/widgets/bottom_sheets/bottom_sheet_header.dart';
 import 'package:app/utils/widgets/svg_prefix_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -15,6 +15,8 @@ class PaginatedBottomSheet<T> extends HookConsumerWidget {
     this.searchController,
     this.subtitleBuilder,
     this.leadingBuilder,
+    this.onFieldSubmitted,
+    this.customItems,
   });
   final PagingController<int, dynamic> pagingController;
   final void Function(T) onSelect;
@@ -22,84 +24,87 @@ class PaginatedBottomSheet<T> extends HookConsumerWidget {
   final void Function(String?)? onSearch;
   final TextEditingController? searchController;
   final Widget Function(T)? subtitleBuilder, leadingBuilder;
+  final List<Widget>? customItems;
+  final void Function(String)? onFieldSubmitted;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    useListenable(pagingController);
+    final fieldController =
+        searchController ?? useTextEditingController();
     return GestureDetector(
       onTap: () {
-        FocusScope.of(context).unfocus(); // Unfocus when tapping anywhere
+        FocusScope.of(context).unfocus();
       },
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(BorderSize.medium),
           topRight: Radius.circular(BorderSize.medium),
         ),
         child: Scaffold(
           extendBody: true,
           extendBodyBehindAppBar: true,
+          backgroundColor: context.colorScheme.surfaceContainerLowest,
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Gap(Insets.medium),
-              BreakLine(),
-              const Gap(Insets.medium),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: Insets.medium),
-                child: Text(
-                  titleText,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-              const Gap(Insets.medium),
+              BottomSheetHeader(title: titleText),
               Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: context.colorScheme.outline,
-                      width: 0.5,
-                    ),
-                    color: context.colorScheme.surfaceContainerLowest,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(BorderSize.medium),
-                      topRight: Radius.circular(BorderSize.medium),
-                    ),
-                  ),
-                  padding: Insets.mediumAll,
-                  child: ColumnPadded(children: [
-                    CustomTextFormField(
-                      prefixIcon:
-                          SvgPrefixIcon(svgPath: Assets.assetsSvgSearch01),
-                      controller:
-                          searchController ?? useTextEditingController(),
-                      hintText: context.l10n.search,
-                      onChanged: onSearch,
-                    ),
-                    Expanded(
-                      child: PagedListView.separated(
-                        pagingController: pagingController,
-                        builderDelegate: defaultListPagedChildBuilderDelegate(
-                          context: context,
-                          controller: pagingController,
-                          itemBuilder: (context, item, index) {
-                            return ListTile(
-                              title: Text(item?.name ?? ''),
-                              subtitle: subtitleBuilder?.call(item as T),
-                              leading: leadingBuilder?.call(item as T),
-                              onTap: () => onSelect(item as T),
-                            );
-                          },
-                        ),
-                        separatorBuilder: (context, index) {
-                          return const Divider(
-                            thickness: 0.5,
-                          );
-                        },
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: Insets.medium),
+                  child: Column(
+                    spacing: Insets.medium,
+                    children: [
+                      CustomTextFormField(
+                        prefixIcon:
+                            SvgPrefixIcon(svgPath: Assets.assetsSvgSearch01),
+                        controller: fieldController,
+                        hintText: context.l10n.search,
+                        onChanged: onSearch,
+                        onFieldSubmitted: onFieldSubmitted,
                       ),
-                    ),
-                  ]),
+                      Expanded(
+                        child: RefreshIndicator(
+                          onRefresh: () async {
+                            await Future.sync(() => pagingController.refresh());
+                          },
+                          child: Column(
+                            children: [
+                              if (customItems != null) ...customItems!,
+                              if (customItems != null)
+                                const Divider(thickness: 0.5),
+                              Expanded(
+                                child: PagedListView.separated(
+                                  state: pagingController.value,
+                                  fetchNextPage: pagingController.fetchNextPage,
+                                  builderDelegate:
+                                      defaultListPagedChildBuilderDelegate(
+                                    context: context,
+                                    controller: pagingController,
+                                    itemBuilder: (context, item, index) {
+                                      return ListTile(
+                                        title: Text(item?.name ?? ''),
+                                        subtitle: subtitleBuilder
+                                            ?.call(item as T),
+                                        leading:
+                                            leadingBuilder?.call(item as T),
+                                        onTap: () => onSelect(item as T),
+                                      );
+                                    },
+                                  ),
+                                  separatorBuilder: (context, index) {
+                                    return const Divider(thickness: 0.5);
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

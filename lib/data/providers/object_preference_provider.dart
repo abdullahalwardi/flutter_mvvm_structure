@@ -2,11 +2,12 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:riverpod/riverpod.dart' show AnyNotifier;
 
 import '../../common_lib.dart';
 import 'provider.dart';
 
-mixin ObjectPreferenceProvider<State> on AutoDisposeNotifier<State> {
+mixin ObjectPreferenceProvider<State> on AnyNotifier<State, State> {
   @protected
   String get key;
 
@@ -50,7 +51,8 @@ mixin ObjectPreferenceProvider<State> on AutoDisposeNotifier<State> {
   }
 }
 
-mixin NullableObjectPreferenceProvider<State> on AutoDisposeNotifier<State?> {
+mixin NullableObjectPreferenceProvider<State>
+    on AnyNotifier<State?, State?> {
   @protected
   String get key;
 

@@ -1,9 +1,9 @@
-// ignore_for_file: avoid_build_context_in_providers
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../theme/theme_extension.dart';
+import 'package:app/theme/theme_extension.dart';
 import 'object_preference_provider.dart';
 import 'package:app/data/shared_preference/preferences.dart';
 
@@ -41,9 +41,12 @@ class Settings extends _$Settings with ObjectPreferenceProvider {
   AppSettings build() => firstBuild(const AppSettings());
 
 
-  Future<void> toggleThemeMode(BuildContext context) =>
-      update((state) => state.copyWith(
-          themeMode: ThemeX.getOppositeThemeMode(state.themeMode, context)));
+  Future<void> toggleThemeMode() => update((state) => state.copyWith(
+        themeMode: ThemeX.getOppositeThemeModeForBrightness(
+          state.themeMode,
+          SchedulerBinding.instance.platformDispatcher.platformBrightness,
+        ),
+      ));
 
   Future<void> setLocale(Locale? locale) =>
       update((state) => state.copyWith(localeCode: locale?.languageCode));

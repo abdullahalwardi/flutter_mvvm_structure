@@ -18,6 +18,3 @@ analyzer:
     use_build_context_synchronously: ignore
     require_trailing_commas: true
     deprecated_member_use: ignore
-
-  plugins:
-    - custom_lint

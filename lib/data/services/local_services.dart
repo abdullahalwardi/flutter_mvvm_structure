@@ -7,28 +7,14 @@ import 'package:image_picker/image_picker.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-Future<void> fetchPage<T>(
-  {
-  int? pageKey,
-  required PagingController<int, T> pagingController,
+/// Awaits [futureItems] and returns the list of items for v5's
+/// [PagingController.fetchPage] callback. On error, the exception is rethrown
+/// so the library records it in `PagingState.error`.
+Future<List<T>> fetchPage<T>({
   required FuturePaginatedResponse<T> futureItems,
-  String? pageSize,
-  }
-) async {
-  try {
-    final newItems = await futureItems;
-    final items = newItems.data.result;
-    final isLastPage = items.length < int.parse(pageSize ?? '25');
-
-    if (isLastPage) {
-      pagingController.appendLastPage(items);
-    } else {
-      final nextPageKey = pageKey ?? 0 + items.length;
-      pagingController.appendPage(items, nextPageKey);
-    }
-  } catch (error) {
-    pagingController.error = error;
-  }
+}) async {
+  final response = await futureItems;
+  return response.data.items;
 }
 
 Future<void> launchNotNullUrlString(String? url, {VoidCallback? orElse}) async {

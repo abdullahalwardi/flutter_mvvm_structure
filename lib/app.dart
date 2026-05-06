@@ -55,7 +55,7 @@ class _AppState extends ConsumerState<App> {
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
-      routerConfig: router,
+      routerConfig: ref.watch(routerProvider),
       scaffoldMessengerKey: Utils.messengerKey,
       // Locale
       locale: settings.locale,

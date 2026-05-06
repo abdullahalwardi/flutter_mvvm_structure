@@ -11,7 +11,7 @@ class SwitchThemeModeButton extends HookConsumerWidget {
     
     return IconButton(
                 onPressed: () {
-                  ref.read(settingsProvider.notifier).toggleThemeMode(context);
+                  ref.read(settingsProvider.notifier).toggleThemeMode();
                 },
                 icon: Icon(
                   isDarkMode

@@ -9,8 +9,7 @@ part of 'pagination.dart';
 _Pagination<T> _$PaginationFromJson<T>(
   Map<String, dynamic> json,
   T Function(Object? json) fromJsonT,
-) =>
-    _Pagination<T>(
-      total: (json['total'] as num).toInt(),
-      items: (json['items'] as List<dynamic>).map(fromJsonT).toList(),
-    );
+) => _Pagination<T>(
+  total: (json['total'] as num).toInt(),
+  items: (json['items'] as List<dynamic>).map(fromJsonT).toList(),
+);

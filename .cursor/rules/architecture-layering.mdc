@@ -8,20 +8,13 @@ alwaysApply: true
 ```
 UI  (lib/src/<feature>/)
  └─> Provider  (lib/data/providers/<domain>_provider.dart)
-      ├─> [default]  Client  (lib/data/services/clients/<domain>_client.dart)
-      ├─> [when repo exists]  Repository  (lib/data/repositories/<domain>_repository.dart)  ->  Client
+      ├─> Client  (lib/data/services/clients/<domain>_client.dart)
       └─> [when needed]  DataSources  (lib/data/db/, lib/data/shared_preference/, lib/data/hubs/)
 ```
 
-**Providers call Retrofit clients directly by default.** A repository is added only when the domain already has one, or when introducing one is justified (non-trivial mapping, multi-client orchestration, or a local cache layer).
+**Providers call Retrofit clients directly.** There is no repository layer in this project — provider -> client is the only correct path. Multi-step orchestration, mapping, caching, or local persistence all live inside the provider.
 
-Current domains that have a repository (providers for these must go through the repository):
-- `posts` — `lib/data/repositories/posts_repository.dart`
-- `user` — `lib/data/repositories/user_repoistory.dart` (typo in filename is intentional — matches disk)
-- `attachment` — `lib/data/repositories/attachment_repository.dart`
-- `notifications` — `lib/data/repositories/notifications_repository.dart`
-
-All other domains: provider -> client is the expected, correct path.
+If a domain needs non-trivial coordination (e.g. uploading attachments before posting, refreshing dependent providers, talking to a datasource), that logic lives inside the same `<domain>_provider.dart` file alongside the rest of that domain's providers.
 
 ## Swagger controller → file naming
 
@@ -31,7 +24,6 @@ For each Swagger controller use one matching `snake_case` base name (e.g. `Auth`
 |---|---|---|
 | Retrofit client | `lib/data/services/clients/<name>_client.dart` | `auth_client.dart` |
 | Riverpod provider | `lib/data/providers/<name>_provider.dart` | `auth_provider.dart` |
-| Repository | `lib/data/repositories/<name>_repository.dart` *(only when justified)* | `posts_repository.dart` |
 
 Do not add a separate provider file per UI page or UI step. Put related notifiers in the same domain `*_provider.dart` file — multiple `@riverpod` classes in one file is fine.
 
@@ -39,9 +31,10 @@ Do not add a separate provider file per UI page or UI step. Put related notifier
 
 ### Provider (`lib/data/providers/`)
 - Use `@riverpod` codegen + `part '*.g.dart'` — do not hand-write providers.
-- Call repository if one exists for the domain; otherwise call the Retrofit client directly.
-- Never call datasources directly from a provider.
-- Never import from `lib/src/` (no UI types, no `BuildContext`, no `ThemeData`).
+- Call the Retrofit client for the domain.
+- May read other providers when orchestration is required.
+- Never call datasources directly when a client exists for the data; if a feature genuinely needs a datasource (e.g. `objectBoxStoreProvider`, `sharedPreferencesProvider`), the provider may consume it directly.
+- Never import from `lib/src/` (no UI types, no `BuildContext` in pure data flow — the only exception is helpers that explicitly need to drive a `FilePlugin`/picker call from a button handler, which is documented in the affected provider).
 - Expose immutable state only; all mutations happen inside notifier methods.
 
 ### Retrofit client (`lib/data/services/clients/`)
@@ -49,24 +42,23 @@ Do not add a separate provider file per UI page or UI step. Put related notifier
 - All Retrofit clients live under `lib/data/services/clients/`. Do not create a parallel `lib/data/clients/` folder.
 - Shared Retrofit helpers (Dio module, interceptors, converters) stay in `lib/data/services/http/` and `lib/data/services/interceptors/`.
 
-### Repository (`lib/data/repositories/`) — optional
-- Exists only for domains listed above, or when added for a justified reason.
-- Owns: calling clients, mapping API models → feature models, normalising errors.
-- Must not import from `lib/src/`.
-
 ### Datasources (`lib/data/db/`, `lib/data/shared_preference/`, `lib/data/hubs/`)
 - Low-level persistence/transport only.
 - No transformations, no UI awareness.
 
-## Mapping rule
-- UI must never consume raw API models from `lib/data/models/`.
-- Map in the provider (default) or in the repository (when one exists).
-- Feature-facing types may live in `lib/src/<feature>/models/` only when a dedicated UI shape is needed and it does not duplicate `lib/data/models/`.
+## Mapping rule (data/models in UI)
+
+This codebase ships with a large amount of UI that imports `lib/data/models/` directly. We are deliberately **not** doing a big-bang migration; the policy is pragmatic, not absolute:
+
+- **New features** must never consume raw API models from `lib/data/models/` in `lib/src/`. Map inside the provider into a feature-facing type when the UI needs a different shape.
+- **Feature-facing types** may live in `lib/src/<feature>/models/` only when a dedicated UI shape is needed and it does not simply duplicate the API model.
+- **Existing UI** that already consumes `lib/data/models/` directly is grandfathered in. Do not refactor in isolation — that creates noisy diffs and parallel models. Migrate opportunistically when you are already touching the file for another reason (bug fix, redesign, behavioural change).
+- **Never** introduce a new alias/wrapper model that just re-exports a `lib/data/models/` type. If the UI shape matches the API, keep using the API model rather than duplicating it.
+- When in doubt, prefer extending the existing data model with computed getters over creating a parallel feature model.
 
 ## Forbidden patterns
 - UI calling a Retrofit client or datasource directly.
-- A provider calling a datasource directly (bypass provider -> repository path when repo exists).
-- API models imported in `lib/src/` widget files.
-- Repository importing from `lib/src/`.
-- New abstraction layers: no `usecases/`, `controllers/`, `managers/`, or `viewmodels/` folders anywhere.
+- Reintroducing a `lib/data/repositories/` folder — that layer has been deleted on purpose.
+- API models imported in `lib/src/` widget files for newly added features.
+- New abstraction layers: no `usecases/`, `controllers/`, `managers/`, `viewmodels/`, or `repositories/` folders anywhere.
 - Placing providers under `lib/src/<feature>/` — providers belong in `lib/data/providers/` only.

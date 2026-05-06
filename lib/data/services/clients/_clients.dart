@@ -6,4 +6,3 @@ export 'package:riverpod_annotation/riverpod_annotation.dart';
 
 export 'package:app/utils/annotations/annotations_lib.dart';
 export '../http/http_lib.dart';
-export 'package:riverpod_state/riverpod_state.dart';

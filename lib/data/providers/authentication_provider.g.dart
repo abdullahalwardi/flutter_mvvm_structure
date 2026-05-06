@@ -6,21 +6,57 @@ part of 'authentication_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$authenticationHash() => r'732581d031d497ac7065d3181a17bfd1f7467d1c';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [Authentication].
 @ProviderFor(Authentication)
-final authenticationProvider =
-    AutoDisposeNotifierProvider<Authentication, AuthenticationModel?>.internal(
-  Authentication.new,
-  name: r'authenticationProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$authenticationHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final authenticationProvider = AuthenticationProvider._();
 
-typedef _$Authentication = AutoDisposeNotifier<AuthenticationModel?>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AuthenticationProvider
+    extends $NotifierProvider<Authentication, AuthenticationModel?> {
+  AuthenticationProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'authenticationProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$authenticationHash();
+
+  @$internal
+  @override
+  Authentication create() => Authentication();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AuthenticationModel? value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AuthenticationModel?>(value),
+    );
+  }
+}
+
+String _$authenticationHash() => r'07009931839e1dfcc7f9535bfb81e51a5ba20c75';
+
+abstract class _$Authentication extends $Notifier<AuthenticationModel?> {
+  AuthenticationModel? build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AuthenticationModel?, AuthenticationModel?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AuthenticationModel?, AuthenticationModel?>,
+              AuthenticationModel?,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

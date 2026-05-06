@@ -36,18 +36,18 @@ Auth state is split across two provider files:
 
 ## Routes
 
-Use `RoutesDocument` constants from `lib/router/app_router.dart`:
+Use typed route classes from [`lib/router/app_router.dart`](lib/router/app_router.dart) (codegen in `lib/router/routes/app_routes.dart`). Navigate with `SomeRoute().go(context)` or `ref.read(routerProvider).go(const SomeRoute().location)`.
 
-| Screen | Constant |
+| Screen | Typed route |
 |---|---|
-| Sign in | `RoutesDocument.signin` |
-| Sign up | `RoutesDocument.signup` |
-| OTP / verify | `RoutesDocument.verify` |
-| Forget password | `RoutesDocument.forgetPassword` |
-| Reset password | `RoutesDocument.resetPassword` |
-| Use forget password | `RoutesDocument.useForgetPassword` |
-| Change email | `RoutesDocument.changeEmail` |
-| Change phone | `RoutesDocument.changePhone` |
+| Sign in | `SignInRoute` (`/sign-in`) |
+| Sign up | *add `SignupRoute` when the page exists* |
+| OTP / verify | *add `VerifyRoute` when the page exists* |
+| Forget password | *add typed route when the page exists* |
+| Reset password | *add typed route when the page exists* |
+| Use forget password | *add typed route when the page exists* |
+| Change email | *add typed route when the page exists* |
+| Change phone | *add typed route when the page exists* |
 
 ## Theme tokens for auth UI
 Do not name auth-specific tokens `loginOtp…` or `signIn…`. Use flow-agnostic names (e.g. `authInputStyle`, `verifySubtitleColor`) in `lib/theme/app_theme.dart`.
