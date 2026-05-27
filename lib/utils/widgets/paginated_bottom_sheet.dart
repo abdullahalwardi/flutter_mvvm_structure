@@ -72,7 +72,7 @@ class PaginatedBottomSheet<T> extends HookConsumerWidget {
                           },
                           child: Column(
                             children: [
-                              if (customItems != null) ...customItems!,
+                              ...?customItems,
                               if (customItems != null)
                                 const Divider(thickness: 0.5),
                               Expanded(
