@@ -1,38 +1,42 @@
+import 'package:app/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ExtraColors extends ThemeExtension<ExtraColors> {
   final Color success;
   final Color onSuccess;
-  final Color error;
 
   const ExtraColors({
     required this.success,
     required this.onSuccess,
-    required this.error,
   });
 
+  static const ExtraColors light = ExtraColors(
+    success: AppColors.successLight,
+    onSuccess: AppColors.onSuccessLight,
+  );
+
+  static const ExtraColors dark = ExtraColors(
+    success: AppColors.successDark,
+    onSuccess: AppColors.onSuccessDark,
+  );
+
   @override
-  ThemeExtension<ExtraColors> copyWith({
+  ExtraColors copyWith({
     Color? success,
     Color? onSuccess,
-    Color? error,
   }) {
     return ExtraColors(
       success: success ?? this.success,
       onSuccess: onSuccess ?? this.onSuccess,
-      error: error ?? this.error,
     );
   }
 
   @override
-  ThemeExtension<ExtraColors> lerp(
-      covariant ThemeExtension<ExtraColors>? other, double t) {
-    if (other is! ExtraColors) return this;
-
+  ExtraColors lerp(covariant ExtraColors? other, double t) {
+    if (other == null) return this;
     return ExtraColors(
       success: Color.lerp(success, other.success, t)!,
       onSuccess: Color.lerp(onSuccess, other.onSuccess, t)!,
-      error: Color.lerp(error, other.error, t)!,
     );
   }
 }

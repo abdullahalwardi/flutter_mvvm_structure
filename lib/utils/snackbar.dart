@@ -1,5 +1,4 @@
 import 'package:app/common_lib.dart';
-import 'package:app/theme/app_theme.dart';
 import 'package:app/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +6,14 @@ class Utils {
   static final messengerKey = GlobalKey<ScaffoldMessengerState>();
   static void showErrorSnackBar(String? text) {
     if (text == null) return;
+    final context = messengerKey.currentContext;
+    final errorColor = context != null
+        ? Theme.of(context).colorScheme.error
+        : Colors.red;
     SnackBar snackBar = SnackBar(
       content: Text(text),
       behavior: SnackBarBehavior.floating,
-      backgroundColor: colorSchemeNotifier.value.error,
+      backgroundColor: errorColor,
     );
     messengerKey.currentState!
       ..removeCurrentSnackBar()

@@ -49,7 +49,6 @@ class _AppState extends ConsumerState<App> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppTheme();
     final settings = ref.watch(settingsProvider);
 
     return MaterialApp.router(
@@ -68,8 +67,8 @@ class _AppState extends ConsumerState<App> {
       supportedLocales: AppLocalizations.supportedLocales,
       // Theme
       themeMode: settings.themeMode,
-      darkTheme: theme.buildDarkTheme(),
-      theme: theme.buildLightTheme(),
+      darkTheme: AppTheme.dark,
+      theme: AppTheme.light,
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: child!,
         breakpoints: [
