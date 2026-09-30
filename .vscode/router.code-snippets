@@ -1,0 +1,89 @@
+{
+  "routerRoute": {
+    "scope": "dart",
+    "prefix": "routerRoute",
+    "body": [
+      "@TypedGoRoute<${1:Name}Route>(path: '/${2:path}')",
+      "class ${1}Route extends GoRouteData with \\$${1}Route {",
+      "  const ${1}Route();",
+      "",
+      "  static final GlobalKey<NavigatorState> \\$parentNavigatorKey = rootNavigatorKey;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context, GoRouterState state) =>",
+      "      const ${1}Page();",
+      "}"
+    ],
+    "description": "typed top-level route for app_routes.dart; then run build_runner and add it to the show list in app_router.dart"
+  },
+  "routerRouteParam": {
+    "scope": "dart",
+    "prefix": "routerRouteParam",
+    "body": [
+      "@TypedGoRoute<${1:Name}Route>(path: '/${2:path}/:${3:id}')",
+      "class ${1}Route extends GoRouteData with \\$${1}Route {",
+      "  const ${1}Route({required this.${3}});",
+      "",
+      "  final ${4:String} ${3};",
+      "",
+      "  static final GlobalKey<NavigatorState> \\$parentNavigatorKey = rootNavigatorKey;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context, GoRouterState state) =>",
+      "      ${1}Page(${3}: ${3});",
+      "}"
+    ],
+    "description": "typed top-level route with a path parameter for app_routes.dart; then run build_runner and add it to the show list in app_router.dart"
+  },
+  "routerRouteExtra": {
+    "scope": "dart",
+    "prefix": "routerRouteExtra",
+    "body": [
+      "@TypedGoRoute<${1:Name}Route>(path: '/${2:path}')",
+      "class ${1}Route extends GoRouteData with \\$${1}Route {",
+      "  const ${1}Route({required this.\\$extra});",
+      "",
+      "  final ${1}RouteExtra \\$extra;",
+      "",
+      "  static final GlobalKey<NavigatorState> \\$parentNavigatorKey = rootNavigatorKey;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context, GoRouterState state) =>",
+      "      ${1}Page(extra: \\$extra);",
+      "}"
+    ],
+    "description": "typed top-level route with a typed extra (class in lib/router/extras/) for app_routes.dart; then run build_runner and add it to the show list in app_router.dart"
+  },
+  "routerGo": {
+    "scope": "dart",
+    "prefix": "routerGo",
+    "body": [
+      "const ${1:Name}Route().go(context);"
+    ],
+    "description": "go to a typed route from a widget (replaces the stack)"
+  },
+  "routerPush": {
+    "scope": "dart",
+    "prefix": "routerPush",
+    "body": [
+      "const ${1:Name}Route().push<${2:void}>(context);"
+    ],
+    "description": "push a typed route from a widget (back returns to the current page)"
+  },
+  "routerPushReplacement": {
+    "scope": "dart",
+    "prefix": "routerPushReplacement",
+    "body": [
+      "const ${1:Name}Route().pushReplacement(context);"
+    ],
+    "description": "replace the current page with a typed route from a widget"
+  },
+  "routerProviderGo": {
+    "scope": "dart",
+    "prefix": "routerProviderGo",
+    "body": [
+      "ref.read(routerProvider).go(const ${1:Name}Route().location);"
+    ],
+    "description": "go to a typed route from a provider/notifier (no BuildContext)"
+  }
+}

@@ -39,7 +39,7 @@ GoRouter configureRootRouter(
       return Scaffold(
         body: Center(
           child: Text(
-            '${context.l10n.defaultErrorMessage}${state.error != null ? ': $state.error' : ''}',
+            '${context.l10n.defaultErrorMessage}${state.error != null ? ': ${state.error}' : ''}',
             textAlign: TextAlign.center,
           ),
         ),
